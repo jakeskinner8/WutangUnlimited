@@ -1,9 +1,8 @@
 -#  This file is app/views/movies/index.html.haml
-%h1 Professor Biographies
+%h1{ :style =>"text-align: center"} Professor Biographies
 
-%table#professors.some{ :style => "margin-left:-300px;" }
+%table#professors.some{ :style => "" }
   %tbody
     - @professors.each do |professor|
-      %tr{:style => "border: 1px solid black; padding: 0 20px; display: inline-block;background-color:#CCC"}
-        %td{:style => "text-align:center"}= professor.first_name
-        %td{:style => "text-align:center"}= professor.last_name
+      %tr{:style => "border: 1px solid black;margin-top:-1px;padding: 0 20px; display: block;background-color:#CCC"}
+        %td= link_to "#{professor.first_name} #{professor.last_name}", professors_path(professor)

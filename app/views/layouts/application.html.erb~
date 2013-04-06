@@ -10,8 +10,8 @@
       body {
         padding-top: 60px;
         padding-bottom: 40px;
+	min-width:1200px;
 	border:1px solid black;
-	text-align:left;
       }
     </style>
 
