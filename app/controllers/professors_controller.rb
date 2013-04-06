@@ -1,8 +1,10 @@
 class ProfessorsController < ApplicationController
-  def bios
+  def index
 	@professors = Professor.all
   end
 
   def show
+	@professors = Professor.all
+	@selected = Professor.find(params[:id])
   end
 end
