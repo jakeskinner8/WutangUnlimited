@@ -48,7 +48,7 @@
           </a>
           <a class="brand" href="/users/edit">ProfMash</a>
           <div class="container-fluid nav-collapse">
-            <ul class="nav pull-left">
+            <ul class="nav nav-pills pull-left">
               <li><%= link_to "About", "/path1"  %></li>
 	      <li class="divider-vertical"></li>
               <li><%= link_to "Contact Us", "/path2"  %></li>
