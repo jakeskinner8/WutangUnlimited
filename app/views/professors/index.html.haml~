@@ -2,11 +2,11 @@
 %h1{ :style =>"text-align: center"} Professor Biographies
 
 
-%table#professors.some{ :style => "" }
+%table#table{ :class => "table table-striped" }
   %tbody
     - @professors.each do |professor|
-      %tr{:style => "border: 1px solid black;margin-top:-1px;padding: 0 20px; display: block;background-color:#CCC"}
-        %td= link_to "#{professor.first_name} #{professor.last_name}", professors_path(professor)
+      %tr
+        %td= link_to "#{professor.first_name} #{professor.last_name}", professor_path(professor)
 
 
 -#%img(src="#{@selected.image_path}")
