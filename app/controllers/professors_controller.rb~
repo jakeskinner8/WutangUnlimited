@@ -1,5 +1,5 @@
-class ProfessorsController 
+class ProfessorsController < ApplicationController
   def bios
-
+	@professors = Professor.All
   end
 end
