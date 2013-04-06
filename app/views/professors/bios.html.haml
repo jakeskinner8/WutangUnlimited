@@ -1,18 +1,9 @@
 -#  This file is app/views/movies/index.html.haml
 %h1 Professor Biographies
 
-%table#professors.some{ :style => "margin-left:0; float:left; border: 1px solid black" }
-  %thead
-    %tr
-      %th first name
-      %th last name
-      %th email
-      %th Education
+%table#professors.some{ :style => "margin-left:-300px;" }
   %tbody
     - @professors.each do |professor|
-      %tr
-        %td= professor.first_name
-        %td= professor.last_name
-        %td= professor.email
-        %td= professor.education
-
+      %tr{:style => "border: 1px solid black; padding: 0 20px; display: inline-block;background-color:#CCC"}
+        %td{:style => "text-align:center"}= professor.first_name
+        %td{:style => "text-align:center"}= professor.last_name
