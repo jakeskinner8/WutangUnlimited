@@ -7,10 +7,12 @@
       %th first name
       %th last name
       %th email
+      %th Education
   %tbody
     - @professors.each do |professor|
       %tr
-        %td= professor.fist_name
+        %td= professor.first_name
         %td= professor.last_name
         %td= professor.email
+	%td= professor.education
 
