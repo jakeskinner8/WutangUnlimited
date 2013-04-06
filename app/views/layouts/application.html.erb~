@@ -50,8 +50,10 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "About", "/path1"  %></li>
+	      <li class="divider-vertical"></li>
               <li><%= link_to "Contact Us", "/path2"  %></li>
-              <li><%= link_to "Teacher Bios", "/teacherbios"  %></li>
+              <li class="divider-vertical"></li>
+	      <li><%= link_to "Teacher Bios", "/teacherbios"  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -60,10 +62,7 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          
-        </div><!--/span-->
-        <div class="span9">
+        <div class="span12">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
