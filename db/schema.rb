@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130405222643) do
+ActiveRecord::Schema.define(:version => 20130406225145) do
+
+  create_table "categories", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "category_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "courses", :force => true do |t|
     t.string   "course_name"
@@ -68,5 +75,22 @@ ActiveRecord::Schema.define(:version => 20130405222643) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "vid"
+    t.integer  "course_id"
+    t.integer  "professor_id"
+    t.integer  "appearance"
+    t.integer  "won"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votings", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "vid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
