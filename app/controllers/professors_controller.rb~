@@ -1,5 +1,5 @@
-class ProfessorsController < ApplicationController
-  def index
+class ProfessorsController 
+  def bios
 
   end
 end
