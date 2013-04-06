@@ -2,13 +2,13 @@ ProfMash::Application.routes.draw do
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
 end
-
+    
   # devise_for :users
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+    match '/teacherbios' => 'professors#bios'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
