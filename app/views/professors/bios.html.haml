@@ -1,0 +1,16 @@
+-#  This file is app/views/movies/index.html.haml
+%h1 All Movies
+
+%table#professors
+  %thead
+    %tr
+      %th first name
+      %th last name
+      %th email
+  %tbody
+    - @professors.each do |professor|
+      %tr
+        %td= professor.first_name
+        %td= professor.last_name
+        %td= professor.email
+

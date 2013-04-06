@@ -5,6 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first
+
+      t.string :first_name
+      t.string :last_name
+      t.string :email
+      t.string :phone
+      t.string :education
+      t.string :image_path
 professors = [
 {:first_name => 'Anton', :last_name => "Kruger", :email => "anton-kruger@uiowa.edu",:phone => "(319) 335-6287", :education=>"Ph.D., Electrical and Computer Engineering, University of Iowa, 1992
 M.S., Electrical Engineering, Potchefstroom University, 1986
