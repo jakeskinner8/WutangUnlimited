@@ -3,6 +3,8 @@ ProfMash::Application.routes.draw do
   get "home/show"
 
   devise_for :users do
+        match 'login' => 'devise/sessions#new'
+        match 'logout' => 'devise/sessions#destroy'
     get '/users/sign_out' => 'devise/sessions#destroy'
 end
     
@@ -59,7 +61,7 @@ end
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
     match 'home' => 'home#show'
-    root :to => redirect("/professors")
+    root :to => 'home#show'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

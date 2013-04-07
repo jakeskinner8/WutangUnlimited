@@ -3,6 +3,8 @@ ProfMash::Application.routes.draw do
   get "home/show"
 
   devise_for :users do
+        match 'login' => 'devise/sessions#new'
+        match 'logout' => 'devise/sessions#destroy'
     get '/users/sign_out' => 'devise/sessions#destroy'
 end
     
@@ -58,7 +60,7 @@ end
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-    match '/home' => 'home#show'
+    match 'home' => 'home#show'
     root :to => redirect("/professors")
   # See how all your routes lay out with "rake routes"
 
