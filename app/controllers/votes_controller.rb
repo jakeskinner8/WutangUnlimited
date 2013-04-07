@@ -6,10 +6,10 @@ class VotesController < ApplicationController
   end	
 
   def show
-	if(params[:id] != -1)
+	if(params[:id].to_s == "S")
 		flash[:notice] = "You skipped the previous question."
-	#elsif(params[:id] != -1)
-	#	flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
+	else
+		flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 	end
 	flash.keep
 	redirect_to votes_path
