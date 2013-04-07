@@ -1,5 +1,7 @@
 
 ProfMash::Application.routes.draw do
+  get "home/show"
+
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
 end
