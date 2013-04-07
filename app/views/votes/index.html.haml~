@@ -1,9 +1,28 @@
-%h1{:style => "text-align:center"} Which teacher is/would be better at teaching #{@question[0].course_name}?
 
-%div{:style => "float:left; margin-left: 20%;"}
-  =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
-  %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
-= button_to 'Skip', "/votes/-1" , :method => :get
-%div{:style => "float:right; margin-right: 20%;"}
-  =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
-  %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
+-if(session[:votingOn] == "Teachers")
+  =link_to "Click to vote for classes", "classes/votes"
+
+  %h1{:style => "text-align:center"} Which teacher is/would be better at teaching #{@question[0].course_name}?
+
+  %div{:style => "float:left; margin-left: 20%;"}
+    =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
+    %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
+  %div{:style => "float:right; margin-right: 20%;"}
+    =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
+    %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
+
+  %div{:style => "text-align:center;margin-top:10%"} 
+    =button_to 'Skip', "/votes/S" , :method => :get
+-else
+  =link_to "Click to vote for teachers", "teachers/votes"
+  %h1{:style => "text-align:center"} Which course would you recommend others to take?
+
+  %div{:style => "float:left; margin-left: 20%;margin-top:5%;"}
+    %p{:style => "text-align:center"}= link_to "#{@random[0].course_name}", "/votes/#{@random[0].id}"
+  %div{:style => "float:right; margin-right: 20%;margin-top:5%;"}
+    %p{:style => "text-align:center"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"
+
+  %div{:style => "text-align:center;margin-top:6%"} 
+    =button_to 'Skip', "/votes/S" , :method => :get
+
+
