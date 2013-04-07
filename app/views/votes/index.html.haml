@@ -1,5 +1,5 @@
 
--if(session[:votingOn] == "Teachers")
+-if(session[:votingOn] == "Teachers" || session[:votingOn] == nil)
   =link_to "Click to vote for classes", "classes/votes"
 
   %h1{:style => "text-align:center"} Which teacher is/would be better at teaching #{@question[0].course_name}?
