@@ -1,5 +1,7 @@
 
 ProfMash::Application.routes.draw do
+  get "home/show"
+
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
 end
@@ -18,7 +20,7 @@ end
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :professors
-
+     resources :votes
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -56,6 +58,7 @@ end
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
+    match '/home' => 'home#show'
     root :to => redirect("/professors")
   # See how all your routes lay out with "rake routes"
 
