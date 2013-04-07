@@ -1,5 +1,9 @@
-%h1{:style => "text-align:center"} Which teacher is #{@random[1].first_name}  #{@random[1].last_name}?
+%h1{:style => "text-align:center"} Which teacher is/would be better at teaching #{@question[0].course_name}?
 
-=link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
-=link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
--#%img(src="#{Professor.find(1).image_path}")= link_to "", v
+%div{:style => "float:left; margin-left: 20%;"}
+  =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
+  %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
+= button_to 'Skip', "/votes/-1" , :method => :get
+%div{:style => "float:right; margin-right: 20%;"}
+  =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
+  %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
