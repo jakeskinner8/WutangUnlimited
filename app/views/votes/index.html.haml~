@@ -22,7 +22,7 @@
   %div{:style => "float:right; margin-right: 20%;margin-top:5%;"}
     %p{:style => "text-align:center"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"
 
-  %div{:style => "text-align:center;margin-top:6%"} 
+  %div{:style => "text-align:center;margin-top:5%"} 
     =button_to 'Skip', "/votes/S" , :method => :get
 
 

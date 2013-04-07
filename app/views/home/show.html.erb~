@@ -1,9 +1,11 @@
  <style type="text/css">
 
       /* Main marketing message and sign up button */
+
       .jumbotron {
-        margin: 80px 0;
+        margin: 40px 0;
         text-align: center;
+	border:2px solid;
       }
       .jumbotron h1 {
         font-size: 100px;
