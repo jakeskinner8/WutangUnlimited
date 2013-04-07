@@ -52,17 +52,21 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-left">
               <li><%= link_to "About", "/path1"  %></li>
-     <li class="divider-vertical"></li>
+                 <li class="divider-vertical"></li>
               <li><%= link_to "Contact Us", "/path2"  %></li>
-              <li class="divider-vertical"></li>
-     <li><%= link_to "Teacher Bios", "/professors"  %></li>
-     <li class="divider-vertical"></li>
-<form class="navbar-search pull-left">
-  <input type="text" class="search-query" placeholder="Search">
-</form>
+                 <li class="divider-vertical"></li>
+     	      <li><%= link_to "Teacher Bios", "/professors"  %></li>
+                 <li class="divider-vertical"></li>
+	      <li><%= link_to "Voting", "/votes"  %></li>
+	         <li class="divider-vertical"></li>
+	      <li><%= link_to "History", "/history"  %></li>
+                 <li class="divider-vertical"></li>
+	      <form class="navbar-search pull-left">
+ 	          <input type="text" class="search-query" placeholder="Search">
+	      </form>
 
 <% if user_signed_in? %>
-<li>Signed in As : <%= current_user.email %></li>
+<li style="color:white">Signed in As : <%= current_user.email %></li>
 <li><%= link_to "Sign Out", destroy_user_session_path  %></li>
 <% else %>
 <li><%= link_to "Sign Up", new_user_registration_path  %></li>
