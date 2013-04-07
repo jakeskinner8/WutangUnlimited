@@ -11,15 +11,10 @@
 	    padding-top: 60px; 
 	}
 	.navbar-inner {
-	    font-size: 12px;
-	      background-color: white; /* background color will be black for all browsers */
-  background-image: none;
-  background-repeat: no-repeat;
-  filter: none;
-
+	    font-size: 13px;
 	}
 
 	.navbar-inner {
 
 }
-	@import "bootstrap-responsive";
+	@import "bootstrap-responsive"
