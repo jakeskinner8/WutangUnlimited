@@ -1,0 +1,4 @@
+%h1{:style => "text-align:center"} Which teacher is teacher A?
+
+=link_to image_tag("#{@random[0].image_path}"), professor_path(@random[0])
+-#%img(src="#{Professor.find(1).image_path}")= link_to "", v

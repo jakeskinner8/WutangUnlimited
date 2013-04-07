@@ -2,7 +2,7 @@
 %h1{ :style =>"text-align: center"} Professor Biographies
 
 
-%table#table{ :class => "table table-striped" }
+%table#table{ :class => "table" }
   %tbody
     - @professors.each do |professor|
       %tr
