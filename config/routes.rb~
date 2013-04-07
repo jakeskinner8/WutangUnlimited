@@ -23,6 +23,11 @@ end
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :professors
      resources :votes
+<<<<<<< HEAD
+     match 'classes/votes' => 'votes#classes'
+     match 'teachers/votes' => 'votes#teachers'
+=======
+>>>>>>> 7a00c5935a93ca26419f761b379549b404e38ba1
   # Sample resource route with options:
   #   resources :products do
   #     member do
