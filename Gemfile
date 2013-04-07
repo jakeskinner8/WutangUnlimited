@@ -40,7 +40,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'bootstrap-sass'
 # Use unicorn as the web server
 # gem 'unicorn'
 
