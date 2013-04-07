@@ -1,5 +1,5 @@
-%h1{:style => "text-align:center"} Which teacher is #{@random[1].first_name}?
+%h1{:style => "text-align:center"} Which teacher is #{@random[1].first_name}  #{@random[1].last_name}?
 
-=link_to image_tag("#{@random[0].image_path}"), professor_path(@random[0])
-=link_to image_tag("#{@random[1].image_path}"), professor_path(@random[1])
+=link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0]}"
+=link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1]}"
 -#%img(src="#{Professor.find(1).image_path}")= link_to "", v
