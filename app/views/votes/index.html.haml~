@@ -3,16 +3,17 @@
   =link_to "Click to vote for classes", "vote-classes"
 
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
+  %div{:style=>"text-align:center;"}
+    %div{:style => "display:inline-block;height:20%;"}
+      =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
+      %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
+    %div{:style => "display:inline-block; width:20%;line-height:200px; vertical-align:top"} 
+      =button_to 'Skip', "/votes/S" , :method => :get
+    %div{:style => "display: inline-block;height:20%;"}
+      =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
+      %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
 
-  %div{:style => "float:left; margin-left: 15%;width:20%;"}
-    =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
-    %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
-  %div{:style => "float:right; margin-right: 15%;width:20%;"}
-    =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
-    %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
 
-  %div{:style => "text-align:center;margin-top:10%;"} 
-    =button_to 'Skip', "/votes/S" , :method => :get
 -else
   =link_to "Click to vote for teachers", "vote-teachers"
   %h3{:style => "text-align:center"} Which course would you recommend others to take?
