@@ -3,7 +3,7 @@
   =link_to "Click to vote for classes", "vote-classes"
 
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
-  %div{:style=>"text-align:center;"}
+  %div{:style=>"text-align:center;vertical-align:top"}
     %div{:style => "display:inline-block;width:20%;"}
       =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
       %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
