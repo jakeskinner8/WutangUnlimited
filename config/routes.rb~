@@ -23,11 +23,8 @@ end
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :professors
      resources :votes
-<<<<<<< HEAD
      match 'classes/votes' => 'votes#classes'
      match 'teachers/votes' => 'votes#teachers'
-=======
->>>>>>> 7a00c5935a93ca26419f761b379549b404e38ba1
   # Sample resource route with options:
   #   resources :products do
   #     member do
@@ -66,7 +63,7 @@ end
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
     match 'home' => 'home#show'
-    root :to => redirect("/professors")
+    root :to => 'home#show'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
