@@ -8,7 +8,7 @@
 
 %div{:class => "span2", :style => "width:70%;float:left;margin-left:5%;text-align:center"}
   %h1{ :style =>"text-align:center"} #{@selected.first_name} #{@selected.last_name}
-  %img(src="#{@selected.image_path}"){ :style => "width:20%px;margin-bottom:20px;"}
+  %img(src="#{@selected.image_path}"){ :style => "width:20%;margin-bottom:20px;"}
   %div
   %div
   %table{:class =>"table"}
