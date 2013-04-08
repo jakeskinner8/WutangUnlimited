@@ -39,8 +39,10 @@ group :assets do
   gem 'therubyracer'
 end
 
+gem 'less-rails'
 gem 'jquery-rails'
-
+gem 'bootstrap-sass'
+gem 'sass-rails', "  ~> 3.1.0"
 # Use unicorn as the web server
 # gem 'unicorn'
 

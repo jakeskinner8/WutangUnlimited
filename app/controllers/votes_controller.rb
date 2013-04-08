@@ -1,7 +1,7 @@
 class VotesController < ApplicationController
   def index
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
-		session[:votingOn] == "Teachers"
+		session[:votingOn] = "Teachers"
 		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
 		@question = Course.find(:all,:order=>'RANDOM()', :limit => 1)
         else
