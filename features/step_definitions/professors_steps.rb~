@@ -16,15 +16,8 @@ When /^I fill email with "(.*?)" and password with "(.*?)"$/ do |email, password
   click_button 'Sign in'
 end
 
-And /^I am on the home page$/
+And /^I am on the home page$/ do
   visit root_path
-end
-
-When /^I have filled email with "(.*?)" and password with "(.*?)"$/ do |email, password|
-  visit new_user_session_path
-  fill_in 'email', :with => email
-  fill_in 'password', :with => password
-  click_button 'Sign in'
 end
 
 Then /^(?:|I )should see "([^"]*)"$/ do |text|

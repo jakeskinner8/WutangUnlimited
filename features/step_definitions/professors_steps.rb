@@ -16,7 +16,7 @@ When /^I fill email with "(.*?)" and password with "(.*?)"$/ do |email, password
   click_button 'Sign in'
 end
 
-And /^I am on the home page$/
+And /^I am on the home page$/ do
   visit root_path
 end
 
