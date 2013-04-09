@@ -31,4 +31,24 @@ When(/^I fill email with "(.*?)", password with "(.*?)", and password confirmati
 end
 
 
+Given(/^the following professors have been enterened into the Teacher Quality Rating System:$/) do |table|
+  table.hashes.each do |prof|
+    Professor.create!(prof)
+  end
+end
+
+Given(/^I am on the teachers bio page$/) do
+   visit "/professors"
+end
+
+Then(/^I should see all of the professors$/) do
+   rows = page.all('table#table tr').count  #counts the tables headers as a row so subtract 1
+ 
+   assert rows.should == Professor.all.size
+end
+
+When(/^I click on professor "(.*?)"$/) do |arg1|
+  click_link "#{arg1}"
+end
+
 

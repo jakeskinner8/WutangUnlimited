@@ -37,12 +37,12 @@
       "/home/ubuntu/WutangUnlimited/app/controllers/professors_controller.rb": [
         1,
         1,
-        0,
+        2,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null
       ],
@@ -121,6 +121,6 @@
         null
       ]
     },
-    "timestamp": 1365546706
+    "timestamp": 1365547644
   }
 }
