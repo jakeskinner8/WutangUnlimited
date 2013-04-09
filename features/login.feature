@@ -6,7 +6,7 @@ Feature: Login to Teacher Quality Rating System
 
  Background: users have registered into Teacher Quality Rating System
 
- Given the following users have registered into the Teacher Quality Rating System
+ Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
 | student1@uiowa.edu          | password     |
 | student2@uiowa.edu          | password     |
@@ -16,10 +16,10 @@ Feature: Login to Teacher Quality Rating System
 
 And I am on login page
 Scenario: login registered users
- When I fill email with student1@uiowa.edu and password with password
+ When I fill email with "student1@uiowa.edu" and password with "password"
  And I am on the home page
  Then I should see "Signed in successfully."
 
 Scenario: fail login of non-registered users
- When I have fill email with student1@uiowa.edu and password with password1
- Then I should see "Invalid email or password.i"
+ When I have fill email with "student1@uiowa.edu" and password with "password1"
+ Then I should see "Invalid email or password."

@@ -4,6 +4,8 @@ gem 'rails', '3.1.0'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem "haml-rails"
+gem 'simplecov'
+
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 group :development, :test do
@@ -15,7 +17,6 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'rspec-rails'
-  gem 'simplecov'
 end
 group :test do
   gem 'cucumber-rails'
