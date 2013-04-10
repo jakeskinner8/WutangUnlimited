@@ -2,12 +2,16 @@ Given(/^I am on login page$/) do
   visit "/users/sign_in"
 end
 
+Given(/^I am on voting page$/) do
+  visit "/users/votes"
+end
 
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
    table.hashes.each do |user|
     User.create!(user)
   end
 end
+
 
 When(/^I fill email with "(.*?)" and password with "(.*?)"$/) do |email, password|
   fill_in 'Email', :with => email
@@ -52,3 +56,32 @@ When(/^I click on professor "(.*?)"$/) do |arg1|
 end
 
 
+<<<<<<< HEAD
+Given(/^the following Course list has heen added:$/) do |table|
+=======
+Given(/^the following courses have been enterened into the Teacher Quality Rating System:$/) do |table|
+>>>>>>> 7eceb328886a9f8efcd1192e875c4d1b25dc2881
+  table.hashes.each do |course|
+    Course.create!(course)
+  end
+end
+
+<<<<<<< HEAD
+=======
+Given(/^I am on the teacher voting page$/) do
+  visit "/vote-teachers"
+end
+
+Then(/^I should be able to choose from two images$/) do
+ 	assert find('img.image1') && find('img.image2')
+end
+
+When(/^I click an image$/) do
+  Professor.all.each do |y|
+	temp |= page.all("img[@alt='#{y.id}']")
+	if(temp)
+		visit "votes/#{y.id}"
+	end
+  end
+end
+>>>>>>> 7eceb328886a9f8efcd1192e875c4d1b25dc2881
