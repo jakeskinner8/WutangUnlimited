@@ -16,7 +16,7 @@ Scenario: I'm able to view the voting page
 When I fill email with "student1@uiowa.edu" and password with "password" 
 Then I should see "Voting"
 
-Given the following Course list has been added:
+Given the following courses have been enterened into the Teacher Quality Rating System:
 |course_name	|course_number	|
 |Linear	System	|101		|
 |Senior Design	|201		|
