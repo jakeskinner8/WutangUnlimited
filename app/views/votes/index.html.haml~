@@ -5,12 +5,12 @@
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
   %div{:style=>"text-align:center;vertical-align:top"}
     %div{:style => "display:inline-block;width:20%;vertical-align:top"}
-      =link_to image_tag("#{@random[0].image_path}"), "/votes/#{@random[0].id}"
+      =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt ="#{@random[0].id}"), "/votes/#{@random[0].id}"
       %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
     %div{:style => "display:inline-block; width:30%;margin-top:10%;vertical-align:top;"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:style => "display: inline-block;width:20%;vertical-align:top"}
-      =link_to image_tag("#{@random[1].image_path}"), "/votes/#{@random[1].id}"
+      =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt ="#{@random[0].id}"), "/votes/#{@random[1].id}"
       %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
 
 
@@ -20,7 +20,7 @@
   %div{:style => "text-align:center"}
     %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top;"}
       %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", "/votes/#{@random[0].id}"
-    %div{:style => "display:inline-block;margin-left:100px;margin-top:5%;margin-right:50px;"} 
+    %div{:style => "display:inline-block;margin-left:50px;margin-top:5%;margin-right:50px;"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top"}
       %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"
