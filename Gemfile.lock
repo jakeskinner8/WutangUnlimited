@@ -31,7 +31,6 @@ GEM
     activesupport (3.1.0)
       multi_json (~> 1.0)
     addressable (2.3.3)
-    ansi (1.4.3)
     archive-tar-minitar (0.5.2)
     arel (2.2.3)
     bcrypt-ruby (3.0.1)
@@ -200,8 +199,6 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    turn (0.9.6)
-      ansi
     twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
@@ -241,6 +238,5 @@ DEPENDENCIES
   simplecov
   sqlite3
   therubyracer
-  turn
   twitter-bootstrap-rails
   uglifier

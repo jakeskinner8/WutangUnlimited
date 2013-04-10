@@ -1,3 +1,0 @@
-Given /^The following users have registered into the Teacher Quality Rating System$/ do
-  visit movies_path
- end
