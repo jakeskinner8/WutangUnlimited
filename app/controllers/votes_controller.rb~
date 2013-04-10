@@ -1,4 +1,10 @@
 class VotesController < ApplicationController
+  before_filter :set_current_user
+  def set_current_user
+    @current_use = user_signed_in? 
+    redirect_to '/home' and return unless @current_use
+  end 
+
   def index
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
 		session[:votingOn] = "Teachers"
@@ -15,7 +21,6 @@ class VotesController < ApplicationController
 		flash[:notice] = "You skipped the previous question."
 	else
 		if(session[:votingOn].to_s == "Teachers")
-			@prof = Professor.find(params[:id])
 			flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
 			flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
