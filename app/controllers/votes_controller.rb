@@ -2,14 +2,16 @@ class VotesController < ApplicationController
   before_filter :set_current_user
   def set_current_user
     @current_use = user_signed_in? 
-    flash[:notice] = "You must be logged in to view this page."
+    if(!@current_use)
+	flash[:notice] = "You must be logged in to view this page."
+    end
     redirect_to '/home' and return unless @current_use
   end 
 
   def index
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
 		session[:votingOn] = "Teachers"
-		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
+		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2,:unique=>true)
 		@question = Course.find(:all,:order=>'RANDOM()', :limit => 1)
         else
 		@random = Course.find(:all,:order=>'RANDOM()', :limit => 2)
