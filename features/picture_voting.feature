@@ -18,6 +18,12 @@ Background: database seeded
 | CIE     	| 
 | PIE     	| 
 | Embedded     	| 
+ Given the following users have registered into the Teacher Quality Rating System:
+| email                       | password     |
+| student1@uiowa.edu          | password     |
+
+And I am on login page
+When I fill email with "student1@uiowa.edu" and password with "password"
 
 Scenario: picture voting
 Given I am on the teacher voting page
