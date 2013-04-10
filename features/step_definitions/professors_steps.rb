@@ -2,12 +2,16 @@ Given(/^I am on login page$/) do
   visit "/users/sign_in"
 end
 
+Given(/^I am on voting page$/) do
+  visit "/users/votes"
+end
 
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
    table.hashes.each do |user|
     User.create!(user)
   end
 end
+
 
 When(/^I fill email with "(.*?)" and password with "(.*?)"$/) do |email, password|
   fill_in 'Email', :with => email
@@ -51,4 +55,10 @@ When(/^I click on professor "(.*?)"$/) do |arg1|
   click_link "#{arg1}"
 end
 
+
+Given(/^the following Course list has heen added:$/) do |table|
+  table.hashes.each do |course|
+    Course.create!(course)
+  end
+end
 
