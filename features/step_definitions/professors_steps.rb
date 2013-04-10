@@ -52,3 +52,25 @@ When(/^I click on professor "(.*?)"$/) do |arg1|
 end
 
 
+Given(/^the following courses have been enterened into the Teacher Quality Rating System:$/) do |table|
+  table.hashes.each do |course|
+    Course.create!(course)
+  end
+end
+
+Given(/^I am on the teacher voting page$/) do
+  visit "/vote-teachers"
+end
+
+Then(/^I should be able to choose from two images$/) do
+ 	assert find('img.image1') && find('img.image2')
+end
+
+When(/^I click an image$/) do
+  Professor.all.each do |y|
+	temp |= page.all("img[@alt='#{y.id}']")
+	if(temp)
+		visit "votes/#{y.id}"
+	end
+  end
+end

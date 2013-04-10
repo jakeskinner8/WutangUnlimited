@@ -54,10 +54,10 @@
       "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
         1,
         1,
-        0,
-        0,
-        0,
-        0,
+        5,
+        5,
+        5,
+        5,
         null,
         0,
         0,
@@ -65,22 +65,22 @@
         null,
         null,
         1,
-        0,
-        0,
-        null,
-        0,
+        4,
         0,
         null,
+        4,
+        4,
+        null,
         0,
         null,
         null,
-        0,
-        0,
+        4,
+        4,
         null,
         null,
         1,
-        0,
-        0,
+        1,
+        1,
         null,
         null,
         1,
@@ -121,6 +121,6 @@
         null
       ]
     },
-    "timestamp": 1365547644
+    "timestamp": 1365624106
   }
 }
