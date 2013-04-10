@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/user.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,28 +13,28 @@
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/controllers/application_controller.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/controllers/application_controller.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/helpers/application_helper.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/helpers/home_helper.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/controllers/home_controller.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/controllers/home_controller.rb": [
         1,
         1,
         null,
         null,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/controllers/professors_controller.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/controllers/professors_controller.rb": [
         1,
         1,
         2,
@@ -46,12 +46,12 @@
         null,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/professor.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/controllers/votes_controller.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/controllers/votes_controller.rb": [
         1,
         1,
         1,
@@ -98,38 +98,38 @@
         null,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/vote.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/vote.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/categorie.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/categorie.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/course.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/course.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/member.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/member.rb": [
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/teach.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/teach.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/Desktop/WutangUnlimited/app/models/voting.rb": [
+      "/home/ubuntu/Documents/Finalrepo/WutangUnlimited/app/models/voting.rb": [
         1,
         null,
         null
       ]
     },
-    "timestamp": 1365625326
+    "timestamp": 1365628115
   }
 }
