@@ -182,6 +182,10 @@
       "/home/ubuntu/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
@@ -263,6 +267,6 @@
         null
       ]
     },
-    "timestamp": 1365718366
+    "timestamp": 1365719543
   }
 }
