@@ -10,24 +10,54 @@ Given the following users have registered into the Teacher Quality Rating System
 | email                       | password     |
 | student1@uiowa.edu          | password     |
 
-And I am on login page
-
-Scenario: I'm able to view the voting page
-When I fill email with "student1@uiowa.edu" and password with "password" 
-Then I should see "Voting"
+Given the following professors have been enterened into the Teacher Quality Rating System:
+| first_name	| last_name	|email          	|image_path	|
+| onef     	| onel   	|onef-onel@uiowa.edu	|path1		|
+| twof     	| twol   	|twof-twol@uiowa.edu	|path2		|
 
 Given the following courses have been enterened into the Teacher Quality Rating System:
-|course_name	|course_number	|
-|Linear	System	|101		|
-|Senior Design	|201		|
-|Calculus I	|111		|
-|Thermodynamic	|131		|
+| course_name	| 
+| SELT     	| 
+| CIE     	| 
 
-And I am on voting page
 
-Scenario:I'm able to vote
-When
-Then
+And I am on home page
+
+Scenario: I can't visit voting page if I'm not logged in
+When I click on Voting link
+Then I should see "You must be logged in to view this page."
+
+Scenario: Class voting
+When I am on login page
+And I fill email with "student1@uiowa.edu" and password with "password"
+And I am on the class voting page
+Then I should be able to choose from two classes
+When I click class SELT
+Then I should see "You voted for "
+
+Scenario: Skip a vote from class voting page
+When I am on login page
+And I fill email with "student1@uiowa.edu" and password with "password"
+And I am on the class voting page
+When I click button Skip
+Then I should see "You skipped the previous question."
+
+Scenario: Skip a vote from teacher voting page
+When I am on login page
+And I fill email with "student1@uiowa.edu" and password with "password"
+And I am on the teacher voting page
+When I click button Skip
+Then I should see "You skipped the previous question."
+
+
+
+
+
+
+
+
+
+
 
 
 

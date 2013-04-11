@@ -2,8 +2,8 @@ Given(/^I am on login page$/) do
   visit "/users/sign_in"
 end
 
-Given(/^I am on voting page$/) do
-  visit "/votes"
+Given(/^I am on home page$/) do
+  visit "/"
 end
 
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
@@ -21,6 +21,10 @@ end
 
 Then(/^I should see "(.*?)"$/) do |arg1|
   assert page.has_content?("#{arg1}")
+end
+
+Then(/^I could visit voting page$/) do
+  visit '/votes'
 end
 
 Given(/^I am on registration page$/) do
@@ -55,6 +59,9 @@ When(/^I click on professor "(.*?)"$/) do |arg1|
   click_link "#{arg1}"
 end
 
+When(/^I click on Voting link$/) do
+  click_on "Voting"
+end
 
 Given(/^the following courses have been enterened into the Teacher Quality Rating System:$/) do |table|
   table.hashes.each do |course|
@@ -67,8 +74,16 @@ Given(/^I am on the teacher voting page$/) do
   visit "/vote-teachers"
 end
 
+Given(/^I am on the class voting page$/) do
+  visit "/vote-classes"
+end
+
 Then(/^I should be able to choose from two images$/) do
  	assert find('img.image1') && find('img.image2')
+end
+
+Then(/^I should be able to choose from two classes$/) do
+ 	assert page.has_content?("SELT") && page.has_content?("CIE")
 end
 
 When(/^I click an image$/) do
@@ -78,5 +93,13 @@ When(/^I click an image$/) do
 		visit "votes/#{y.id}"
 	end
   end
+end
+
+When(/^I click class SELT$/) do
+  click_link "SELT"
+end
+
+When(/^I click button Skip$/) do
+  click_button "Skip"
 end
 
