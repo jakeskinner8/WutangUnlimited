@@ -1,0 +1,10 @@
+require 'spec_helper'
+
+describe HomesController do
+  describe 'Trying to vote without being logged in' do
+    it 'should redirect home page' do
+	get :votes#index
+	response.should redirect_to(home_show_path)
+    end
+  end
+end

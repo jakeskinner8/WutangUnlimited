@@ -49,6 +49,10 @@
       "/home/ubuntu/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
+        null,
+        1,
+        7,
+        null,
         null
       ],
       "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
@@ -112,6 +116,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        15,
+        null,
         null
       ],
       "/home/ubuntu/WutangUnlimited/app/models/member.rb": [
@@ -130,7 +138,7 @@
         null
       ]
     },
-    "timestamp": 1365714721
+    "timestamp": 1365720011
   },
   "RSpec": {
     "coverage": {
@@ -192,11 +200,11 @@
         1,
         1,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
-        0,
+        1,
         null,
         null,
         1,
@@ -249,6 +257,10 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/WutangUnlimited/app/models/member.rb": [
@@ -267,6 +279,6 @@
         null
       ]
     },
-    "timestamp": 1365719543
+    "timestamp": 1365722891
   }
 }
