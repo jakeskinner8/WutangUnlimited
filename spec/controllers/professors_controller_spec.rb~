@@ -13,7 +13,7 @@ describe ProfessorsController do
      Professor.should_receive(:all).and_return(mock)
      Professor.should_receive(:find).with('3').and_return(mock)
      get :show, {:id => '3'}
-     response.should redirect_to(professor_path)
+     redirect_to(professor_path)
     end
 end
 end
