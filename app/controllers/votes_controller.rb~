@@ -14,8 +14,8 @@ class VotesController < ApplicationController
 		@random = Professor.getRandomProfessor
 		@question = Course.getRandomCourse(1)
         else
-		@random = Course.getRandomProfessor(2)
-		@question = Course.getRandomProfessor(1)
+		@random = Course.getRandomCourse(2)
+		@question = Course.getRandomCourse(1)
 	end
   end	
 
