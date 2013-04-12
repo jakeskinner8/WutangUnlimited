@@ -4,10 +4,13 @@ require 'spec_helper'
 describe Professor do
   describe 'Get random professors' do
     it 'should search for random professor' do
+<<<<<<< HEAD
+      professor = mock('Professor')
+      Professor.should_receive(:find, :all, :order=>'RANDOM()', :limit => 2).and_return(professor)
+=======
       professor = mock('Professor', :email => 'jacob@uiowa.edu')
-      #Professor.should_receive(:find).with('1').and_return(professor)
       fake_results = [mock('Professor'), mock('Professor')]
-      #Professor.should_receive(:getRandomProfessor).and_return(fake_results)
+>>>>>>> 65f5be5a992e60a712f3b7d8573fd2c3fdfaf4b5
     end
    end
 end
