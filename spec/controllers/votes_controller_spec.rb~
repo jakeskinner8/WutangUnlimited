@@ -18,7 +18,7 @@ describe VotesController do
 
   describe 'Trying to vote without being logged in' do
     it 'should redirect home page' do
-	redirect_to voting_path
+	redirect_to votes_path
 	page.should have_content "Teacher of The Month"
     end
   end
