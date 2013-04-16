@@ -51,7 +51,7 @@
           <a class="brand" href="/home">ProfMash</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-left">
-              <li><%= link_to "About", ""  %></li>
+              <li><%= link_to "About", "/about"  %></li>
                  <li class="divider-vertical"></li>
               <li><%= link_to "Contact Us", ""  %></li>
                  <li class="divider-vertical"></li>
@@ -68,7 +68,7 @@
 	   <ul class="nav pull-right">
 	     <% if user_signed_in? %>
 		<% a = current_user.email %>
-		<li style="color:white; padding-top:12px; font-size:14px;">Signed in As : <%= a[0..17] %></li>
+		<li style="color:white; padding-top:12px; font-size:14px;">Signed in As : <%= a[0..16] %></li>
 		<li><%= link_to "Sign Out", destroy_user_session_path  %></li>
              <% else %>
 		<li><%= link_to "Sign Up", new_user_registration_path  %></li>
