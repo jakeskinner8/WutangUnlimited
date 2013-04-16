@@ -25,6 +25,7 @@ end
      resources :votes
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
+     match 'invite' => 'home#invite'
   # Sample resource route with options:
   #   resources :products do
   #     member do
