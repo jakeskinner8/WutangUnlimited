@@ -59,7 +59,7 @@
                  <li class="divider-vertical"></li>
 	      <li><%= link_to "Voting", "/votes"  %></li>
 	         <li class="divider-vertical"></li>
-	      <li><%= link_to "History", "/history"  %></li>
+	      <li><%= link_to "History", ""  %></li>
                  <li class="divider-vertical"></li>
 	      <form class="navbar-search pull-left">
  	          <input type="text" class="search-query" placeholder="Search">
