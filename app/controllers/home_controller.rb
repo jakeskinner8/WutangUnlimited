@@ -6,8 +6,9 @@ class HomeController < ApplicationController
   end
 
   def sendinvite
-	@email = params[:email]["email"]
-	MyMailer.welcome(@email).deliver
+	@email = params[:email]["email"].split(",").each do |email|
+	  MyMailer.welcome(email).deliver
+	end
 	flash[:notice] = "Invite(s) Sent!"
 	redirect_to "/home"
   end

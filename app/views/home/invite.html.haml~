@@ -1,9 +1,10 @@
 %h1 Invite your friends!!
 
+%h6 Separate by commas if sending more than one.
 = form_tag ('/sendinvite') do
 
   = label :email, :email, 'Email'
-  = text_field :emails, 'email'
+  = text_field :email, 'email'
 
   = submit_tag 'Send Invite(s)'
 
