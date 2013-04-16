@@ -59,7 +59,7 @@
                  <li class="divider-vertical"></li>
 	      <li><%= link_to "Voting", "/votes"  %></li>
 	         <li class="divider-vertical"></li>
-	      <li><%= link_to "History", "/history"  %></li>
+	      <li><%= link_to "History", ""  %></li>
                  <li class="divider-vertical"></li>
 	      <form class="navbar-search pull-left">
  	          <input type="text" class="search-query" placeholder="Search">
@@ -67,7 +67,8 @@
 	 </ul>
 	   <ul class="nav pull-right">
 	     <% if user_signed_in? %>
-		<li style="color:white; padding-top:12px; font-size:14px;">Signed in As : <%= current_user.email %></li>
+		<% a = current_user.email %>
+		<li style="color:white; padding-top:12px; font-size:14px;">Signed in As : <%= a[0..17] %></li>
 		<li><%= link_to "Sign Out", destroy_user_session_path  %></li>
              <% else %>
 		<li><%= link_to "Sign Up", new_user_registration_path  %></li>
