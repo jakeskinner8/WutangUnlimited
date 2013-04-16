@@ -1,6 +1,7 @@
-
+=link_to "Invite Friends!", "sendinvite"
 -if(session[:votingOn] == "Teachers" || session[:votingOn] == nil)
-  =link_to "Click to vote for classes", "vote-classes"
+  %div{:style => "float:right"}
+    =link_to "Click to vote for classes", "vote-classes"
 
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
   %div{:style=>"text-align:center;vertical-align:top"}
@@ -15,7 +16,8 @@
 
 
 -else
-  =link_to "Click to vote for teachers", "vote-teachers"
+  %div{:style => "float:right"}
+    =link_to "Click to vote for teachers", "vote-teachers"
   %h3{:style => "text-align:center"} Which course would you recommend others to take?
   %div{:style => "text-align:center"}
     %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top;"}
