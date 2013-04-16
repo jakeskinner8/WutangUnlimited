@@ -647,34 +647,317 @@ irb(main):007:0> MyMailer.welcome('brian-chau@uiowa.edu').deliver
 ]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ c[Kcon[K[K[Kgit commit -am "adding emails"
 [master 32b75df] adding emails
  5 files changed, 14 insertions(+), 3 deletions(-)
-]0;saasbook@saamplate'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `block in instrument'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/activesupport-3.1.0/lib/active_support/notifications.rb:53:in `instrument'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/abstract_renderer.rb:17:in `wrap_formats'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/action_view/renderer/template_renderer.rb:9:in `render'
-... 9 levels...
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/base.rb:653:in `mail'
-	from /home/ubuntu/WutangUnlimited/app/mailers/my_mailer.rb:6:in `welcome'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:167:in `process_action'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/base.rb:121:in `process'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.1.0/lib/abstract_controller/rendering.rb:45:in `process'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/old_api.rb:65:in `process'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/base.rb:474:in `process'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/base.rb:469:in `initialize'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/base.rb:456:in `new'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/actionmailer-3.1.0/lib/action_mailer/base.rb:456:in `method_missing'
-	from (irb):1
-	from /usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands/console.rb:45:in `start'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands/console.rb:8:in `start'
-	from /usr/local/lib/ruby/gems/1.9.1/gems/railties-3.1.0/lib/rails/commands.rb:40:in `<top (required)>'
-	from script/rails:6:in `require'
-	from script/rails:6:in `<main>'irb(main):002:0> MyMailer.welcome('destination_mail@gmail.com').deliver
-=> #<Mail::Message:104330330, Multipart: false, Headers: <Date: Mon, 15 Apr 2013 21:55:37 -0700>, <From: from@example.com>, <To: destination_mail@gmail.com>, <Message-ID: <516cd9c93ed88_9de48c2dc414061@saasbook.mail>>, <Subject: Welcome to my App>, <Mime-Version: 1.0>, <Content-Type: text/plain>, <Content-Transfer-Encoding: 7bit>>
-irb(main):003:0> MyMailer.welcome('destination_mail@gmail.com').deliver[C[C[C[C[C[C[C[C[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliver[1P').deliverj').delivera').deliverc').d
+]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ git add .
+]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ git add .commit -am "adding emails"
+[master fc8377b] adding emails
+ 10 files changed, 755 insertions(+)
+ create mode 100644 app/mailers/my_mailer.rb
+ create mode 100644 app/mailers/my_mailer.rb~
+ create mode 100644 app/views/my_mailer/welcome.text.haml
+ create mode 100644 app/views/my_mailer/welcome.text.haml~
+ create mode 100644 config/environment.rb~
+ create mode 100644 config/initializers/setup_email.rb
+ create mode 100644 config/initializers/setup_email.rb~
+ create mode 100644 install
+ create mode 100644 spec/fixtures/my_mailer/welcome
+ create mode 100644 spec/mailers/my_mailer_spec.rb
+]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ git pull
+Already up-to-date.
+]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ git push heroku master
+Counting objects: 43, done.
+Compressing objects:   3% (1/26)   Compressing objects:   7% (2/26)   Compressing objects:  11% (3/26)   Compressing objects:  15% (4/26)   Compressing objects:  19% (5/26)   Compressing objects:  23% (6/26)   Compressing objects:  26% (7/26)   Compressing objects:  30% (8/26)   Compressing objects:  34% (9/26)   Compressing objects:  38% (10/26)   Compressing objects:  42% (11/26)   Compressing objects:  46% (12/26)   Compressing objects:  50% (13/26)   Compressing objects:  53% (14/26)   Compressing objects:  57% (15/26)   Compressing objects:  61% (16/26)   Compressing objects:  65% (17/26)   Compressing objects:  69% (18/26)   Compressing objects:  73% (19/26)   Compressing objects:  76% (20/26)   Compressing objects:  80% (21/26)   Compressing objects:  84% (22/26)   Compressing objects:  88% (23/26)   Compressing objects:  92% (24/26)   Compressing objects:  96% (25/26)   Compressing objects: 100% (26/26)   Compressing objects: 100% (26/26), done.
+Writing objects:   3% (1/31)   Writing objects:   6% (2/31)   Writing objects:   9% (3/31)   Writing objects:  12% (4/31)   Writing objects:  16% (5/31)   Writing objects:  19% (6/31)   Writing objects:  22% (7/31)   Writing objects:  25% (8/31)   Writing objects:  29% (9/31)   Writing objects:  32% (10/31)   Writing objects:  35% (11/31)   Writing objects:  38% (12/31)   Writing objects:  41% (13/31)   Writing objects:  45% (14/31)   Writing objects:  48% (15/31)   Writing objects:  51% (16/31)   Writing objects:  54% (17/31)   Writing objects:  58% (18/31)   Writing objects:  61% (19/31)   Writing objects:  64% (20/31)   Writing objects:  67% (21/31)   Writing objects:  70% (22/31)   Writing objects:  74% (23/31)   Writing objects:  77% (24/31)   Writing objects:  80% (25/31)   Writing objects:  83% (26/31)   Writing objects:  87% (27/31)   Writing objects:  90% (28/31)   Writing objects:  93% (29/31)   Writing objects:  96% (30/31)   Writing objects: 100% (31/31)   Writing objects: 100% (31/31), 12.12 KiB, done.
+Total 31 (delta 13), reused 0 (delta 0)
+
+-----> Ruby/Rails app detected
+-----> Installing dependencies using Bundler version 1.3.2
+       Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin --deployment
+       Using rake (10.0.4)
+       Using multi_json (1.7.2)
+       Using activesupport (3.1.0)
+       Using bcrypt-ruby (3.0.1)
+       Using builder (3.0.4)
+       Using i18n (0.6.4)
+       Using activemodel (3.1.0)
+       Using erubis (2.7.0)
+       Using rack (1.3.10)
+       Using rack-cache (1.0.3)
+       Using rack-mount (0.8.3)
+       Using rack-test (0.6.2)
+       Using hike (1.2.1)
+       Using tilt (1.3.6)
+       Using sprockets (2.0.4)
+       Using actionpack (3.1.0)
+       Using mime-types (1.22)
+       Using polyglot (0.3.3)
+       Using treetop (1.4.12)
+       Using mail (2.3.3)
+       Using actionmailer (3.1.0)
+       Using arel (2.2.3)
+       Using tzinfo (0.3.37)
+       Using activerecord (3.1.0)
+       Using activeresource (3.1.0)
+       Using addressable (2.3.3)
+       Using sass (3.2.7)
+       Using bootstrap-sass (2.3.1.0)
+       Using coffee-script-source (1.6.2)
+       Using execjs (1.4.0)
+       Using coffee-script (2.2.0)
+       Using rack-ssl (1.3.3)
+       Using json (1.7.7)
+       Using rdoc (3.12.2)
+       Using thor (0.14.6)
+       Using railties (3.1.0)
+       Using coffee-rails (3.1.1)
+       Using commonjs (0.2.6)
+       Using orm_adapter (0.4.0)
+       Using warden (1.2.1)
+       Using devise (2.2.3)
+       Using haml (4.0.1)
+       Using haml-rails (0.4)
+       Using launchy (2.2.0)
+       Using rest-client (1.6.7)
+       Using rubyzip (0.9.9)
+       Using term-ansicolor (1.0.7)
+       Using heroku (2.8.0)
+       Using jquery-rails (2.2.1)
+       Using less (2.3.1)
+       Using less-rails (2.3.2)
+       Using libv8 (3.11.8.17)
+       Using pg (0.15.0)
+       Using bundler (1.3.2)
+       Using rails (3.1.0)
+       Using ref (1.0.4)
+       Using sass-rails (3.1.7)
+       Using simplecov-html (0.7.1)
+       Using simplecov (0.7.1)
+       Using therubyracer (0.11.4)
+       Using twitter-bootstrap-rails (2.2.6)
+       Using uglifier (1.3.0)
+       Your bundle is complete! It was installed into ./vendor/bundle
+       Cleaning up the bundler cache.
+-----> Writing config/database.yml to read from DATABASE_URL
+-----> Preparing app for Rails asset pipeline
+       Running: rake assets:precompile
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets/twitter/bootstrap
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets/twitter/bootstrap
+       mkdir -p /tmp/build_30nvna5soifhq/public/assets
+       rake aborted!
+       glyphicons-halflings.png isn't precompiled
+       (in /tmp/build_30nvna5soifhq/app/assets/stylesheets/bootstrap_and_overrides.css.scss)
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/helpers/rails_helper.rb:138:in `digest_for'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/helpers/rails_helper.rb:146:in `rewrite_asset_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/action_view/asset_paths.rb:29:in `compute_public_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/helpers/rails_helper.rb:112:in `compute_public_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/action_view/helpers/asset_tag_helper.rb:279:in `image_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-rails-3.1.7/lib/sass/rails/template_handlers.rb:31:in `image_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-rails-3.1.7/lib/sass/rails/helpers.rb:22:in `image_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/script/funcall.rb:106:in `_perform'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/script/node.rb:40:in `perform'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:327:in `visit_variable'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `map'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `map'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `block in visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `map'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:227:in `visit_import'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sass-rails-3.1.7/lib/sass/rails/template_handlers.rb:98:in `evaluate'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/tilt-1.3.6/lib/tilt/template.rb:77:in `render'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/context.rb:175:in `block in evaluate'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/context.rb:172:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/context.rb:172:in `evaluate'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:171:in `build_dependency_context_and_body'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:135:in `dependency_context'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:194:in `build_dependencies_paths_and_assets'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:141:in `dependency_paths'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:61:in `mtime'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:58:in `block in encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:43:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/caching.rb:52:in `cache_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:67:in `block in build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:76:in `memoize'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:65:in `build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:99:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:48:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:110:in `[]'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:200:in `block in build_dependencies_paths_and_assets'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:194:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:194:in `build_dependencies_paths_and_assets'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:141:in `dependency_paths'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:61:in `mtime'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:58:in `block in encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:43:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/caching.rb:52:in `cache_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:67:in `block in build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:76:in `memoize'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:65:in `build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/trail.rb:102:in `find_asset_in_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:101:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:48:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:34:in `block (4 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:151:in `block in each_logical_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:139:in `block (2 levels) in each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:129:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:129:in `each_entry'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:137:in `block in each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:136:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:136:in `each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:149:in `each_logical_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:27:in `block (3 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:26:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:26:in `block (2 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:246:in `call'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:246:in `block in execute'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:241:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:241:in `execute'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:184:in `block in invoke_with_call_chain'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:177:in `invoke_with_call_chain'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:170:in `invoke'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:143:in `invoke_task'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `block (2 levels) in top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `block in top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:110:in `run_with_threads'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:95:in `top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:73:in `block in run'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:160:in `standard_exception_handling'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:70:in `run'
+       Tasks: TOP => assets:precompile
+       (See full trace by running task with --trace)
+       Precompiling assets failed, enabling runtime asset compilation
+       Injecting rails31_enable_runtime_asset_compilation
+       Please see this article for troubleshooting help:
+       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worke5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:58:in `block in encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:43:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/caching.rb:52:in `cache_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:67:in `block in build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:76:in `memoize'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:65:in `build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:99:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:48:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:110:in `[]'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:200:in `block in build_dependencies_paths_and_assets'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:194:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:194:in `build_dependencies_paths_and_assets'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:141:in `dependency_paths'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:61:in `mtime'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:58:in `block in encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/asset.rb:57:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/bundled_asset.rb:43:in `encode_with'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/caching.rb:52:in `cache_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:67:in `block in build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:76:in `memoize'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:65:in `build_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/trail.rb:102:in `find_asset_in_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:101:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/index.rb:48:in `find_asset'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:34:in `block (4 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:151:in `block in each_logical_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:139:in `block (2 levels) in each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:129:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:129:in `each_entry'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:137:in `block in each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:136:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:136:in `each_file'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/sprockets-2.0.4/lib/sprockets/base.rb:149:in `each_logical_path'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:27:in `block (3 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:26:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/actionpack-3.1.0/lib/sprockets/assets.rake:26:in `block (2 levels) in <top (required)>'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:246:in `call'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:246:in `block in execute'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:241:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:241:in `execute'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:184:in `block in invoke_with_call_chain'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:177:in `invoke_with_call_chain'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/task.rb:170:in `invoke'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:143:in `invoke_task'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `block (2 levels) in top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `each'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:101:in `block in top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:110:in `run_with_threads'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:95:in `top_level'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:73:in `block in run'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:160:in `standard_exception_handling'
+       /tmp/build_30nvna5soifhq/vendor/bundle/ruby/1.9.1/gems/rake-10.0.4/lib/rake/application.rb:70:in `run'
+       Tasks: TOP => assets:precompile
+       (See full trace by running task with --trace)
+       Precompiling assets failed, enabling runtime asset compilation
+       Injecting rails31_enable_runtime_asset_compilation
+       Please see this article for troubleshooting help:
+       http://devcenter.heroku.com/articles/rails31_heroku_cedar#troubleshooting
+-----> Rails plugin injection
+       Injecting rails_log_stdout
+       Injecting rails3_serve_static_assets
+-----> Discovering process types
+       Procfile declares types      -> (none)
+       Default types for Ruby/Rails -> console, rake, web, worker
+
+-----> Compiled slug size: 17.7MB
+-----> Launching... done, v7
+       http://immense-atoll-4933.herokuapp.com deployed to Heroku
+
+To git@heroku.com:immense-atoll-4933.git
+   39a72f3..fc8377b  master -> master
+]0;saasbook@saasbook: ~/WutangUnlimitedsaasbook@saasbook:~/WutangUnlimited$ bundel[K[Kle install --without production
+Using rake (10.0.4) 
+Using multi_json (1.7.2) 
+Using activesupport (3.1.0) 
+Using bcrypt-ruby (3.0.1) 
+Using builder (3.0.4) 
+Using i18n (0.6.4) 
+Using activemodel (3.1.0) 
+Using erubis (2.7.0) 
+Using rack (1.3.10) 
+Using rack-cache (1.0.3) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.2) 
+Using hike (1.2.1) 
+Using tilt (1.3.6) 
+U

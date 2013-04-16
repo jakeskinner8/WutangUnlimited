@@ -3,7 +3,11 @@ class HomeController < ApplicationController
   end
 
   def invite
-	MyMailer.welcome('jacob-skinner@uiowa.edu').deliver
+  end
+
+  def sendinvite
+	@email = params[:email]["email"]
+	MyMailer.welcome(@email).deliver
 	flash[:notice] = "Invite(s) Sent!"
 	redirect_to "/home"
   end

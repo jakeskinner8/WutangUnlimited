@@ -1,0 +1,11 @@
+%h1 Invite your friends!!
+
+= form_tag ('/sendinvite') do
+
+  = label :email, :email, 'Email'
+  = text_field :email, 'email'
+
+  = submit_tag 'Send Invite(s)'
+
+
+
