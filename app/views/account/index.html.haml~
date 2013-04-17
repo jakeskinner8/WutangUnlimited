@@ -1,0 +1,25 @@
+%div{:style=>"text-align:center"}
+  %h1{:style=>"text-align:center"} Invite your friends!
+  %h5{:style=>"text-align:center"} Separate by commas if sending more than one.
+  = form_tag ('/savesettings') do
+    %div{:style=>"display:inline-block; width:125px;text-align:right"}
+      =label :email, :email, 'Email'
+    %div{:style=>"display:inline-block"}
+      =text_field :email, 'email'
+    %br
+    %div{:style=>"display:inline-block;width:150px;text-align:right"}
+      =label :password, :password, 'Password'
+    %div{:style=>"display:inline-block"}
+      =text_field :password, 'password'
+    %br
+    %div{:style=>"display:inline-block;width:150px;text-align:right"}
+      =label :new_password, :new_password, 'New Password'
+    %div{:style=>"display:inline-block"}
+      =text_field :new_password, 'new_password'
+    %br
+    %div{:style=>"display:inline-block;width:150px;text-align:right"}
+      =label :confirm_password, :confirm_password, 'Confirm Password'
+    %div{:style=>"display:inline-block"}
+      =text_field :confirm_password, 'confirm_password'
+    %br
+    =submit_tag 'Save'

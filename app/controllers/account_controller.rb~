@@ -1,0 +1,6 @@
+class AccountController < ApplicationController
+  def savesettings
+	flash[:notice] = "Nothing done here!"
+	redirect_to "/home"
+  end
+end
