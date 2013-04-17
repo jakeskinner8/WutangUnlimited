@@ -1,0 +1,9 @@
+.accLabel{
+  display:inline-block; 
+  width:125px;
+  text-align:right; 
+  margin-left:-50px;
+}
+.accField{
+ display:inline-block
+}

@@ -1,27 +1,29 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
+
 -if(session[:votingOn] == "Teachers" || session[:votingOn] == nil)
   %div{:style => "text-align: center"}
     =link_to "Click to vote for classes", "vote-classes"
   
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
   %div{:style=>"text-align:center;vertical-align:top"}
-    %div{:style => "display:inline-block;width:20%;vertical-align:top"}
+    %div{:class=>"profImage"}
       =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt =>"#{@random[0].id}"), "/votes/#{@random[0].id}"
       %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
-    %div{:style => "display:inline-block; width:30%;margin-top:10%;vertical-align:top;"} 
+    %div{:class=>"skip1"} 
       =button_to 'Skip', "/votes/S" , :method => :get
-    %div{:style => "display: inline-block;width:20%;vertical-align:top"}
+    %div{:class=>"profImage"}
       =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt =>"#{@random[0].id}"), "/votes/#{@random[1].id}"
       %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
 
 
 -else
-  %div{:style => "margin:0 auto; border: 1px solid black;"}
+  %div{:style => "text-align:center"}
     =link_to "Click to vote for teachers", "vote-teachers"
   %h3{:style => "text-align:center"} Which course would you recommend others to take?
   %div{:style => "text-align:center"}
-    %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top;"}
+    %div{:class=>"classVote"}
       %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", "/votes/#{@random[0].id}"
-    %div{:style => "display:inline-block;margin-left:50px;margin-top:5%;margin-right:50px;"} 
+    %div{:class=>"skip2"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top"}
       %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"

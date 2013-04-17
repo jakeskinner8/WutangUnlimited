@@ -1,24 +1,26 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
+
 %div{:style=>"text-align:center;"}
   %h1{:style=>"text-align:center"} Account Information
   = form_tag ('/savesettings') do
-    %div{:style=>"display:inline-block; width:125px;text-align:right; margin-left:-50px;"}
+    %div{:class=>'accLabel'}
       =label :email, :email, 'Email'
-    %div{:style=>"display:inline-block"}
+    %div{:class=>'accField'}
       =text_field :email, 'email'
     %br
-    %div{:style=>"display:inline-block;width:125px;text-align:right; margin-left:-50px;"}
+    %div{:class=>'accLabel'}
       =label :password, :password, 'Password'
-    %div{:style=>"display:inline-block"}
+    %div{:class=>'accField'}
       =text_field :password, 'password'
     %br
-    %div{:style=>"display:inline-block;width:125px;text-align:right; margin-left:-50px;"}
+    %div{:class=>'accLabel'}
       =label :new_password, :new_password, 'New Password'
-    %div{:style=>"display:inline-block"}
+    %div{:class=>'accField'}
       =text_field :new_password, 'new_password'
     %br
-    %div{:style=>"display:inline-block;width:125px;text-align:right; margin-left:-50px;"}
+    %div{:class=>'accLabel'}
       =label :confirm_password, :confirm_password, 'Confirm Password'
-    %div{:style=>"display:inline-block"}
+    %div{:class=>'accField'}
       =text_field :confirm_password, 'confirm_password'
     %br
     %div{:style => "margin-right: 20px; display:inline-block;"}
