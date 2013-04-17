@@ -1,7 +1,5 @@
  <style type="text/css">
-
       /* Main marketing message and sign up button */
-
       .jumbotron {
         margin: 40px 0;
         text-align: center;
@@ -22,16 +20,11 @@
       }
 
     </style>
-   
-
-
-
 <div class="jumbotron">
    <h1>Teacher of The Month</h1>
 	<p class="lead">Teacher pic and info go here</p>
-        <a class="btn btn-large btn-inverse" href="#">View Teacher's Bio</a>
+        <a class="btn btn-large btn-success" href="#">View Teacher's Bio</a>
       </div>
-
 <hr>
       <!-- Example row of columns -->
       <div class="row-fluid">
@@ -51,5 +44,4 @@
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
-
       <hr>

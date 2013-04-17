@@ -1,6 +1,5 @@
 %div{:style=>"text-align:center"}
   %h1{:style=>"text-align:center"} Invite your friends!
-
   %h5{:style=>"text-align:center"} Separate by commas if sending more than one.
   = form_tag ('/sendinvite') do
     %div{:style=>"display:inline-block"}

@@ -23,6 +23,7 @@ end
   # Sample resource route (maps HTTP verbs to controller actions automatically):
      resources :professors
      resources :votes
+     resources :invite
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
      match 'invite' => 'home#invite'
