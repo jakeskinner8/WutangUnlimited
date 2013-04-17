@@ -5,6 +5,7 @@ class VotesController < ApplicationController
     if(!@current_use)
 	flash[:notice] = "You must be logged in to view this page."
     end
+   
     redirect_to '/home' and return unless @current_use
   end 
 

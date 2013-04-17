@@ -5,11 +5,14 @@ class InviteController < ApplicationController
     if(!@current_use)
 	flash[:notice] = "You must be logged in to view this page."
     end
+	
     redirect_to '/home' and return unless @current_use
   end 
+  def invite
+  end
   def sendinvite
 	@email = params[:email]["email"].split(",").each do |email|
-	  MyMailer.welcome(email).deliver
+	  MyMailer.welcome(email,@current_use.email).deliver
 	end
 	flash[:notice] = "Invite(s) Sent!"
 	redirect_to "/home"
