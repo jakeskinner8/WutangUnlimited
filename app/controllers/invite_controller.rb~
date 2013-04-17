@@ -5,7 +5,6 @@ class InviteController < ApplicationController
     if(!@current_use)
 	flash[:notice] = "You must be logged in to view this page."
     end
-    flash[:notice] = "I'm a poopy face."
     redirect_to '/home' and return unless @current_use
   end 
   def sendinvite

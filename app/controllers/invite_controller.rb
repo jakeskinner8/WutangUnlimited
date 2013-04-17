@@ -7,6 +7,8 @@ class InviteController < ApplicationController
     end
     redirect_to '/home' and return unless @current_use
   end 
+  def invite
+  end
   def sendinvite
 	@email = params[:email]["email"].split(",").each do |email|
 	  MyMailer.welcome(email).deliver
