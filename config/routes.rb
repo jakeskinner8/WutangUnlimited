@@ -24,10 +24,12 @@ end
      resources :professors
      resources :votes
      resources :invite
+     resources :account
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
      match 'invite' => 'invite#invite'
      match 'sendinvite' => 'invite#sendinvite'
+     match 'savesettings' => 'account#savesettings'
   # Sample resource route with options:
   #   resources :products do
   #     member do

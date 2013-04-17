@@ -53,8 +53,6 @@
             <ul class="nav pull-left">
               <li><%= link_to "About", "/about"  %></li>
                  <li class="divider-vertical"></li>
-              <li><%= link_to "Contact Us", ""  %></li>
-                 <li class="divider-vertical"></li>
      	      <li><%= link_to "Teacher Bios", "/professors"  %></li>
                  <li class="divider-vertical"></li>
 	      <li><%= link_to "Voting", "/votes"  %></li>
@@ -68,7 +66,7 @@
 	   <ul class="nav pull-right">
 	     <% if user_signed_in? %>
 		<% a = current_user.email %>
-		<li style="color:white; padding-top:12px; font-size:14px;">Signed in As : <%= a[0..16] %></li>
+		<li style="color:white; font-size:14px"><a href="/account"><%= a %></a></li>
 		<li><%= link_to "Sign Out", destroy_user_session_path  %></li>
              <% else %>
 		<li><%= link_to "Sign Up", new_user_registration_path  %></li>

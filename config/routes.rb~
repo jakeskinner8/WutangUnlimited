@@ -27,7 +27,8 @@ end
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
      match 'invite' => 'invite#invite'
-     match 'sendinvite' => 'home#sendinvite'
+     match 'sendinvite' => 'invite#sendinvite'
+     match 'savesettings' => 'account#savesettings'
   # Sample resource route with options:
   #   resources :products do
   #     member do
