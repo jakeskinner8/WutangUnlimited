@@ -4,8 +4,6 @@ class VotesController < ApplicationController
     @current_use = user_signed_in? 
     if(!@current_use)
 	flash[:notice] = "You must be logged in to view this page."
-    else
-	@current_use = current_user.email
     end
    
     redirect_to '/home' and return unless @current_use
@@ -44,5 +42,9 @@ class VotesController < ApplicationController
   def classes
 	session[:votingOn] = "Classes"
 	redirect_to votes_path
+  end
+  def history
+    flash[:notice] = "This is a test."
+    
   end
 end

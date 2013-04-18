@@ -30,6 +30,7 @@ end
      match 'invite' => 'invite#invite'
      match 'sendinvite' => 'invite#sendinvite'
      match 'savesettings' => 'account#savesettings'
+     match 'history' => 'votes#history'
   # Sample resource route with options:
   #   resources :products do
   #     member do

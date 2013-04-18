@@ -43,4 +43,7 @@ class VotesController < ApplicationController
 	session[:votingOn] = "Classes"
 	redirect_to votes_path
   end
+  def history
+    
+  end
 end

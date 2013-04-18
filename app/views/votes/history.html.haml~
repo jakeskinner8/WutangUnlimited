@@ -1,0 +1,7 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
+
+%h1{:style=>"text-align:center"} Voting history
+%ul{:style=>"text-align:center"}
+  %li You voted for Teacher1 over Teacher2 when it comes to Category1
+  %li You voted for Teacher3 over Teacher4 when it comes to Category2
+  %li You voted for Teacher5 over Teacher6 when it comes to Category3
