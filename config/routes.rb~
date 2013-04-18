@@ -25,13 +25,14 @@ end
      resources :votes
      resources :invite
      resources :account
-     resources :history
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
      match 'invite' => 'invite#invite'
      match 'sendinvite' => 'invite#sendinvite'
      match 'savesettings' => 'account#savesettings'
      match 'history' => 'votes#history'
+     match 'teachers' => 'home#teachers'
+     match 'classes' => 'home#faveclass'
   # Sample resource route with options:
   #   resources :products do
   #     member do

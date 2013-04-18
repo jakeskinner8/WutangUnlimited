@@ -1,0 +1,8 @@
+%h1{:style=>"text-align:center"} Top 5 Rated Professors
+
+%ul{:style=>"text-align:center"}
+  %li{:class=>"listitem"} First, last, department
+  %li{:class=>"listitem"} First, last, department
+  %li{:class=>"listitem"} First, last, department
+  %li{:class=>"listitem"} First, last, department
+  %li{:class=>"listitem"} First, last, department

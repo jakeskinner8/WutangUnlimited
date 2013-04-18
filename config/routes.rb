@@ -31,6 +31,8 @@ end
      match 'sendinvite' => 'invite#sendinvite'
      match 'savesettings' => 'account#savesettings'
      match 'history' => 'votes#history'
+     match 'teachers' => 'home#teachers'
+     match 'classes' => 'home#classes'
   # Sample resource route with options:
   #   resources :products do
   #     member do
