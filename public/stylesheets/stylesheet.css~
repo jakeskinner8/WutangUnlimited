@@ -30,3 +30,6 @@
   width:150px;
   vertical-align:top;
 }
+.listitem{
+  list-style-type:none;
+}

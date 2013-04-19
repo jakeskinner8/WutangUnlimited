@@ -32,7 +32,7 @@ end
      match 'savesettings' => 'account#savesettings'
      match 'history' => 'votes#history'
      match 'teachers' => 'home#teachers'
-     match 'classes' => 'home#classes'
+     match 'courses' => 'home#courses'
   # Sample resource route with options:
   #   resources :products do
   #     member do
