@@ -25,7 +25,7 @@
       %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", "/votes/#{@random[0].id}"
     %div{:class=>"skip2"} 
       =button_to 'Skip', "/votes/S" , :method => :get
-    %div{:style => "display:inline-block;margin-top:5%;width:150px;vertical-align:top"}
+    %div{:class=>"classVote"}
       %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"
 
 

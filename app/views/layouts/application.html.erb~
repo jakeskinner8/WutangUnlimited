@@ -8,6 +8,9 @@
     <title><%= content_for?(:title) ? yield(:title) : "ProfMash" %></title>
     <%= csrf_meta_tags %>
     <style type="text/css">
+      body{
+        min-width:1100px;
+      }
     </style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -68,7 +71,7 @@
 		<li><%= link_to "Sign Out", destroy_user_session_path  %></li>
              <% else %>
 		<li><%= link_to "Sign Up", new_user_registration_path  %></li>
-		<li style="float:right"><%= link_to "Sign in", new_user_session_path %></li>
+		<li style=""><%= link_to "Sign in", new_user_session_path %></li>
              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
@@ -84,7 +87,7 @@
         </div>
       </div><!--/row-->
 
-      <footer>
+      <footer style="text-align:center">
         <p>&copy; Wutang Unlimited</p>
       </footer>
 
