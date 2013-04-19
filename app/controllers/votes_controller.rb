@@ -46,4 +46,8 @@ class VotesController < ApplicationController
   def history
     
   end
+
+  def generalhistory
+
+  end
 end
