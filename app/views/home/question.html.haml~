@@ -2,4 +2,4 @@
 %h1{:style => "text-align:center;"} About ProfMash
 
 %div{:class => "jumbotron"}
-  %h3{:style => "text-align: center"} I like to eat boogers.
+  %h3{:style => "text-align: center"} I like eating boogers

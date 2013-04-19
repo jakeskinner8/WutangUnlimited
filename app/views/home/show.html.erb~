@@ -41,7 +41,7 @@
         <div class="span4">
           <h2>Favorite Courses</h2>
           <p>Here is the list of the top 5 rated courses</p>
-          <p><a class="btn" href="classes">View details &raquo;</a></p>
+          <p><a class="btn" href="courses">View details &raquo;</a></p>
         </div>
       </div>
 <hr>

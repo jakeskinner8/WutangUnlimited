@@ -34,6 +34,7 @@ end
      match 'generalhistory' => 'votes#generalhistory'
      match 'teachers' => 'home#teachers'
      match 'courses' => 'home#courses'
+     match 'question' => 'home#question'
   # Sample resource route with options:
   #   resources :products do
   #     member do
