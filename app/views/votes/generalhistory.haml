@@ -1,0 +1,18 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
+
+%h1{:style=>"text-align:center"} Overall Voting Results
+%ul{:style=>"text-align:center"}
+
+%table#results
+  %thead
+    %tr
+      %th Professor
+      %th Wins
+      %th Appearances
+  %tbody
+    - Professor.all.each do |prof|
+      %tr
+        %td= "#{prof.first_name} #{prof.last_name}"
+        %td= 0
+        %td= 0
+

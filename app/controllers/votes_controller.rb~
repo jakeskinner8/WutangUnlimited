@@ -44,7 +44,10 @@ class VotesController < ApplicationController
 	redirect_to votes_path
   end
   def history
-    flash[:notice] = "This is a test."
     
+  end
+
+  def generalhistory
+
   end
 end
