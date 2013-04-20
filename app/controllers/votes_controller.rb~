@@ -58,7 +58,16 @@ Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winp
   end
 
   def generalhistory
-	@top5 = Professor.find(:all,:order=>'wins desc')
+	if(params[:sort].to_s == "name") 
+		@top5 = Professor.find(:all,:order=>'last_name desc')
+	elsif(params[:sort].to_s == "wins") 
+		@top5 = Professor.find(:all,:order=>'wins desc')
+	elsif(params[:sort].to_s == "appearances") 
+		@top5 = Professor.find(:all,:order=>'appearances desc')
+	else
+		@top5 = Professor.find(:all,:order=>'winpercentage desc')
+	end
+
   end
 
   def topProfs

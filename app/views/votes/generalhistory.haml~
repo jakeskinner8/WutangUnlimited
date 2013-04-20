@@ -6,15 +6,15 @@
 %table{:class => "table"}
   %thead
     %tr
-      %th Professor
-      %th Wins
-      %th Appearances
-      %th= link_to 'Win Percentage(%)', votes_generalhistory(:sort => 'winpercentage')
+      %th= link_to 'Professor', generalhistory_path(:sort => 'name')
+      %th= link_to 'Wins', generalhistory_path(:sort => 'wins')
+      %th= link_to 'Appearances', generalhistory_path(:sort => 'appearances')
+      %th= link_to 'Win Percentage(%)', generalhistory_path(:sort => 'winpercentage')
   %tbody
     - @top5.each do |prof|
       %tr
-        %td= link_to "#{prof.first_name} #{prof.last_name}", "professors/#{prof.id}"
+        %td= link_to "#{prof.last_name},#{prof.first_name} ", "professors/#{prof.id}"
         %td= prof.wins
         %td= prof.appearances
-        %td= prof.winpercentage
+        %td= number_with_precision(prof.winpercentage, :precision => 2)
 
