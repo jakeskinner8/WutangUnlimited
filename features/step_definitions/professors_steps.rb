@@ -89,7 +89,7 @@ When(/^I click an image$/) do
   Professor.all.each do |y|
 	temp |= page.all("img[@alt='#{y.id}']")
 	if(temp)
-		visit "votes/#{y.id}"
+		visit "votes/#{y.id}?loser=#{y.id}"
 	end
   end
 end

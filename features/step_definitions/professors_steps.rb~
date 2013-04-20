@@ -89,7 +89,7 @@ When(/^I click an image$/) do
   Professor.all.each do |y|
 	temp |= page.all("img[@alt='#{y.id}']")
 	if(temp)
-		visit "votes/#{y.id}"
+		visit "votes/#{y.id}?loser=#{y.id}"
 	end
   end
 end
@@ -107,7 +107,7 @@ When(/^I am on the invite page$/) do
 end
 
 When(/^I fill in "(.*?)" into the email$/) do |arg1|
-  fill_in 'email', :with => arg1
+  fill_in 'Emails', :with => arg1
   click_button 'Send Invite(s)'
 end
 
