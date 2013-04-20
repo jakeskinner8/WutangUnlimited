@@ -1,5 +1,5 @@
  <style type="text/css">
-     
+
       .jumbotron {
         margin: 40px 0;
         text-align: center;
@@ -41,14 +41,29 @@
                </table></p><a class="btn" href="results">View results</a>
         </div>
         <div class="span4">
-          <h2>Favorite Teachers</h2>
-          <p>Here is the list of the top 5 rated teachers </p>
-          <p><a class="btn" href="teachers">View details &raquo;</a></p>
+          <h2>Top Ranked Teachers</h2>
+          <p>Here is the list of the top 5 teachers </p>
+          <ol> 
+
+               <% @top5professors.each do |a| %>
+               <li>
+                 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
+               </li>
+		<% end %>
+               </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
+	 
        </div>
         <div class="span4">
-          <h2>Favorite Courses</h2>
-          <p>Here is the list of the top 5 rated courses</p>
-          <p><a class="btn" href="courses">View details &raquo;</a></p>
-        </div>
+                 <h2>Top Ranked Courses</h2>
+          <p>Here is the list of the top 5 courses</p>
+          <p><ol> 
+
+               <% @top5courses.each do |a| %>
+               <li>
+                 <%= a.course_name %>
+               
+		  </li>
+		<% end %>
+               </ol></p><a class="btn" href="generalhistoryclasses">More Results</a>
       </div>
 <hr>

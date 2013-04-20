@@ -1,8 +1,7 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 %h1{:style=>"text-align:center"} Top 5 Rated Professors
 
 %ul{:style=>"text-align:center"}
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
+  - @top5.each do |prof|
+  %li "#{prof.first_name}"
+

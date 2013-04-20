@@ -1,9 +1,10 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 %h1{:style=>"text-align:center"} Top 5 Rated Professors
+-#  This file is app/views/movies/index.html.haml
+%table#table{ :class => "table",:style => "width:15%;float:left; " }
+  %tbody
+    - @top5.each do |professor|
+      %tr
+        %td= link_to "#{professor.first_name} #{professor.last_name}", professor_path(professor)
 
-%ul{:style=>"text-align:center"}
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
-  %li{:class=>"listitem"} First, last, department
+

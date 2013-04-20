@@ -1,5 +1,4 @@
 -#  This file is app/views/movies/index.html.haml
-%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 %table#table{ :class => "table",:style => "width:15%;float:left; " }
   %tbody
     - @professors.each do |professor|
