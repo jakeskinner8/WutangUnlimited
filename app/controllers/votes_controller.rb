@@ -37,6 +37,16 @@ class VotesController < ApplicationController
 Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
 			flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
+
+		wins = Course.find(params[:id]).wins + 1
+		appearances = Course.find(params[:id]).appearances + 1
+		winpercentage = wins.to_f / appearances.to_f * 100
+		Course.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
+
+		wins = Course.find(params[:loser]).wins
+		appearances = Course.find(params[:loser]).appearances + 1
+		winpercentage = wins.to_f / appearances.to_f * 100
+Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
 			flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
 		end	
 	end
@@ -70,7 +80,15 @@ Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winp
   end
 
   def generalhistoryclasses
-	
+	if(params[:sort].to_s == "name") 
+		@top5 = Course.find(:all,:order=>'course_name asc')
+	elsif(params[:sort].to_s == "wins") 
+		@top5 = Course.find(:all,:order=>'wins desc')
+	elsif(params[:sort].to_s == "appearances") 
+		@top5 = Course.find(:all,:order=>'appearances desc')
+	else
+		@top5 = Course.find(:all,:order=>'winpercentage desc')
+	end
   end
 
   def topProfs

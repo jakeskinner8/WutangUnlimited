@@ -4,5 +4,17 @@
 %ul{:style=>"text-align:center"}
 
 %table{:class => "table"}
-
+  %thead
+    %tr
+      %th= link_to 'Course', generalhistoryclasses_path(:sort => 'name')
+      %th= link_to 'Wins', generalhistoryclasses_path(:sort => 'wins')
+      %th= link_to 'Appearances', generalhistoryclasses_path(:sort => 'appearances')
+      %th= link_to 'Win Percentage(%)',generalhistoryclasses_path(:sort => 'winpercentage')
+  %tbody
+    - @top5.each do |course|
+      %tr
+        %td= course.course_name
+        %td= course.wins
+        %td= course.appearances
+        %td= number_with_precision(course.winpercentage, :precision => 2)
 
