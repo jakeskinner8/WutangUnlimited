@@ -16,5 +16,5 @@
         %td= link_to "#{prof.first_name} #{prof.last_name}", "professors/#{prof.id}"
         %td= prof.wins
         %td= prof.appearances
-        %td= prof.winpercentage
+        %td= number_with_precision(prof.winpercentage, :precision => 2)
 
