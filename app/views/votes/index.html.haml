@@ -7,12 +7,12 @@
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
   %div{:style=>"text-align:center;vertical-align:top"}
     %div{:class=>"profImage"}
-      =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt =>"#{@random[0].id}"), "/votes/#{@random[0].id}"
+      =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt =>"#{@random[0].id}"), vote_path(@random[0].id, :loser=>@random[1].id)
       %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
     %div{:class=>"skip1"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:class=>"profImage"}
-      =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt =>"#{@random[0].id}"), "/votes/#{@random[1].id}"
+      =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt =>"#{@random[1].id}"), vote_path(@random[1].id, :loser=>@random[0].id)
       %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
 
 

@@ -25,6 +25,11 @@ class VotesController < ApplicationController
 		flash[:notice] = "You skipped the previous question."
 	else
 		if(session[:votingOn].to_s == "Teachers")
+
+Professor.find(params[:id]).update_attributes(:wins=> Professor.find(params[:id]).wins + 1)
+Professor.find(params[:id]).update_attributes(:appearances=> Professor.find(params[:id]).appearances + 1)
+
+Professor.find(params[:loser]).update_attributes(:appearances=> Professor.find(params[:loser]).appearances + 1)
 			flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
 			flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
