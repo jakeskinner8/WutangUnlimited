@@ -3,7 +3,7 @@
 %h1{:style=>"text-align:center"} Overall Voting Results
 %ul{:style=>"text-align:center"}
 
-%table#results
+%table#results {:class => "table"}
   %thead
     %tr
       %th Professor
