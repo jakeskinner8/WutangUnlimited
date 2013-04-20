@@ -58,9 +58,36 @@
                  <li class="divider-vertical"></li>
      	      <li><%= link_to "Teacher Bios", "/professors"  %></li>
                  <li class="divider-vertical"></li>
-	      <li><%= link_to "Voting", "/votes"  %></li>
+
+		<li class="dropdown" id="votingtab">
+		<a class="dropdown-toggle" id="drop2" role="button" data-toggle="dropdown" href="#">Voting <b class="caret"></b></a>	
+		<ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+	      <li role="presentation"><%= link_to "Vote Teachers", "/vote-teachers"  %></li>
+	      <li role="presentation"><%= link_to "Vote Classes", "/vote-classes"  %></li>
+		</ul>
+	       </li>
 	         <li class="divider-vertical"></li>
-	      <li><%= link_to "History", "/history"  %></li>
+
+	   <li class="dropdown" id="historytab">
+		<a class="dropdown-toggle" id="drop2" role="button" data-toggle="dropdown" href="#">History <b class="caret"></b></a>	
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+	            <li class="dropdown-submenu" id="subtab1">
+		       <a class="dropdown-toggle" id="drop3" role="button" data-toggle="dropdown" href="#">My Votes</a>	
+		         <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+		            <li role="presentation"><%= link_to "Classes", "/generalhistory"  %></li>
+		            <li role="presentation"><%= link_to "Teachers", "/generalhistory"  %></li>
+		         </ul>
+		    </li>
+	            <li class="dropdown-submenu" id="subtab2">
+		       <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Others Votes</a>	
+		         <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
+		            <li role="presentation"><%= link_to "Classes", "/generalhistory"  %></li>
+		            <li role="presentation"><%= link_to "Teachers", "/generalhistory"  %></li>
+		        </ul>
+	            </li>
+		  </ul>
+	   </li>
+
                  <li class="divider-vertical"></li>
 	      <form class="navbar-search pull-left">
  	          <input type="text" class="search-query" placeholder="Search">
