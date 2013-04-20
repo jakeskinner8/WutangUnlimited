@@ -5,7 +5,8 @@ class HomeController < ApplicationController
   end
   def invite
   end
-  def faveprof
+  def teachers
+    @top5 = Professor.find(:all,:order=>'winpercentage desc').take(5)
   end
   def faveclass
   end
