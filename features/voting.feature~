@@ -39,14 +39,14 @@ Scenario: Skip a vote from class voting page
 When I am on login page
 And I fill email with "student1@uiowa.edu" and password with "password"
 And I am on the class voting page
-When I click button Skip
+When I click button "Skip"
 Then I should see "You skipped the previous question."
 
 Scenario: Skip a vote from teacher voting page
 When I am on login page
 And I fill email with "student1@uiowa.edu" and password with "password"
 And I am on the teacher voting page
-When I click button Skip
+When I click button "Skip"
 Then I should see "You skipped the previous question."
 
 

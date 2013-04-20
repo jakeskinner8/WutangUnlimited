@@ -11,9 +11,9 @@ Given the following users have registered into the Teacher Quality Rating System
 | student1@uiowa.edu          | password     |
 
 Given the following professors have been enterened into the Teacher Quality Rating System:
-| first_name	| last_name	|email          	|image_path	|
-| onef     	| onel   	|onef-onel@uiowa.edu	|path1		|
-| twof     	| twol   	|twof-twol@uiowa.edu	|path2		|
+| first_name	| last_name	|email          	|image_path	|wins	|appearances|
+| onef     	| onel   	|onef-onel@uiowa.edu	|path1		|0	|0	    |
+| twof     	| twol   	|twof-twol@uiowa.edu	|path2		|0      |0          |
 
 Given the following courses have been enterened into the Teacher Quality Rating System:
 | course_name	| 
