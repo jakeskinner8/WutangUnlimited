@@ -78,11 +78,11 @@
 		            <li role="presentation"><%= link_to "Teachers", "/generalhistory"  %></li>
 		         </ul>
 		    </li>
-	            <li class="dropdown-submenu" id="subtab2"></li>
+	            <li class="dropdown-submenu" id="subtab2">
 		       <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Others Votes</a>	
 		         <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
-		            <li role="presentation"><%= link_to "Classes", "/generalhistory"  %></li>
-		            <li role="presentation"><%= link_to "Teachers", "/generalhistory"  %></li>
+		            <li role="presentation"><%= link_to "Classes", "/generalhistoryclasses"  %></li>
+		            <li role="presentation"><%= link_to "Teachers", "/generalhistoryprofessors"  %></li>
 		        </ul>
 	            </li>
 		  </ul>
