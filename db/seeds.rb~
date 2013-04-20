@@ -59,16 +59,16 @@ end
 
 
 courses=[
-{:course_name => 'Embedded Systems', :course_number => 'CourseNumber1'},
-{:course_name => 'SELT', :course_number => 'CourseNumber2'},
-{:course_name => 'Electronic Circuits', :course_number => 'CourseNumber3'},
-{:course_name => 'Introduction to Software Design', :course_number => 'CourseNumber4'},
-{:course_name => 'Computers In Engineering', :course_number => 'CourseNumber5'},
-{:course_name => 'Testing Digital Logic Circuits', :course_number => 'CourseNumber6'},
-{:course_name => 'Computer Architecture', :course_number => 'CourseNumber7'},
-{:course_name => 'PEI', :course_number => 'CourseNumber8'},
-{:course_name => 'Senior Design', :course_number => 'CourseNumber9'},
-{:course_name => 'Fundamentals of Software Engineering', :course_number => 'CourseNumber10'}
+{:course_name => 'Embedded Systems', :course_number => 'CourseNumber1' ,:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'SELT', :course_number => 'CourseNumber2',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Electronic Circuits', :course_number => 'CourseNumber3',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Introduction to Software Design', :course_number => 'CourseNumber4',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Computers In Engineering', :course_number => 'CourseNumber5',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Testing Digital Logic Circuits', :course_number => 'CourseNumber6',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Computer Architecture', :course_number => 'CourseNumber7',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'PEI', :course_number => 'CourseNumber8',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Senior Design', :course_number => 'CourseNumber9',:wins=>0,:appearances=>0,:winpercentage=>0.0},
+{:course_name => 'Fundamentals of Software Engineering', :course_number => 'CourseNumber10',:wins=>0,:appearances=>0,:winpercentage=>0.0}
 ]
 
 courses.each do |c|
