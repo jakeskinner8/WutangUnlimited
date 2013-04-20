@@ -1,0 +1,6 @@
+class ResultsController < ActionController::Base
+  def evaluation
+	@professors = Professor.all
+	@selected = Professor.find(params[:id])
+  end
+end

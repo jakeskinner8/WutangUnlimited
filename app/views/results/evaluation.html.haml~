@@ -1,0 +1,21 @@
+-#  This file is app/views/movies/index.html.haml
+%table#table{ :class => "table",:style => "width:15%;float:left; " }
+  %tbody
+    - @professors.each do |professor|
+      %tr
+        %td= link_to "#{professor.first_name} #{professor.last_name}", professor_path(professor)
+
+%div{:class => "span2", :style => "width:70%;float:left;margin-left:5%;text-align:center"}
+  %h3{ :style =>"text-align:center"} #{@selected.first_name} #{@selected.last_name}
+  %img(src="#{@selected.image_path}"){ :style => "width:30%;margin-bottom:20px;"}
+  %div
+  %div
+  %table{:class =>"table"}
+    %tbody
+      %tr
+        %td Email: #{@selected.email}
+      %tr
+        %td Phone: #{@selected.phone}
+      %tr
+        %td Education: #{@selected.education}
+  
