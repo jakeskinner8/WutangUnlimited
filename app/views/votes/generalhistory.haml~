@@ -16,5 +16,5 @@
         %td= "#{prof.first_name} #{prof.last_name}"
         %td= prof.wins
         %td= prof.appearances
-        %td= (prof.appearances > 0 ? prof.wins.to_f/prof.appearances.to_f*100 : 0.0 )
+        %td= prof.winpercentage
 

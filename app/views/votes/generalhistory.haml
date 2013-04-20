@@ -16,5 +16,5 @@
         %td= "#{prof.first_name} #{prof.last_name}"
         %td= prof.wins
         %td= prof.appearances
-        %td= prof.winpercentage
+        %td= number_with_precision(prof.winpercentage, :precision => 2)
 
