@@ -14,7 +14,7 @@
 }
 .skip1{
   display:inline-block; 
-  width:30%;
+  width:50%;
   margin-top:10%;
   vertical-align:top;
 }
@@ -33,4 +33,5 @@
 .listitem{
   list-style-type:none;
   margin-left:-30px;
+  font-size:14pt;
 }
