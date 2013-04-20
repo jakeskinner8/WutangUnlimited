@@ -84,3 +84,56 @@ categories=[
 categories.each do |ct|
   Categorie.create!(ct)
 end
+
+
+
+questions=[
+{:question => 'What is your favorite place of study?'},
+{:question => 'Do you like this website?'},
+{:question => 'How many hours do you study daily?'},
+{:question => 'Which flower do you like the most?'},
+{:question => 'What is your major?'},
+{:question => 'Which sport do you like the most?'},
+{:question => 'How many hours do you spend time in the library per month?'},
+{:question => 'Do you like programming?'}
+]
+
+questions.each do |q|
+  Question.create!(q)
+end
+
+
+
+answers=[
+{:Question_id => 1, :answers => 'Library'},
+{:Question_id => 1, :answers => 'Home'},
+{:Question_id => 1, :answers => 'John Deere Plaza'},
+{:Question_id => 1, :answers => 'Other'},
+{:Question_id => 2, :answers => 'Yes'},
+{:Question_id => 2, :answers => 'No'},
+{:Question_id => 3, :answers => '5'},
+{:Question_id => 3, :answers => '6'},
+{:Question_id => 3, :answers => '7'},
+{:Question_id => 3, :answers => '8'},
+{:Question_id => 3, :answers => 'Other'},
+{:Question_id => 4, :answers => 'Rose'},
+{:Question_id => 4, :answers => 'Lotus'},
+{:Question_id => 4, :answers => 'Other'},
+{:Question_id => 5, :answers => 'Computer Science'},
+{:Question_id => 5, :answers => 'Engineering'},
+{:Question_id => 5, :answers => 'Other'},
+{:Question_id => 6, :answers => 'Tennis'},
+{:Question_id => 6, :answers => 'Baseball'},
+{:Question_id => 6, :answers => 'Other'},
+{:Question_id => 7, :answers => '5'},
+{:Question_id => 7, :answers => '6'},
+{:Question_id => 7, :answers => '7'},
+{:Question_id => 7, :answers => '8'},
+{:Question_id => 7, :answers => 'Other'},
+{:Question_id => 8, :answers => 'Yes'},
+{:Question_id => 8, :answers => 'No'}
+]
+
+answers.each do |a|
+  Answer.create!(a)
+end

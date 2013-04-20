@@ -28,10 +28,17 @@
 <hr>
       <!-- Example row of columns -->
       <div class="row-fluid">
-        <div class="span4">
-          <h2>Question of The Day</h2>
-          <p>How many letters are there in the alphabet? </p>
-          <p><a class="btn" href="question">View details &raquo;</a></p>
+       <div class="span4">
+          <h2>Users Poll</h2>
+          <p><%= @randomquestion[0].question %> </p>
+          <p><table> 
+               <tr>
+               <% @answer.each do |a| %>
+                 <td><%= radio_button_tag "answer", a.answers %></td>
+                 <td><%= a.answers %></td>
+               <% end %>
+                </tr>
+               </table></p><a class="btn" href="results">View results</a>
         </div>
         <div class="span4">
           <h2>Favorite Teachers</h2>

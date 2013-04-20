@@ -9,4 +9,6 @@ class HomeController < ApplicationController
   end
   def faveclass
   end
+  def question
+  end
 end
