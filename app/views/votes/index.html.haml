@@ -18,11 +18,11 @@
   %h3{:style => "text-align:center"} Which course would you recommend others to take?
   %div{:style => "text-align:center"}
     %div{:class=>"classVote"}
-      %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", "/votes/#{@random[0].id}"
+      %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", vote_path(@random[1].id, :loser=>@random[0].id)
     %div{:class=>"skip2"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:class=>"classVote"}
-      %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}","/votes/#{@random[1].id}"
+      %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}",vote_path(@random[0].id, :loser=>@random[1].id)
 
 
 

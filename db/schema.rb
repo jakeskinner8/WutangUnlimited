@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420203936) do
+ActiveRecord::Schema.define(:version => 20130420215342) do
 
   create_table "categories", :force => true do |t|
     t.integer  "category_id"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(:version => 20130420203936) do
     t.string   "course_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "wins"
+    t.integer  "appearances"
+    t.float    "winpercentage"
   end
 
   create_table "members", :force => true do |t|
