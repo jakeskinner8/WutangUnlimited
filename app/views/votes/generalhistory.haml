@@ -9,11 +9,11 @@
       %th Professor
       %th Wins
       %th Appearances
-      %th Win Percentage(%)
+      %th= link_to 'Win Percentage(%)', generalhistory(:sort => 'winpercentage')
   %tbody
     - @top5.each do |prof|
       %tr
-        %td= "#{prof.first_name} #{prof.last_name}"
+        %td= link_to "#{prof.first_name} #{prof.last_name}", "professors/#{prof.id}"
         %td= prof.wins
         %td= prof.appearances
         %td= prof.winpercentage
