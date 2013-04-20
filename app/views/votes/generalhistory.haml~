@@ -3,16 +3,18 @@
 %h1{:style=>"text-align:center"} Overall Voting Results
 %ul{:style=>"text-align:center"}
 
-%table#results {:class => "table"}
+%table{:class => "table"}
   %thead
     %tr
       %th Professor
       %th Wins
       %th Appearances
+      %th Win Percentage(%)
   %tbody
-    - Professor.all.each do |prof|
+    - @top5.each do |prof|
       %tr
         %td= "#{prof.first_name} #{prof.last_name}"
         %td= prof.wins
         %td= prof.appearances
+        %td= (prof.appearances > 0 ? prof.wins.to_f/prof.appearances.to_f*100 : 0.0 )
 

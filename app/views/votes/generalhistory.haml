@@ -9,10 +9,12 @@
       %th Professor
       %th Wins
       %th Appearances
+      %th Win Percentage(%)
   %tbody
-    - Professor.all.each do |prof|
+    - @top5.each do |prof|
       %tr
         %td= "#{prof.first_name} #{prof.last_name}"
         %td= prof.wins
         %td= prof.appearances
+        %td= prof.winpercentage
 

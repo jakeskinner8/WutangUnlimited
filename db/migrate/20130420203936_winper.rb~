@@ -1,0 +1,9 @@
+class Winper < ActiveRecord::Migration
+ def up
+	add_column :professors, :winpercentage, :integer
+  end
+
+  def down
+	remove_column :professors, :winpercentage
+  end
+end

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ubuntu/WutangUnlimited/app/models/user.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,46 +13,105 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/application_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/application_controller.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/application_helper.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/home_helper.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/home_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/account_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/account.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/home_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/invite_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/invite.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/professors_controller.rb": [
+        1,
         1,
         1,
         null,
         null,
-        null
-      ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/professors_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/professor.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/votes_controller.rb": [
         1,
         1,
         1,
@@ -60,6 +119,7 @@
         2,
         1,
         null,
+        null,
         2,
         null,
         null,
@@ -79,6 +139,11 @@
         0,
         null,
         0,
+        null,
+        0,
+        0,
+        null,
+        0,
         0,
         null,
         0,
@@ -94,44 +159,65 @@
         null,
         null,
         1,
+        0,
+        0,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/vote.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/mailers/my_mailer.rb": [
+        1,
+        1,
+        1,
+        0,
         0,
         0,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/vote.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/categorie.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/categorie.rb": [
-        1,
-        null,
-        null
-      ],
-      "/home/ubuntu/WutangUnlimited/app/models/course.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/course.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/member.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/member.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/teach.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/teach.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/voting.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/voting.rb": [
         1,
         null,
         null
       ]
     },
-    "timestamp": 1366059365
+    "timestamp": 1366488393
   },
   "Cucumber Features": {
     "coverage": {
@@ -249,42 +335,42 @@
         1,
         1,
         1,
-        16,
-        16,
+        23,
+        23,
         1,
         null,
         null,
-        16,
+        23,
+        null,
+        null,
+        1,
+        11,
+        7,
+        7,
+        7,
+        null,
+        4,
+        4,
+        null,
         null,
         null,
         1,
         7,
-        3,
-        3,
-        3,
+        2,
+        null,
+        5,
         null,
         4,
         4,
         null,
-        null,
-        null,
-        1,
         4,
-        2,
-        null,
-        2,
-        null,
-        1,
-        1,
-        null,
-        1,
-        0,
+        4,
         null,
         1,
         null,
         null,
-        3,
-        3,
+        7,
+        7,
         null,
         null,
         1,
@@ -295,6 +381,10 @@
         1,
         2,
         2,
+        null,
+        1,
+        null,
+        null,
         null,
         1,
         null,
@@ -347,6 +437,6 @@
         null
       ]
     },
-    "timestamp": 1366486907
+    "timestamp": 1366488248
   }
 }
