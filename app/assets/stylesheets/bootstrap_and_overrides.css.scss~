@@ -9,12 +9,11 @@
 	@import "bootstrap";
 	body { 
 	    padding-top: 60px; 
+
 	}
 	.navbar-inner {
-	    font-size: 13px;
+	    font-size: 12px;
+	    background-color: #000;
 	}
 
-	.navbar-inner {
-
-}
 	@import "bootstrap-responsive"

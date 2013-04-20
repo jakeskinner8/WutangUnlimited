@@ -1,5 +1,7 @@
  <style type="text/css">
-      /* Main marketing message and sign up button */
+      body{
+		background-color:black;
+	}
       .jumbotron {
         margin: 40px 0;
         text-align: center;
