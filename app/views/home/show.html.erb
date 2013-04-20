@@ -47,7 +47,7 @@
 
                <% @top5professors.each do |a| %>
                <li>
-                 <%= link_to "#{a.first_name} #{a.last_name}", professors_path(a.id) %>
+                 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
                </li>
 		<% end %>
                </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>

@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(:version => 20130420215342) do
 
+  create_table "answers", :force => true do |t|
+    t.integer  "Question_id"
+    t.string   "answers"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "categories", :force => true do |t|
     t.integer  "category_id"
     t.string   "category_type"
@@ -54,6 +61,12 @@ ActiveRecord::Schema.define(:version => 20130420215342) do
     t.integer  "wins"
     t.integer  "appearances"
     t.float    "winpercentage"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "teaches", :force => true do |t|

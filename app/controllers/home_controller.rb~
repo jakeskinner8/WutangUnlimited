@@ -1,12 +1,21 @@
 class HomeController < ApplicationController
   def show
+    @top5professors = Professor.find(:all,:order=>'winpercentage desc').take(5)
+    if session["question"] ==  nil
+    	@randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
+   	@answer = Answer.find_all_by_Question_id(@randomquestion)
+        session["question"] = @randomquestion
+    else
+        @randomquestion = session["question"]
+        @answer = Answer.find_all_by_Question_id(@randomquestion)
+    end
   end
   def about
   end
   def invite
   end
   def teachers
-    @top5 = Professor.find(:all,:order=>'winpercentage desc')
+    
   end
   def faveclass
   end
