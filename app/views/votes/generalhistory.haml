@@ -13,6 +13,6 @@
     - Professor.all.each do |prof|
       %tr
         %td= "#{prof.first_name} #{prof.last_name}"
-        %td= 0
-        %td= 0
+        %td= prof.wins
+        %td= prof.appearances
 

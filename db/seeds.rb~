@@ -9,45 +9,81 @@
 professors = [
 {:first_name => 'Anton', :last_name => "Kruger", :email => "anton-kruger@uiowa.edu",:phone => "(319) 335-6287", :education=>"Ph.D., Electrical and Computer Engineering, University of Iowa, 1992
 M.S., Electrical Engineering, Potchefstroom University, 1986
+<<<<<<< HEAD
+B.S., Electrical Engineering, Potchefstroom University, 1984", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Kruger-a.jpg?itok=xfkbi_r4", :wins => 0, :appearances=>0},
+=======
 B.S., Electrical Engineering, Potchefstroom University, 1984", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Kruger-a.jpg?itok=xfkbi_r4"},
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
 
 {:first_name => 'Jon', :last_name => "Kuhl", :email => "jon-kuhl@uiowa.edu
 ",:phone => "(319) 335-5958", :education=>"Ph.D., Computer Science, University of Iowa, 1980
 M.S., Electrical Engineering, University of Iowa, 1977
+<<<<<<< HEAD
+B.S., Computer Science, University of Iowa, 1975", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/kuhl.jpg?itok=Baw3gcYs", :wins => 0, :appearances=>0},
+
+{:first_name => 'Thomas', :last_name => "Casavant", :email => "tom-casavant@uiowa.edu",:phone => "(319) 335-5953", :education=>"Ph.D., Electrical Engineering, University of Iowa, 1986
+M.S., Electrical Engineering, University of Iowa, 1983
+B.S., C.S., University of Iowa, 1982 ", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/casavant-t.jpg?itok=TsJvwDoc", :wins => 0, :appearances=>0},
+
+{:first_name => 'Raghuraman', :last_name => "Mudumbai", :email => "rmudumbai@engineering.uiowa.edu",:phone => "(319) 335-6333", :education=>"Ph.D., Electrical and Computer Engineering, University of California, Santa Barbara, 2007.
+M.S., Electrical Engineering, Brooklyn Polytechnic University, 2000.
+B. Tech., Electrical Engineering, Indian Institute of Technology, Madras, 1998.", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Mudumbai-r.jpg?itok=N-FRVMBz", :wins => 0, :appearances=>0}, 
+=======
 B.S., Computer Science, University of Iowa, 1975", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/kuhl.jpg?itok=Baw3gcYs"},
 
 {:first_name => 'Thomas', :last_name => "Casavant", :email => "tom-casavant@uiowa.edu",:phone => "(319) 335-5953", :education=>"Ph.D., Electrical Engineering, University of Iowa, 1986
 M.S., Electrical Engineering, University of Iowa, 1983
-B.S., C.S., University of Iowa, 1982 ", :image_path=>"path1"},
+B.S., C.S., University of Iowa, 1982 ", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/casavant-t.jpg?itok=TsJvwDoc"},
 
 {:first_name => 'Raghuraman', :last_name => "Mudumbai", :email => "rmudumbai@engineering.uiowa.edu",:phone => "(319) 335-6333", :education=>"Ph.D., Electrical and Computer Engineering, University of California, Santa Barbara, 2007.
 M.S., Electrical Engineering, Brooklyn Polytechnic University, 2000.
 B. Tech., Electrical Engineering, Indian Institute of Technology, Madras, 1998.", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Mudumbai-r.jpg?itok=N-FRVMBz"}, 
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
 
 {:first_name => 'Mona', :last_name => "Garvin", :email => "mona-garvin@uiowa.edu",:phone => "(319) 335-5950", :education=>"Ph.D., Biomedical Engineering, The University of Iowa, 2008
 M.S., Biomedical Engineering, The University of Iowa, 2004
 B.S.E., Biomedical Engineering, The University of Iowa, 2003
+<<<<<<< HEAD
+B.S., Computer Science, The University of Iowa, 2003", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/garvin-m.jpg?itok=_CEshS6U", :wins => 0, :appearances=>0},
+=======
 B.S., Computer Science, The University of Iowa, 2003", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/garvin-m.jpg?itok=_CEshS6U"},
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
  
 {:first_name => 'Mark', :last_name => "Andersland", :email => "mark-andersland@uiowa.edu",
 :phone => "(319) 335-6167", :education=>"Ph.D., Electrical Engineering, University of Michigan, 1989
 M.S.E., Electrical Engineering, University of Michigan, 1984
+<<<<<<< HEAD
+B.S.E., Electrical Engineering, University of Michigan, 1983", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Andersland%20Mark.jpg?itok=AoWaliCR", :wins => 0, :appearances=>0}, 
+
+{:first_name => 'Reinhard', :last_name => "Beichel", :email => "reinhard-beichel@uiowa.edu",
+:phone => "(319) 335-4597", :education=>"Ph.D., Telematics (Computer Science), Graz University of Technology, 2005
+M.S., Telematics (Computer Science), Graz University of Technology, 1999", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Beichel%20Reinhard.jpg?itok=c4Pvcyr2", :wins => 0, :appearances=>0},
+=======
 B.S.E., Electrical Engineering, University of Michigan, 1983", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Andersland%20Mark.jpg?itok=AoWaliCR"}, 
 
 {:first_name => 'Reinhard', :last_name => "Beichel", :email => "reinhard-beichel@uiowa.edu",
 :phone => "(319) 335-4597", :education=>"Ph.D., Telematics (Computer Science), Graz University of Technology, 2005
 M.S., Telematics (Computer Science), Graz University of Technology, 1999", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Beichel%20Reinhard.jpg?itok=c4Pvcyr2"},
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
 
 {:first_name => 'David', :last_name => "Anderson", :email => "kOrx@uiowa.edu",
 :phone => "(319) 335-2529", :education=>"Ph.D., Electrical Engineering, Purdue University, 1986
 M.S.E.E., Electrical Engineering, Purdue University, 1982
+<<<<<<< HEAD
+B.S.E.E., Electrical Engineering, Iowa State University, 1981", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/andersen_0.jpg?itok=5WaJ5qhX", :wins => 0, :appearances=>0}, 
+=======
 B.S.E.E., Electrical Engineering, Iowa State University, 1981", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/andersen_0.jpg?itok=5WaJ5qhX"}, 
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
 
 {:first_name => 'Sudhakar', :last_name => "Reddy", :email => "sudhakar-reddy@uiowa.edu",
 :phone => "(319) 335-5196", :education=>"Ph.D., Electrical Engineering, University of Iowa, 1968
 M.E., Electrical Engineering, Indian Institute of Science, 1963
 B.E., Electrical Engineering, Osmania University, 1962
+<<<<<<< HEAD
+B.Sc., Physics, Osmania University, 1958", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Reddy%2C%20Sudhakar.jpg?itok=1JhwZDEJ", :wins => 0, :appearances=>0}
+=======
 B.Sc., Physics, Osmania University, 1958", :image_path=>"http://www.engineering.uiowa.edu/sites/default/files/styles/profile_portrait/public/field/image/Reddy%2C%20Sudhakar.jpg?itok=1JhwZDEJ"}
+>>>>>>> 8b8f5aea4f7deead20d6eeef3c6f33c0fe90f3e4
 
 
 
