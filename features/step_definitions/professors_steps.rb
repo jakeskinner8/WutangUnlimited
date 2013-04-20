@@ -12,7 +12,6 @@ Given(/^the following users have registered into the Teacher Quality Rating Syst
   end
 end
 
-
 When(/^I fill email with "(.*?)" and password with "(.*?)"$/) do |email, password|
   fill_in 'Email', :with => email
   fill_in 'Password', :with => password
@@ -99,7 +98,16 @@ When(/^I click class SELT$/) do
   click_link "SELT"
 end
 
-When(/^I click button Skip$/) do
-  click_button "Skip"
+When(/^I click button "(.*?)"$/) do |button|
+  click_button button
+end
+
+When(/^I am on the invite page$/) do
+  visit "/invite"
+end
+
+When(/^I fill in "(.*?)" into the email$/) do |arg1|
+  fill_in 'Emails', :with => arg1
+  click_button 'Send Invite(s)'
 end
 

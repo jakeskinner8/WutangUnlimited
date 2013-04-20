@@ -15,6 +15,7 @@ Feature: Login to Teacher Quality Rating System
 | student5@uiowa.edu          | password     |
 
 And I am on login page
+
 Scenario: login registered users
  When I fill email with "student1@uiowa.edu" and password with "password"
  Then I should see "Signed in successfully."
