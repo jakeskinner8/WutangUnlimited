@@ -55,4 +55,8 @@ Professor.find(params[:loser]).update_attributes(:appearances=> Professor.find(p
   def generalhistory
 
   end
+
+  def topProfs
+
+  end
 end
