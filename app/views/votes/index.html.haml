@@ -5,13 +5,17 @@
   %h4{:style => "text-align:center;"} Who would you prefer to teach #{@question[0].course_name}?
   %div{:style=>"text-align:center;vertical-align:top"}
     %div{:class=>"profImage"}
-      =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt =>"#{@random[0].id}"), vote_path(@random[0].id, :loser=>@random[1].id)
-      %p{:style => "text-align:center"} #{@random[0].first_name} #{@random[0].last_name}
+      =link_to image_tag("#{@random[0].image_path}",:class=>"image1",:alt =>"#{@random[0].id}"), vote_path(:id => @random[0].id, :loser=>@random[1].id)
+      %p #{@random[0].first_name} #{@random[0].last_name}
+      %p
+      =link_to "Vote A", vote_path(:id => @random[0].id, :loser=>@random[1].id), :class => "btn btn-success"  
     %div{:class=>"skip1"} 
       =button_to "Skip", "/votes/S" , :method => :get, :class => "btn btn-large btn-inverse"
     %div{:class=>"profImage"}
       =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt =>"#{@random[1].id}"), vote_path(@random[1].id, :loser=>@random[0].id)
-      %p{:style => "text-align:center"} #{@random[1].first_name} #{@random[1].last_name}
+      %p #{@random[1].first_name} #{@random[1].last_name}
+      %p
+      =link_to "Vote B", vote_path(:id => @random[1].id, :loser=>@random[0].id), :class => "btn btn-success" 
 
 
 -else
@@ -25,4 +29,5 @@
       %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}",vote_path(@random[0].id, :loser=>@random[1].id)
 
 
+      
 
