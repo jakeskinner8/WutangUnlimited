@@ -13,7 +13,7 @@
   %tbody
     - @top5.each do |prof|
       %tr
-        %td= link_to "#{prof.last_name},#{prof.first_name} ", "professors/#{prof.id}"
+        %td= link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"
         %td= prof.wins
         %td= prof.appearances
         %td= number_with_precision(prof.winpercentage, :precision => 2)
