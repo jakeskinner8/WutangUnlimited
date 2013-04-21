@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
-  def show
+  def show 
+    @teacherOfMonth = Professor.find(:all,:order=>'winpercentage desc').take(1)
     @top5professors = Professor.find(:all,:order=>'winpercentage desc').take(5)
     @top5courses = Course.find(:all,:order=>'winpercentage desc').take(5)
     if session["question"] ==  nil

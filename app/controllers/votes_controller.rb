@@ -4,9 +4,9 @@ class VotesController < ApplicationController
     @current_use = user_signed_in? 
     if(!@current_use)
 	flash[:notice] = "You must be logged in to view this page."
+	redirect_to '/home' and return
     end
    
-    redirect_to '/home' and return unless @current_use
   end 
 
   def index
@@ -67,29 +67,6 @@ Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winperc
     
   end
 
-  def generalhistoryprofessors
-	if(params[:sort].to_s == "name") 
-		@top5 = Professor.find(:all,:order=>'last_name asc')
-	elsif(params[:sort].to_s == "wins") 
-		@top5 = Professor.find(:all,:order=>'wins desc')
-	elsif(params[:sort].to_s == "appearances") 
-		@top5 = Professor.find(:all,:order=>'appearances desc')
-	else
-		@top5 = Professor.find(:all,:order=>'winpercentage desc')
-	end
-  end
-
-  def generalhistoryclasses
-	if(params[:sort].to_s == "name") 
-		@top5 = Course.find(:all,:order=>'course_name asc')
-	elsif(params[:sort].to_s == "wins") 
-		@top5 = Course.find(:all,:order=>'wins desc')
-	elsif(params[:sort].to_s == "appearances") 
-		@top5 = Course.find(:all,:order=>'appearances desc')
-	else
-		@top5 = Course.find(:all,:order=>'winpercentage desc')
-	end
-  end
 
   def topProfs
     
