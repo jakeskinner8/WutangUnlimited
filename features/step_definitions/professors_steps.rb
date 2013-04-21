@@ -5,12 +5,8 @@ end
 Given(/^I am on home page$/) do
   visit "/"
 end
-Given(/^the user is not logged in$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Given(/^the user is on the Invite page$/) do
-  pending # express the regexp above with the code you wish you had
+Given(/^I am on the Invite page$/) do
+  visit "/invite"
 end
 
 Given(/^the following questions have been added have into the Teacher Quality Rating System:$/) do |table|
@@ -113,10 +109,6 @@ end
 
 When(/^I click button "(.*?)"$/) do |button|
   click_button button
-end
-
-When(/^I am on the invite page$/) do
-  visit "/invite"
 end
 
 When(/^I fill in "(.*?)" into the email$/) do |arg1|
