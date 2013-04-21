@@ -6,6 +6,12 @@ Given(/^I am on home page$/) do
   visit "/"
 end
 
+Given(/^the following questions have been added have into the Teacher Quality Rating System:$/) do |table|
+    table.hashes.each do |ques|
+    Question.create!(ques)
+  end
+end
+
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
    table.hashes.each do |user|
     User.create!(user)
@@ -59,7 +65,7 @@ When(/^I click on professor "(.*?)"$/) do |arg1|
 end
 
 When(/^I click on Voting link$/) do
-  click_on "Voting"
+  visit 'vote-classes'
 end
 
 Given(/^the following courses have been enterened into the Teacher Quality Rating System:$/) do |table|

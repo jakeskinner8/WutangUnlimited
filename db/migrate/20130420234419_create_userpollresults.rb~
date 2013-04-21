@@ -1,0 +1,9 @@
+class CreateUserpollresults < ActiveRecord::Migration
+ def change
+   create_table :userpollresults do |u|
+     u.references 'Question'
+     u.string :answers
+     u.timestamps
+   end
+ end
+endl
