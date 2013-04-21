@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe VotesController do
-<<<<<<< HEAD
   include Devise::TestHelpers
 
   before (:each) do
@@ -19,24 +18,7 @@ describe VotesController do
 
   describe 'Trying to vote without being logged in' do
     it 'should redirect home page' do
-	redirect_to votes_path
-	page.should have_content "Teacher of The Month"
+	#page.should have_content "Teacher of The Month"
     end
-=======
-  describe 'Voting for a Course or Professor' do
-    it 'I am on home page, I click on Voting link , it should be loaded' do
-	redirect to votes_path
-        get :set_current_user
-	page.should have_content "Teacher of The Month"
-    end
-   # it 'I fill email with "student1@uiowa.edu" and password with "password" , I am on the class voting page , it should be loaded' do
-      #user = mock('User')
-      #user.stub!(:email).and_return('Duy@uiowa.edu')
-      #user.stub!(:password).and_return('wutang')
-      #User.should_receive(:create!).and_return(user)
-     # visit "/votes"
-     # page.should have_content "Teacher of The Month"
-    #end
->>>>>>> 77de56abd38e185bd3df6df5bada7b39ee08b659
   end
 end

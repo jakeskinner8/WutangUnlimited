@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(:version => 20130420234419) do
     t.float    "winpercentage"
   end
 
+  create_table "members", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "user_name"
+    t.string   "password"
+    t.time     "dob"
+    t.string   "email"
+    t.string   "major"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "professors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -90,5 +102,22 @@ ActiveRecord::Schema.define(:version => 20130420234419) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "vid"
+    t.integer  "course_id"
+    t.integer  "professor_id"
+    t.integer  "appearance"
+    t.integer  "won"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "votings", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "vid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
