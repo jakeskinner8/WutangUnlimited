@@ -31,10 +31,12 @@ end
      match 'sendinvite' => 'invite#sendinvite'
      match 'savesettings' => 'account#savesettings'
      match 'history' => 'votes#history'
-     match 'generalhistory' => 'votes#generalhistory'
+     match 'generalhistoryprofessors' => 'votes#generalhistoryprofessors'
+     match 'generalhistoryclasses' => 'votes#generalhistoryclasses'
      match 'teachers' => 'home#teachers'
      match 'courses' => 'home#courses'
      match 'question' => 'home#question'
+     match 'results' => 'home#question'
   # Sample resource route with options:
   #   resources :products do
   #     member do
