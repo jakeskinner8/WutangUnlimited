@@ -5,6 +5,9 @@ end
 Given(/^I am on home page$/) do
   visit "/"
 end
+Given(/^I am on the Invite page$/) do
+  visit "/invite"
+end
 
 Given(/^the following questions have been added have into the Teacher Quality Rating System:$/) do |table|
     table.hashes.each do |ques|
