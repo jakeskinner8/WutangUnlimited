@@ -4,6 +4,7 @@
         text-align: center;
 	border:2px solid #CCCCCC;
 	padding: 5px;
+	margin-bottom:200px;
       }
       .jumbotron h1 {
         font-size: 100px;
@@ -23,7 +24,7 @@
 		<h2>Teacher of The Month</h2>
 		<p class="lead"><img src="<%= @teacherOfMonth[0].image_path %>" alt="<%= @teacherOfMonth[0].first_name %> <%= @teacherOfMonth[0].last_name%>" style="width:15%"/>
 		<p class="lead"><%= @teacherOfMonth[0].first_name %> <%= @teacherOfMonth[0].last_name %></p>
-	        <a class="btn btn-large btn-success" href="professors/<%= teacherOfMonth[0].id %>">View Teacher's Bio</a>
+	        <a class="btn btn-large btn-success" href="professors/<%= @teacherOfMonth[0].id %>">View Teacher's Bio</a>
 	</div>
 	<hr>
 	<!-- Example row of columns -->
