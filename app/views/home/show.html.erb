@@ -1,9 +1,8 @@
  <style type="text/css">
-
       .jumbotron {
-        margin: 40px 0;
+        margin: 10px 0;
         text-align: center;
-	border:2px solid;
+	border:2px solid #CCCCCC;
 	padding: 5px;
       }
       .jumbotron h1 {
@@ -20,50 +19,49 @@
       }
 
     </style>
-<div class="jumbotron">
-   <h1>Teacher of The Month</h1>
-	<p class="lead">Teacher pic and info go here</p>
-        <a class="btn btn-large btn-success" href="#">View Teacher's Bio</a>
-      </div>
-<hr>
-      <!-- Example row of columns -->
-      <div class="row-fluid">
-       <div class="span4">
-          <h2>Users Poll</h2>
-          <p><%= @randomquestion[0].question %> </p>
-          <p><table> 
-               <tr>
-               <% @answer.each do |a| %>
-                 <td><%= radio_button_tag "answer", a.answers %></td>
-                 <td><%= a.answers %></td>
-               <% end %>
-                </tr>
-               </table></p><a class="btn" href="results">View results</a>
-        </div>
-        <div class="span4">
-          <h2>Top Ranked Teachers</h2>
-          <p>Here is the list of the top 5 teachers </p>
-          <ol> 
-
-               <% @top5professors.each do |a| %>
-               <li>
-                 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
-               </li>
-		<% end %>
-               </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
-	 
-       </div>
-        <div class="span4">
-                 <h2>Top Ranked Courses</h2>
+	<div class="jumbotron">
+		<h2>Teacher of The Month</h2>
+		<p class="lead"><img src="<%= @teacherOfMonth[0].image_path %>" alt="<%= @teacherOfMonth[0].first_name %> <%= @teacherOfMonth[0].last_name%>" style="width:15%"/>
+		<p class="lead"><%= @teacherOfMonth[0].first_name %> <%= @teacherOfMonth[0].last_name %></p>
+	        <a class="btn btn-large btn-success" href="professors/<%= @teacherOfMonth[0].id %>">View Teacher's Bio</a>
+	</div>
+	<hr>
+	<!-- Example row of columns -->
+	<div class="row-fluid">
+		<div class="span4" style="margin-top:-30px">
+			<h2>Users Poll</h2>
+		  	<p><%= @randomquestion[0].question %> </p>
+			<p><ul> 
+				<% @answer.each do |a| %>
+				<li style="list-style-type:none">
+					<td><%= radio_button_tag "answer", a.answers %></td>
+					<td><%= a.answers %></td>
+				</li>
+				<% end %>
+			</ul></p>
+			<a class="btn" href="results">View results</a>
+		</div>
+		<div class="span4" style="margin-top:-30px">
+		  <h2>Top Ranked Teachers</h2>
+		  <p>Here is the list of the top 5 teachers </p>
+		  <ol> 
+		       <% @top5professors.each do |a| %>
+			       <li>
+				 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
+			       </li>
+			<% end %>
+		       </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
+		 
+	       </div>
+        <div class="span4" style="margin-top:-30px">
+          <h2>Top Ranked Courses</h2>
           <p>Here is the list of the top 5 courses</p>
           <p><ol> 
-
                <% @top5courses.each do |a| %>
-               <li>
-                 <%= a.course_name %>
-               
-		  </li>
-		<% end %>
+		       <li>
+		         <%= a.course_name %>
+		       </li>
+	       <% end %>
                </ol></p><a class="btn" href="generalhistoryclasses">More Results</a>
       </div>
 <hr>
