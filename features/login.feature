@@ -4,8 +4,11 @@ Feature: Login to Teacher Quality Rating System
  So that I can login to the Teacher Quality Rating System
  I want to enter my vote for different voting categories for different Professors and Courses
 
- Background: users have registered into Teacher Quality Rating System
+ Background: database is seeded
 
+ Given the following professors have been enterened into the Teacher Quality Rating System:
+| first_name	| last_name	|email          	|image_path	| wins | appearances  |
+| onef     	| onel   	|onef-onel@uiowa.edu	|path1		| 0    | 0            |
 
 Given the following questions have been added have into the Teacher Quality Rating System:
 | question                   | 

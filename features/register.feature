@@ -9,6 +9,10 @@ Background: user has been added to database
 | email                       | password     |
 | student1@uiowa.edu          | password     |
 
+Given the following professors have been enterened into the Teacher Quality Rating System:
+| first_name	| last_name	|email          	|image_path	| wins | appearances  |
+| onef     	| onel   	|onef-onel@uiowa.edu	|path1		| 0    | 0            |
+
 Given the following questions have been added have into the Teacher Quality Rating System:
 | question                   | 
 | 'What is your favorite place of study?'        | 
