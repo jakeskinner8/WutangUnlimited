@@ -7,4 +7,4 @@ class CreateUserpollresults < ActiveRecord::Migration
      u.timestamps
    end
  end
-endl
+end
