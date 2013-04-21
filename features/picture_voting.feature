@@ -12,6 +12,10 @@ Background: database seeded
 | threef     	| threel   	|threef-threel@uiowa.edu|path3		| 0    | 0            |
 | fourf     	| fourl   	|fourf-fourl@uiowa.edu	|path4		| 0    | 0            |
 
+Given the following questions have been added have into the Teacher Quality Rating System:
+| question                   | 
+| 'What is your favorite place of study?'        | 
+
  Given the following courses have been enterened into the Teacher Quality Rating System:
 | course_name	| 
 | SELT     	| 

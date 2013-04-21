@@ -7,7 +7,7 @@ I want to be able to view teachers biography’s to see there background, what c
 Background: professors already exist
  Given the following professors have been enterened into the Teacher Quality Rating System:
 | first_name	| last_name	|email          	|
-| onef     	| onel   	|onef-one1@uiowa.edu	|
+| onef     	| onel   	|onef-onel@uiowa.edu	|
 | twof     	| twol   	|twof-twol@uiowa.edu	|
 | threef     	| threel   	|threef-threel@uiowa.edu|
 | fourf     	| fourl   	|fourf-fourl@uiowa.edu	|

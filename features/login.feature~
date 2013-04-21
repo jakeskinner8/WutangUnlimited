@@ -6,6 +6,11 @@ Feature: Login to Teacher Quality Rating System
 
  Background: users have registered into Teacher Quality Rating System
 
+
+Given the following questions have been added have into the Teacher Quality Rating System:
+| question                   | 
+| 'What is your favorite place of study?'        | 
+
  Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
 | student1@uiowa.edu          | password     |
@@ -13,8 +18,8 @@ Feature: Login to Teacher Quality Rating System
 | student3@uiowa.edu          | password     |
 | student4@uiowa.edu          | password     |
 | student5@uiowa.edu          | password     |
+
 And I am on login page
-When I fill email with "student1@uiowa.edu" and password with "password"
 
 Scenario: login registered users
  When I fill email with "student1@uiowa.edu" and password with "password"

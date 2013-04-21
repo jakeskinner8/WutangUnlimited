@@ -6,6 +6,12 @@ Feature: Login to Teacher Quality Rating System
 
  Background: users have registered into Teacher Quality Rating System
 
+
+Given the following questions have been added have into the Teacher Quality Rating System:
+| question                   | 
+| 'What is your favorite place of study?'        | 
+
+
  Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
 | student1@uiowa.edu          | password     |

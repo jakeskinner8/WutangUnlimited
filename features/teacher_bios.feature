@@ -12,6 +12,10 @@ Background: professors already exist
 | threef     	| threel   	|threef-threel@uiowa.edu|
 | fourf     	| fourl   	|fourf-fourl@uiowa.edu	|
 
+Given the following questions have been added have into the Teacher Quality Rating System:
+| question                   | 
+| 'What is your favorite place of study?'        | 
+
  And I am on the teachers bio page
 
 Scenario: See List of all Professors
