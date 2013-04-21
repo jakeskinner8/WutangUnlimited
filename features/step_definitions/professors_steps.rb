@@ -5,6 +5,13 @@ end
 Given(/^I am on home page$/) do
   visit "/"
 end
+Given(/^the user is not logged in$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Given(/^the user is on the Invite page$/) do
+  pending # express the regexp above with the code you wish you had
+end
 
 Given(/^the following questions have been added have into the Teacher Quality Rating System:$/) do |table|
     table.hashes.each do |ques|
