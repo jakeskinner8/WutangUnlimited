@@ -13,7 +13,6 @@
 	}
 	.navbar-inner {
 	    font-size: 12px;
-	    background-color: #000;
 	}
 
 	@import "bootstrap-responsive"
