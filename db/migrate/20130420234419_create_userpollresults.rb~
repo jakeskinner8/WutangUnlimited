@@ -3,7 +3,11 @@ class CreateUserpollresults < ActiveRecord::Migration
    create_table :userpollresults do |u|
      u.references 'Question'
      u.references 'Answer'
+<<<<<<< HEAD
 
+=======
+     u.string :answers
+>>>>>>> 517f96a57eefd151d3263a7280f95c473494015b
      u.timestamps
    end
  end

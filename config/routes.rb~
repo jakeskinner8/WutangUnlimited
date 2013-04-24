@@ -36,7 +36,11 @@ end
      match 'teachers' => 'home#teachers'
      match 'courses' => 'home#courses'
      match 'question' => 'home#question'
+<<<<<<< HEAD
      match 'result' => 'home#show'
+=======
+     match 'results' => 'results#evaluation'
+>>>>>>> 517f96a57eefd151d3263a7280f95c473494015b
   # Sample resource route with options:
   #   resources :products do
   #     member do

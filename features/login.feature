@@ -7,7 +7,7 @@ Feature: Login to Teacher Quality Rating System
  Background: database is seeded
 
  Given the following professors have been enterened into the Teacher Quality Rating System:
-| first_name	| last_name	|email          	|image_path	| wins | appearances  |
+| first_name	| last_name	|email          	|image_path	| wins | appearances  |	
 | onef     	| onel   	|onef-onel@uiowa.edu	|path1		| 0    | 0            |
 
 Given the following questions have been added have into the Teacher Quality Rating System:

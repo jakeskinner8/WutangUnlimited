@@ -5,11 +5,41 @@ end
 Given(/^I am on home page$/) do
   visit "/"
 end
+Given(/^I am on the Invite page$/) do
+  visit "/invite"
+end
+When(/^I click link "(.*?)"$/) do |arg1|
+  visit "/#{arg1}"
+end
+
+Then(/^it should show "(.*?)" has win percentage of "(.*?)"$/) do |arg1, arg2|
+   result=false
+   all("tr").each do |tr|
+     if tr.has_content?(arg1) && tr.has_content?(arg2)
+       result = true
+       break
+     end
+   end  
+   assert result
+end
 
 Given(/^the following questions have been added have into the Teacher Quality Rating System:$/) do |table|
     table.hashes.each do |ques|
     Question.create!(ques)
   end
+end
+
+Then(/^when I click "(.*?)"$/) do |arg1|
+  click_link "#{arg1}"
+end
+
+
+Given(/^I am on the courses results page$/) do
+  visit "/generalhistoryclasses"
+end
+
+When(/^I click link to sort courses by "(.*?)"$/) do |arg1|
+  visit "/generalhistoryclasses/?sort=#{arg1}"
 end
 
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
@@ -32,6 +62,9 @@ Then(/^I could visit voting page$/) do
   visit '/votes'
 end
 
+Then /^I should find that "(.*?)" is before "(.*?)"$/ do |arg1, arg2|
+  assert page.body =~ /#{arg1}.*#{arg2}/m, "#{arg1} was not before #{arg2}"
+end
 Given(/^I am on registration page$/) do
   visit "/users/sign_up"
 end
@@ -50,9 +83,18 @@ Given(/^the following professors have been enterened into the Teacher Quality Ra
   end
 end
 
+When(/^I click link to sort professors by "(.*?)"$/) do |arg1|
+   visit "/generalhistoryprofessors/?sort=#{arg1}"
+end
+
 Given(/^I am on the teachers bio page$/) do
    visit "/professors"
 end
+
+Given(/^I am on the teachers results page$/) do
+ visit "/generalhistoryprofessors"
+end
+
 
 Then(/^I should see all of the professors$/) do
    rows = page.all('table#table tr').count  #counts the tables headers as a row so subtract 1
@@ -106,10 +148,6 @@ end
 
 When(/^I click button "(.*?)"$/) do |button|
   click_button button
-end
-
-When(/^I am on the invite page$/) do
-  visit "/invite"
 end
 
 When(/^I fill in "(.*?)" into the email$/) do |arg1|

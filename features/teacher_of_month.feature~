@@ -24,5 +24,5 @@ Scenario: teacher of the month
 Given I am on home page
 Then I should see "Teacher of The Month"
 Then when I click "View Teacher's Bio"
-Then I should see "Email: onef-onel@uiowa.edu"
+Then I should see "onef onel"
 

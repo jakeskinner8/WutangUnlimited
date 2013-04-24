@@ -32,4 +32,28 @@ class HomeController < ApplicationController
   end
   def question
   end
+
+    def generalhistoryprofessors
+	if(params[:sort].to_s == "name") 
+		@top5 = Professor.find(:all,:order=>'last_name asc')
+	elsif(params[:sort].to_s == "wins") 
+		@top5 = Professor.find(:all,:order=>'wins desc')
+	elsif(params[:sort].to_s == "appearances") 
+		@top5 = Professor.find(:all,:order=>'appearances desc')
+	else
+		@top5 = Professor.find(:all,:order=>'winpercentage desc')
+	end
+  end
+
+  def generalhistoryclasses
+	if(params[:sort].to_s == "name") 
+		@top5 = Course.find(:all,:order=>'course_name asc')
+	elsif(params[:sort].to_s == "wins") 
+		@top5 = Course.find(:all,:order=>'wins desc')
+	elsif(params[:sort].to_s == "appearances") 
+		@top5 = Course.find(:all,:order=>'appearances desc')
+	else
+		@top5 = Course.find(:all,:order=>'winpercentage desc')
+	end
+  end
 end
