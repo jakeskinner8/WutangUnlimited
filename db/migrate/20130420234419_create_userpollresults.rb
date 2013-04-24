@@ -3,8 +3,8 @@ class CreateUserpollresults < ActiveRecord::Migration
    create_table :userpollresults do |u|
      u.references 'Question'
      u.references 'Answer'
-     u.string :answers
+
      u.timestamps
    end
  end
-endl
+end

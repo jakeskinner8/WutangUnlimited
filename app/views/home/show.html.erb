@@ -30,16 +30,25 @@
 	<div class="row-fluid">
 		<div class="span4" style="margin-top:-30px">
 			<h2>Users Poll</h2>
+                        <% if session[:value]== nil%>
 		  	<p><%= @randomquestion[0].question %> </p>
 			<p><ul> 
 				<% @answer.each do |a| %>
 				<li style="list-style-type:none">
-					<td><%= radio_button_tag "answer", a.answers %></td>
-					<td><%= a.answers %></td>
+					<td class="skip1"><%= link_to "#{a.answers}", :question => @randomquestion[0].question, :answer => a.id %>  
+    					</td>
 				</li>
 				<% end %>
 			</ul></p>
-			<a class="btn" href="results">View results</a>
+                        <% 
+                          else 
+                          %> 
+                          <p><%= session[:value] %> </p>
+                            
+                          <%
+                              end
+                          %>
+
 		</div>
 		<div class="span4" style="margin-top:-30px">
 		  <h2>Top Ranked Teachers</h2>
