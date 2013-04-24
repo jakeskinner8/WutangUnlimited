@@ -88,14 +88,14 @@ end
 
 
 questions=[
-{:question => 'What is your favorite place of study?'},
-{:question => 'Do you like this website?'},
-{:question => 'How many hours do you study daily?'},
-{:question => 'Which flower do you like the most?'},
-{:question => 'What is your major?'},
-{:question => 'Which sport do you like the most?'},
-{:question => 'How many hours do you spend time in the library per month?'},
-{:question => 'Do you like programming?'}
+{:question => 'What is your favorite place of study?', :total => 0},
+{:question => 'Do you like this website?', :total => 0},
+{:question => 'How many hours do you study daily?', :total => 0},
+{:question => 'Which flower do you like the most?', :total => 0},
+{:question => 'What is your major?', :total => 0},
+{:question => 'Which sport do you like the most?', :total => 0},
+{:question => 'How many hours do you spend time in the library per month?', :total => 0},
+{:question => 'Do you like programming?', :total => 0}
 ]
 
 questions.each do |q|
@@ -136,4 +136,38 @@ answers=[
 
 answers.each do |a|
   Answer.create!(a)
+end
+
+userpollresults=[
+{:Question_id => 1, :Answer_id => 1, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 2, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 3, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 4, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 5, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 6, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 7, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 8, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 9, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 10, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 11, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 12, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 13, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 14, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 15, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 16, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 17, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 18, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 19, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 20, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 21, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 22, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 23, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 24, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 25, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 26, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 27, :totalpoll => 0}
+]
+
+userpollresults.each do |u|
+  Userpollresult.create!(u)
 end

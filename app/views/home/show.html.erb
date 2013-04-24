@@ -31,25 +31,15 @@
 	<div class="row-fluid">
 		<div class="span4" style="margin-top:-30px">
 			<h2>Users Poll</h2>
-                        <% if session[:value]== nil%>
 		  	<p><%= @randomquestion[0].question %> </p>
 			<p><ul> 
 				<% @answer.each do |a| %>
 				<li style="list-style-type:none">
-					<td class="skip1"><%= link_to "#{a.answers}", :question => @randomquestion[0].question, :answer => a.id %>  
+<td class="skip1"><%= link_to "#{a.answers}", :id => @randomquestion[0].id, :Answer_id => a.id,:realquestion => @randomquestion[0].question, :realanswer => a.answers %> 
     					</td>
 				</li>
 				<% end %>
 			</ul></p>
-                        <% 
-                          else 
-                          %> 
-                          <p><%= session[:value] %> </p>
-                            
-                          <%
-                              end
-                          %>
-
 		</div>
 		<div class="span4" style="margin-top:-30px">
 		  <h2>Top Ranked Teachers</h2>

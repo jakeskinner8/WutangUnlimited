@@ -3,23 +3,20 @@ class HomeController < ApplicationController
     @teacherOfMonth = Professor.find(:all,:order=>'winpercentage desc').take(1)
     @top5professors = Professor.find(:all,:order=>'winpercentage desc').take(5)
     @top5courses = Course.find(:all,:order=>'winpercentage desc').take(5)
-    @value = params[:question]
-    if session["value"] ==  nil 
-      session["value"] = @value
+
+   
+    @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
+    @answer = Answer.find_all_by_Question_id(@randomquestion)
+    if params[:id] != nil
+      total = Question.find(params[:id]).total + 1
+      totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
+      Question.find(params[:id]).update_attributes(:total=>total)
+      Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
+      flash[:notice] = "Uptil now total #{totalpoll} out of #{total} people voted #{params[:realanswer]} for #{params[:realquestion]}."
     end
-    if session["value"] ==  nil  
-	if session["question"] ==  nil
-             @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
-   	     @answer = Answer.find_all_by_Question_id(@randomquestion)
-             session["question"] = @randomquestion
-         else
-             @randomquestion = session["question"]
-             @answer = Answer.find_all_by_Question_id(@randomquestion)
-         end
-     else
-       @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
-       @answer = Answer.find_all_by_Question_id(@randomquestion)
-     end
+
+
+    
   end
   def about
   end

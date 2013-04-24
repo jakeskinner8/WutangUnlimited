@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20130420234419) do
 
   create_table "questions", :force => true do |t|
     t.string   "question"
+    t.integer  "total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,10 +69,7 @@ ActiveRecord::Schema.define(:version => 20130420234419) do
   create_table "userpollresults", :force => true do |t|
     t.integer  "Question_id"
     t.integer  "Answer_id"
-<<<<<<< HEAD
-=======
-    t.string   "answers"
->>>>>>> 517f96a57eefd151d3263a7280f95c473494015b
+    t.integer  "totalpoll"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

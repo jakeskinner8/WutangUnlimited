@@ -84,3 +84,90 @@ categories=[
 categories.each do |ct|
   Categorie.create!(ct)
 end
+
+
+
+questions=[
+{:question => 'What is your favorite place of study?', :total => 0},
+{:question => 'Do you like this website?', :total => 0},
+{:question => 'How many hours do you study daily?', :total => 0},
+{:question => 'Which flower do you like the most?', :total => 0},
+{:question => 'What is your major?', :total => 0},
+{:question => 'Which sport do you like the most?', :total => 0},
+{:question => 'How many hours do you spend time in the library per month?', :total => 0},
+{:question => 'Do you like programming?', :total => 0}
+]
+
+questions.each do |q|
+  Question.create!(q)
+end
+
+
+
+answers=[
+{:Question_id => 1, :answers => 'Library'},
+{:Question_id => 1, :answers => 'Home'},
+{:Question_id => 1, :answers => 'John Deere Plaza'},
+{:Question_id => 1, :answers => 'Other'},
+{:Question_id => 2, :answers => 'Yes'},
+{:Question_id => 2, :answers => 'No'},
+{:Question_id => 3, :answers => '5'},
+{:Question_id => 3, :answers => '6'},
+{:Question_id => 3, :answers => '7'},
+{:Question_id => 3, :answers => '8'},
+{:Question_id => 3, :answers => 'Other'},
+{:Question_id => 4, :answers => 'Rose'},
+{:Question_id => 4, :answers => 'Lotus'},
+{:Question_id => 4, :answers => 'Other'},
+{:Question_id => 5, :answers => 'Computer Science'},
+{:Question_id => 5, :answers => 'Engineering'},
+{:Question_id => 5, :answers => 'Other'},
+{:Question_id => 6, :answers => 'Tennis'},
+{:Question_id => 6, :answers => 'Baseball'},
+{:Question_id => 6, :answers => 'Other'},
+{:Question_id => 7, :answers => '5'},
+{:Question_id => 7, :answers => '6'},
+{:Question_id => 7, :answers => '7'},
+{:Question_id => 7, :answers => '8'},
+{:Question_id => 7, :answers => 'Other'},
+{:Question_id => 8, :answers => 'Yes'},
+{:Question_id => 8, :answers => 'No'}
+]
+
+answers.each do |a|
+  Answer.create!(a)
+end
+
+userpollresults=[
+{:Question_id => 1, :Answer_id => 'Library', :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 'Home', :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 'John Deere Plaza', :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 'Yes', :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 'No', :totalpoll => 0},
+{:Question_id => 3, :Answer_id => '5', :totalpoll => 0},
+{:Question_id => 3, :Answer_id => '6', :totalpoll => 0},
+{:Question_id => 3, :Answer_id => '7', :totalpoll => 0},
+{:Question_id => 3, :Answer_id => '8', :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 'Rose', :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 'Lotus', :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 'Computer Science', :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 'Engineering', :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 'Tennis', :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 'Baseball', :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 7, :Answer_id => '5', :totalpoll => 0},
+{:Question_id => 7, :Answer_id => '6', :totalpoll => 0},
+{:Question_id => 7, :Answer_id => '7', :totalpoll => 0},
+{:Question_id => 7, :Answer_id => '8', :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 'Other', :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 'Yes', :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 'No', :totalpoll => 0}
+]
+
+userpollresults.each do |u|
+  Userpollresult.create!(u)
+end
