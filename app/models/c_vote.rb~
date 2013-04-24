@@ -1,0 +1,3 @@
+class CVote < ActiveRecord::Base
+  belongs_to :CQuestion
+end
