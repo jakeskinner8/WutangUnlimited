@@ -35,7 +35,7 @@
 			<p><ul> 
 				<% @answer.each do |a| %>
 				<li style="list-style-type:none">
-<td class="skip1"><%= link_to "#{a.answers}", :id => @randomquestion[0].id, :Answer_id => a.id,:realquestion => @randomquestion[0].question, :realanswer => a.answers %> 
+<td class="skip1"><%= link_to "#{a.answers}", home_path(:id => @randomquestion[0].id, :Answer_id => a.id,:realquestion => @randomquestion[0].question, :realanswer => a.answers) %> 
     					</td>
 				</li>
 				<% end %>
