@@ -12,7 +12,7 @@ class HomeController < ApplicationController
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
       Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
-      flash[:notice] = "Uptil now total #{totalpoll} out of #{total} people voted #{params[:realanswer]} for #{params[:realquestion]}."
+      flash[:notice] = "#{totalpoll} out of #{total} people answered #{params[:realanswer]} to the question: #{params[:realquestion]}."
     end
 
 
