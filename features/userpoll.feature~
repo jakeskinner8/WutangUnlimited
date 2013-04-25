@@ -7,12 +7,16 @@ I want to be able to answer general questions
 Background: I am on home page
 
 Given the following questions have been added have into the Teacher Quality Rating System:
-| question                   |                               total   |
-| 'What is your favorite place of study?'        |         0     |
+| question                                       |       total       |
+| 'What is your favorite place of study?'        |         0         |
+
+Given the following answers have been added have into the Teacher Quality Rating System:
+|       answers     |
+|        Home      |
 
 Given the following userpollresults have been added have into the Teacher Quality Rating System:
 | Question_id                   |        Answer_id           |            totalpoll   |
-| 1                             |         1                  |                 0       |                 
+| 1                             |         1                  |                 0      |                 
 
 Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
@@ -31,31 +35,10 @@ Given the following courses have been enterened into the Teacher Quality Rating 
 
 And I am on home page
 
-Scenario: I can't visit voting page if I'm not logged in
-When I click on Voting link
-Then I should see "You must be logged in to view this page."
+Scenario: I can vote for any question present on the home page
+When I click on Home link
+Then I should see "Your answer was submitted. View the results page to see how other people answered the question."
 
-Scenario: Class voting
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the class voting page
-Then I should be able to choose from two classes
-When I click class SELT
-Then I should see "You voted for "
-
-Scenario: Skip a vote from class voting page
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the class voting page
-When I click button "Skip"
-Then I should see "You skipped the previous question."
-
-Scenario: Skip a vote from teacher voting page
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the teacher voting page
-When I click button "Skip"
-Then I should see "You skipped the previous question."
 
 
 

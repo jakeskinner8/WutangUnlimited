@@ -26,6 +26,14 @@ Given the following questions have been added have into the Teacher Quality Rati
 | email                       | password     |
 | student1@uiowa.edu          | password     |
 
+Given the following pquestions have been added have into the Teacher Quality Rating System:
+| question                   |       
+| Who is better at communication?|  
+
+Given the following cquestions have been added have into the Teacher Quality Rating System:
+| question                   |       
+| Which course has more homework?|  
+
 And I am on login page
 When I fill email with "student1@uiowa.edu" and password with "password"
 
