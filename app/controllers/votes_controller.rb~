@@ -30,12 +30,14 @@ class VotesController < ApplicationController
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
 		  exists = PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question])
-		  if exists != nil
-		    wins = exists[3] + 1
-		    appearances = exists[4] + 1
-		    PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
-		  else
+		  if exists.nil?
 		    PVote.create!(:Professor_id=>params[:id], :PQuestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		  else
+
+		    wins = exists[:wins] + 1
+		    appearances = exists[:appearances] + 1
+		    PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+
 		  end
 		
 		  wins = Professor.find(params[:loser]).wins
@@ -43,11 +45,13 @@ class VotesController < ApplicationController
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
 		  exists = PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question])
-		  if exists != nil
-		    appearances = exist[4] + 1
-		    PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
-		  else
+		  if exists.nil?
 		    PVote.create!(:Professor_id=>params[:loser], :PQuestion_id=>params[:question],:wins=>0,:appearances=>1)
+		  else
+
+		    appearances = exists[4] + 1
+		    PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
+
 		  end		
 		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
