@@ -159,16 +159,19 @@ userpollresults=[
 {:Question_id => 5, :Answer_id => 15, :totalpoll => 0},
 {:Question_id => 5, :Answer_id => 16, :totalpoll => 0},
 {:Question_id => 5, :Answer_id => 17, :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 18, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 18, :totalpoll => 0},
 {:Question_id => 6, :Answer_id => 19, :totalpoll => 0},
 {:Question_id => 6, :Answer_id => 20, :totalpoll => 0},
-{:Question_id => 7, :Answer_id => 21, :totalpoll => 0},
-{:Question_id => 7, :Answer_id => 22, :totalpoll => 0},
-{:Question_id => 7, :Answer_id => 23, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 21, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 22, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 23, :totalpoll => 0},
 {:Question_id => 7, :Answer_id => 24, :totalpoll => 0},
 {:Question_id => 7, :Answer_id => 25, :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 26, :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 27, :totalpoll => 0}
+{:Question_id => 7, :Answer_id => 26, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 27, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 28, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 29, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 30, :totalpoll => 0}
 ]
 
 userpollresults.each do |u|

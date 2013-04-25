@@ -190,10 +190,10 @@ end
 
 cquestions=[
 {:question => 'Which course has more homework?'},
-{:question => 'Which course offer online?'},
+{:question => 'Which course is offered online?'},
 {:question => 'Which course requires a personal laptop?'},
 {:question => 'Which course has more workload then its actual credit hour?'},
-{:question => 'Which course offer in all semester?'},
+{:question => 'Which course offered in all semester?'},
 {:question => 'Which course has more than 2 exams, including final?'}
 ]
 
