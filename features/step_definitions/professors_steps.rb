@@ -36,13 +36,13 @@ Given(/^the following answers have been added have into the Teacher Quality Rati
 end
 Given(/^the following pquestions have been added have into the Teacher Quality Rating System:$/) do |table|
   table.hashes.each do |x|
-    PQuestion.create!(x)
+    Pquestion.create!(x)
   end
 end
 
 Given(/^the following cquestions have been added have into the Teacher Quality Rating System:$/) do |table|
   table.hashes.each do |x|
-    CQuestion.create!(x)
+    Cquestion.create!(x)
   end
 end
 

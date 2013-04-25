@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/WutangUnlimited/app/models/user.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,21 +13,21 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/application_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/application_controller.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/application_helper.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/home_helper.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/account_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/account_controller.rb": [
         1,
         1,
         1,
@@ -44,12 +44,12 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/account.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/account.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/home_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/home_controller.rb": [
         1,
         1,
         21,
@@ -104,7 +104,7 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/invite_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/invite_controller.rb": [
         1,
         1,
         1,
@@ -128,11 +128,11 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/invite.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/invite.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/professors_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/professors_controller.rb": [
         1,
         1,
         2,
@@ -144,7 +144,7 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/professor.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
         1,
@@ -153,14 +153,14 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/results_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/results_controller.rb": [
         1,
         1,
         null,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/controllers/votes_controller.rb": [
         1,
         1,
         1,
@@ -196,11 +196,9 @@
         4,
         4,
         null,
-        null,
         0,
         0,
         0,
-        null,
         null,
         null,
         4,
@@ -211,10 +209,8 @@
         4,
         0,
         null,
-        null,
         4,
         4,
-        null,
         null,
         4,
         null,
@@ -222,12 +218,26 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        0,
         null,
         1,
         1,
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
         null,
         null,
         7,
@@ -253,7 +263,7 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/mailers/my_mailer.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/mailers/my_mailer.rb": [
         1,
         1,
         1,
@@ -263,31 +273,17 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/answer.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/answer.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/c_question.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/ubuntu/WutangUnlimited/app/models/c_vote.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/home/ubuntu/WutangUnlimited/app/models/categorie.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/categorie.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/course.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/course.rb": [
         1,
         1,
         1,
@@ -296,13 +292,28 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/p_question.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/cquestion.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/p_vote.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/cvote.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/pquestion.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/pvote.rb": [
         1,
         1,
         1,
@@ -310,24 +321,24 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/question.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/question.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/teach.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/teach.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/userpollresult.rb": [
+      "/home/ubuntu/Documents/WutangUnlimited/app/models/userpollresult.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1366858117
+    "timestamp": 1366927177
   }
 }
