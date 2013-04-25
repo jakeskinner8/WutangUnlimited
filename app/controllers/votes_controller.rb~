@@ -49,7 +49,7 @@ class VotesController < ApplicationController
 		    PVote.create!(:Professor_id=>params[:loser], :PQuestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
 
-		    appearances = exists[4] + 1
+		    appearances = exists[:appearances] + 1
 		    PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
 
 		  end		
