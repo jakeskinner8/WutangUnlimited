@@ -18,7 +18,7 @@
         %td= course.appearances
         %td= number_with_precision(course.winpercentage, :precision => 2)
 
-- CQuestion.all.each do |x|
+- Cquestion.all.each do |x|
   %h4= "#{x.question}"
   %table{:class => "table"}
     - for counter in 1..5 do 

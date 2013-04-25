@@ -18,12 +18,21 @@
         %td= prof.appearances
         %td= number_with_precision(prof.winpercentage, :precision => 2)
 
-- PQuestion.all.each do |x|
-  %h4= "#{x.question}"
-  %table{:class => "table"}
-    %thead
-      %tr
-        %td= x.id
-    //- x.Professor.each do |y|
-   
+- Pquestion.all.each do |x|
+  - if not x.Professor.nil?
+    %h4= "#{x.question}"
+    %table{:class => "table"}
+      %thead
+        %tr
+          %th Professor Name
+          %th Wins
+          %th Appearances
+          %th Win Percentage (%)
+      - x.Professor.each do |y|
+        %tbody
+          %tr
+            %td= "#{y.first_name} #{y.last_name}"
+            %td= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins}"
+            %td= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances}"
+            %td= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
 

@@ -24,4 +24,4 @@
     - for counter in 1..5 do 
       %thead
         %tr
-          %th= "#{counter}."
+          %td= "#{counter}."
