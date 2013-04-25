@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424234003) do
+ActiveRecord::Schema.define(:version => 20130425030720) do
 
   create_table "answers", :force => true do |t|
     t.integer  "Question_id"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130424234003) do
   end
 
   create_table "c_votes", :force => true do |t|
-    t.integer  "Professor_id"
+    t.integer  "Course_id"
     t.integer  "CQuestion_id"
     t.integer  "wins"
     t.integer  "appearances"
@@ -52,6 +52,21 @@ ActiveRecord::Schema.define(:version => 20130424234003) do
     t.float    "winpercentage"
   end
 
+  create_table "cquestions", :force => true do |t|
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cvotes", :force => true do |t|
+    t.integer  "Course_id"
+    t.integer  "Cquestion_id"
+    t.integer  "wins"
+    t.integer  "appearances"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "p_questions", :force => true do |t|
     t.text     "question"
     t.datetime "created_at"
@@ -63,6 +78,12 @@ ActiveRecord::Schema.define(:version => 20130424234003) do
     t.integer  "PQuestion_id"
     t.integer  "wins"
     t.integer  "appearances"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pquestions", :force => true do |t|
+    t.text     "question"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -79,6 +100,15 @@ ActiveRecord::Schema.define(:version => 20130424234003) do
     t.integer  "wins"
     t.integer  "appearances"
     t.float    "winpercentage"
+  end
+
+  create_table "pvotes", :force => true do |t|
+    t.integer  "Professor_id"
+    t.integer  "Pquestion_id"
+    t.integer  "wins",         :default => 0
+    t.integer  "appearances",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "questions", :force => true do |t|
