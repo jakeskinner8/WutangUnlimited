@@ -11,8 +11,8 @@ Given the following questions have been added have into the Teacher Quality Rati
 | 'What is your favorite place of study?'        |         0         |
 
 Given the following answers have been added have into the Teacher Quality Rating System:
-|       answers     |
-|        Home      |
+| Question_id           |       answers     |
+|        1              |       Home        |
 
 Given the following userpollresults have been added have into the Teacher Quality Rating System:
 | Question_id                   |        Answer_id           |            totalpoll   |
@@ -39,10 +39,9 @@ Scenario: I can vote for any question present on the home page
 When I click on Home link
 Then I should see "Your answer was submitted. View the results page to see how other people answered the question."
 
-
-
-
-
+Scenario: I can view all the results
+When I click "More Results"
+Then I should see "What is your favorite place of study?"
 
 
 

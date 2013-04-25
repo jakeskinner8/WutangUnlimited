@@ -6,7 +6,7 @@ class HomeController < ApplicationController
 
     @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
     @answer = Answer.find_all_by_Question_id(@randomquestion)
-    if params[:Answer_id] != nil
+    if params[:Answer_id] != nil and params[:id] != nil
       total = Question.find(params[:id]).total + 1
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
