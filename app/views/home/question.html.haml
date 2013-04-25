@@ -2,14 +2,15 @@
 %h1{:style => "text-align:center;"} Question Results
 
 - @questions.each do |x|
-  %h4= "#{x.question} (#{x.total} total votes)"
-  %table{:class => "table"}
-    %thead
-      %tr
-        %th= ""
-        %th= "Percentage of Votes (%)"
-      - Answer.where(:Question_id => x.id).each do |y|
-        %tbody
-          %tr
-            %td= y.answers
-            %td= number_with_precision((x.total != 0 ? Userpollresult.find(y.id).totalpoll.to_f/x.total.to_f*100 : 0),:precision=>2)
+  %div
+    %h4= "#{x.question} (#{x.total} total votes)"
+    %table{:class => "table"}
+      %thead
+        %tr
+          %th= ""
+          %th= "Percentage of Votes (%)"
+        - Answer.where(:Question_id => x.id).each do |y|
+          %tbody
+            %tr
+              %td= y.answers
+              %td= number_with_precision((x.total != 0 ? Userpollresult.find(y.id).totalpoll.to_f/x.total.to_f*100 : 0),:precision=>2)
