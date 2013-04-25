@@ -48,30 +48,42 @@ Given the following userpollresults have been added have into the Teacher Qualit
 And I am on home page
 
 Scenario: I can't visit voting page if I'm not logged in
-When I click on Voting link
-Then I should see "You must be logged in to view this page."
+	When I click on Voting link
+	Then I should see "You must be logged in to view this page."
 
 Scenario: Class voting
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the class voting page
-Then I should be able to choose from two classes
-When I click class SELT
-Then I should see "You voted for "
+	When I am on login page
+	And I fill email with "student1@uiowa.edu" and password with "password"
+	And I am on the class voting page
+	Then I should be able to choose from two classes
+	When I click class SELT
+	Then I should see "You voted for SELT"
 
 Scenario: Skip a vote from class voting page
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the class voting page
-When I click button "Skip"
-Then I should see "You skipped the previous question."
+	When I am on login page
+	And I fill email with "student1@uiowa.edu" and password with "password"
+	And I am on the class voting page
+	When I click button "Skip"
+	Then I should see "You skipped the previous question."
 
 Scenario: Skip a vote from teacher voting page
-When I am on login page
-And I fill email with "student1@uiowa.edu" and password with "password"
-And I am on the teacher voting page
-When I click button "Skip"
-Then I should see "You skipped the previous question."
+	When I am on login page
+	And I fill email with "student1@uiowa.edu" and password with "password"
+	And I am on the teacher voting page
+	When I click button "Skip"
+	Then I should see "You skipped the previous question."
+
+
+Scenario: Class voting (voting for some choice twice)
+	When I am on login page
+	And I fill email with "student1@uiowa.edu" and password with "password"
+	And I am on the class voting page
+	Then I should be able to choose from two classes
+	When I click class SELT
+	Then I should see "You voted for SELT"
+	When I click class SELT
+	Then I should see "You voted for SELT"
+
 
 
 
