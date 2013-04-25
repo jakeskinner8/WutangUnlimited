@@ -1,8 +1,8 @@
-class CreateCVotes < ActiveRecord::Migration
+class CreateCvotes < ActiveRecord::Migration
   def change
-    create_table :c_votes do |t|
+    create_table :cvotes do |t|
       t.references 'Course'
-      t.references 'CQuestion'
+      t.references 'Cquestion'
       t.integer :wins
       t.integer :appearances
       t.timestamps
