@@ -188,7 +188,7 @@ pquestions=[
 ]
 
 pquestions.each do |q|
-  PQuestion.create!(q)
+  Pquestion.create!(q)
 end
 
 cquestions=[
@@ -201,6 +201,6 @@ cquestions=[
 ]
 
 cquestions.each do |q|
-  CQuestion.create!(q)
+  Cquestion.create!(q)
 end
 

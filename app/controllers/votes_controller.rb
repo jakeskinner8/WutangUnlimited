@@ -29,14 +29,14 @@ class VotesController < ApplicationController
 		  appearances = Professor.find(params[:id]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-		  exists = PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question])
+		  exists = PVote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question])
 		  if exists.nil?
-		    PVote.create!(:Professor_id=>params[:id], :PQuestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		    PVote.create!(:Professor_id=>params[:id], :Pquestion_id=>params[:question],:wins=>1,:appearances=>1)		
 		  else
 
 		    wins = exists[:wins] + 1
 		    appearances = exists[:appearances] + 1
-		    PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		    PVote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
 
 		  end
 		
@@ -44,13 +44,13 @@ class VotesController < ApplicationController
 		  appearances = Professor.find(params[:loser]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
-		  exists = PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question])
+		  exists = PVote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question])
 		  if exists.nil?
-		    PVote.create!(:Professor_id=>params[:loser], :PQuestion_id=>params[:question],:wins=>0,:appearances=>1)
+		    PVote.create!(:Professor_id=>params[:loser], :Pquestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
 
 		    appearances = exists[:appearances] + 1
-		    PVote.find_by_Professor_id_and_PQuestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
+		    PVote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
 
 		  end		
 		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
