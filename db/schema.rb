@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20130424234003) do
   end
 
   create_table "c_votes", :force => true do |t|
-    t.integer  "Course_id"
+    t.integer  "Professor_id"
     t.integer  "CQuestion_id"
     t.integer  "wins"
     t.integer  "appearances"
