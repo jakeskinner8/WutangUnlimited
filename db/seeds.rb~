@@ -139,35 +139,48 @@ answers.each do |a|
 end
 
 userpollresults=[
-{:Question_id => 1, :Answer_id => 'Library', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'Home', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'John Deere Plaza', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 2, :Answer_id => 'Yes', :totalpoll => 0},
-{:Question_id => 2, :Answer_id => 'No', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '5', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '6', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '7', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '8', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Rose', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Lotus', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Computer Science', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Engineering', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Tennis', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Baseball', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '5', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '6', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '7', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '8', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 'Yes', :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 'No', :totalpoll => 0}
+{:Question_id => 1, :Answer_id => 1, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 2, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 3, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 4, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 5, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 6, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 7, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 8, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 9, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 10, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 11, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 12, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 13, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 14, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 15, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 16, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 17, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 18, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 19, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 20, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 21, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 22, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 23, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 24, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 25, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 26, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 27, :totalpoll => 0}
 ]
 
 userpollresults.each do |u|
   Userpollresult.create!(u)
+end
+
+pquestions=[
+{:question => 'Who is better at communication?'},
+{:question => 'Who provides extra help outside class better?'},
+{:question => 'Who is friendlier?'},
+{:question => 'Who gives extra credit?'},
+{:question => 'Whose lectures are more interesting?'},
+{:question => 'Who would be a better adviser in general?'}
+]
+
+pquestions.each do |q|
+  PQuestion.create!(q)
 end
