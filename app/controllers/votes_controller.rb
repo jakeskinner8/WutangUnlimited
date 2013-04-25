@@ -33,11 +33,9 @@ class VotesController < ApplicationController
 		  if exists.nil?
 		    Pvote.create!(:Professor_id=>params[:id], :Pquestion_id=>params[:question],:wins=>1,:appearances=>1)		
 		  else
-
 		    wins = exists[:wins] + 1
 		    appearances = exists[:appearances] + 1
 		    Pvote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
-
 		  end
 		
 		  wins = Professor.find(params[:loser]).wins
@@ -48,10 +46,8 @@ class VotesController < ApplicationController
 		  if exists.nil?
 		    Pvote.create!(:Professor_id=>params[:loser], :Pquestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
-
 		    appearances = exists[:appearances] + 1
 		    Pvote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
-
 		  end		
 		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
@@ -59,12 +55,27 @@ class VotesController < ApplicationController
 		  appearances = Course.find(params[:id]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Course.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-		
+		  exists = Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question])
+		  if exists.nil?
+		    Cvote.create!(:Course_id=>params[:id], :Cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		  else
+		    wins = exists[:wins] + 1
+		    appearances = exists[:appearances] + 1
+		    Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		  end
 		  wins = Course.find(params[:loser]).wins
 		  appearances = Course.find(params[:loser]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
 		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
+		  exists = Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question])
+		  if exists.nil?
+		    Cvote.create!(:Course_id=>params[:id], :Cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		  else
+		    wins = exists[:wins]
+		    appearances = exists[:appearances] + 1
+		    Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		  end
 		end	
 	end
 	flash.keep

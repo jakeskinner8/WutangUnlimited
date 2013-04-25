@@ -3,8 +3,8 @@ class CreateCvotes < ActiveRecord::Migration
     create_table :cvotes do |t|
       t.references 'Course'
       t.references 'Cquestion'
-      t.integer :wins
-      t.integer :appearances
+      t.integer :wins 		, :default => 0
+      t.integer :appearances	, :default => 0
       t.timestamps
     end
   end
