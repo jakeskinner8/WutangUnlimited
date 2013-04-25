@@ -75,7 +75,7 @@
 		<a class="dropdown-toggle" id="drop2" role="button" data-toggle="dropdown" href="#">Results <b class="caret"></b></a>	
 		<ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
 	      <li role="presentation"><%= link_to "Professors", "/generalhistoryprofessors"  %></li>
-	      <li role="presentation"><%= link_to "Classes", "/generalhistoryclasses"  %></li>
+	      <li role="presentation"><%= link_to "Courses", "/generalhistoryclasses"  %></li>
 		</ul>
 	   </li>
 
