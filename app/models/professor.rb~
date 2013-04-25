@@ -2,7 +2,6 @@ class Professor < ActiveRecord::Base
   has_many :Teach
   has_many :Course, :through => :Teach
 
-  def self.getRandomProfessor
-    self.find(:all,:order=>'RANDOM()', :limit => 2)
-  end
+  has_many :PVote
+  has_many :PQuestion, :through => :PVote
 end

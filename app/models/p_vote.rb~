@@ -1,0 +1,3 @@
+class PVote < ActiveRecord::Base
+  belongs_to :PQuestion
+end
