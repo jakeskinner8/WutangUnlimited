@@ -2,7 +2,7 @@
 %h1{:style => "text-align:center;"} Question Results
 
 - @questions.each do |x|
-  %h4= "#{x.question} (#{x.total} total vote" x.total == 0 ? "x" : "x"
+  %h4= "#{x.question} (#{x.total} total votes)"
   %table{:class => "table"}
     %thead
       %tr

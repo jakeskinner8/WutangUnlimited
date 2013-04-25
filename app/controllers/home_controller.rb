@@ -11,7 +11,7 @@ class HomeController < ApplicationController
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
       Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
-      flash[:notice] = "Your answer was submitted. View the results page to see how other people answered the question."
+      flash.now[:notice] = "Your answer was submitted. View the results page to see how other people answered the question."
     end
   end
   def about
