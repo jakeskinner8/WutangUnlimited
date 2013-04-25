@@ -70,11 +70,11 @@ class VotesController < ApplicationController
 		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
 		  exists = Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question])
 		  if exists.nil?
-		    Cvote.create!(:Course_id=>params[:id], :Cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		    Cvote.create!(:Course_id=>params[:loser], :Cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
 		  else
-		    wins = exists[:wins] + 1
+		    wins = exists[:wins]
 		    appearances = exists[:appearances] + 1
-		    Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		    Cvote.find_by_Course_id_and_Cquestion_id(params[:loser],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
 		  end
 		end	
 	end

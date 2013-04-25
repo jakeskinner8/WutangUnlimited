@@ -20,21 +20,6 @@ ActiveRecord::Schema.define(:version => 20130425030720) do
     t.datetime "updated_at"
   end
 
-  create_table "c_questions", :force => true do |t|
-    t.text     "question"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "c_votes", :force => true do |t|
-    t.integer  "Course_id"
-    t.integer  "CQuestion_id"
-    t.integer  "wins"
-    t.integer  "appearances"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "categories", :force => true do |t|
     t.integer  "category_id"
     t.string   "category_type"
@@ -61,23 +46,8 @@ ActiveRecord::Schema.define(:version => 20130425030720) do
   create_table "cvotes", :force => true do |t|
     t.integer  "Course_id"
     t.integer  "Cquestion_id"
-    t.integer  "wins"
-    t.integer  "appearances"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "p_questions", :force => true do |t|
-    t.text     "question"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "p_votes", :force => true do |t|
-    t.integer  "Professor_id"
-    t.integer  "PQuestion_id"
-    t.integer  "wins"
-    t.integer  "appearances"
+    t.integer  "wins",         :default => 0
+    t.integer  "appearances",  :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

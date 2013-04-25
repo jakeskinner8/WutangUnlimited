@@ -18,10 +18,22 @@
         %td= course.appearances
         %td= number_with_precision(course.winpercentage, :precision => 2)
 
-- CQuestion.all.each do |x|
-  %h4= "#{x.question}"
-  %table{:class => "table"}
-    - for counter in 1..5 do 
-      %thead
-        %tr
-          %td= "#{counter}."
+%div{:style=>"text-align:center"}
+  - Cquestion.all.each do |x|
+    - if not x.Course == []
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;"}
+        %h4= "#{x.question}"
+        %table{:class => "table", :style=>"width:500px;"}
+          %thead
+            %tr
+              %th{:style=>"text-align:center"} Course Name
+              %th{:style=>"text-align:center"} Wins
+              %th{:style=>"text-align:center"} Appearances
+              %th{:style=>"text-align:center"} Win Percentage (%)
+          - x.Professor.each do |y|
+            %tbody
+              %tr
+                %td{:style=>"text-align:center"}= "#{y.course_name}"
+                %td{:style=>"text-align:center"}= "#{Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].wins}"
+                %td{:style=>"text-align:center"}= "#{Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances}"
+                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
