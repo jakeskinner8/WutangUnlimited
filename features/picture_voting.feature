@@ -37,8 +37,17 @@ Given the following cquestions have been added have into the Teacher Quality Rat
 And I am on login page
 When I fill email with "student1@uiowa.edu" and password with "password"
 
-Scenario: picture voting
-Given I am on the teacher voting page
-Then I should be able to choose from two images
-When I click an image
-Then I should see "You voted for " 
+
+Scenario: picture voting 
+	Given I am on the teacher voting page
+	Then I should be able to choose from two images
+	When I click an image
+	Then I should see "You voted for " 
+
+Scenario: picture voting (voting for same question twice)
+	Given I am on the teacher voting page
+	Then I should be able to choose from two images
+	When I click an image
+	Then I should see "You voted for " 
+	When I click an image
+	Then I should see "You voted for " 
