@@ -1,5 +1,15 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
-%h1{:style => "text-align:center;"} About ProfMash
+%h1{:style => "text-align:center;"} Question Results
 
-%div{:class => "jumbotron"}
-  %h3{:style => "text-align: center"} I like to eat boogers.
+- @questions.each do |x|
+  %h4= "#{x.question} (#{x.total} total vote" x.total == 0 ? "x" : "x"
+  %table{:class => "table"}
+    %thead
+      %tr
+        %th= ""
+        %th= "Percentage of Votes (%)"
+      - Answer.where(:Question_id => x.id).each do |y|
+        %tbody
+          %tr
+            %td= y.answers
+            %td= number_with_precision((x.total != 0 ? Userpollresult.find(y.id).totalpoll.to_f/x.total.to_f*100 : 0),:precision=>2)

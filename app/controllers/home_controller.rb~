@@ -12,7 +12,8 @@ class HomeController < ApplicationController
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
       Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
-      flash[:notice] = "#{totalpoll} out of #{total} people have voted #{params[:realanswer]} for #{params[:realquestion]}."
+      flash[:notice] = "Your answer was submitted. View the results page to see how other people answered the question."
+      params[:id] = nil
     end
 
 
@@ -28,8 +29,10 @@ class HomeController < ApplicationController
   def faveclass
   end
   def question
+	@results = Userpollresult.all
+	@questions = Question.all
+        @answers = Answer.all
   end
-
     def generalhistoryprofessors
 	if(params[:sort].to_s == "name") 
 		@top5 = Professor.find(:all,:order=>'last_name asc')

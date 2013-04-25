@@ -1,0 +1,20 @@
+%link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
+
+%h1{:style=>"text-align:center"} Overall Voting Results
+%ul{:style=>"text-align:center"}
+
+%table{:class => "table"}
+  %thead
+    %tr
+      %th= link_to 'Professor', generalhistoryprofessors_path(:sort => 'name')
+      %th= link_to 'Wins', generalhistoryprofessors_path(:sort => 'wins')
+      %th= link_to 'Appearances', generalhistoryprofessors_path(:sort => 'appearances')
+      %th= link_to 'Win Percentage(%)',generalhistoryprofessors_path(:sort => 'winpercentage')
+  %tbody
+    - @top5.each do |prof|
+      %tr
+        %td= link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"
+        %td= prof.wins
+        %td= prof.appearances
+        %td= number_with_precision(prof.winpercentage, :precision => 2)
+
