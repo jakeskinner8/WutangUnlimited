@@ -57,6 +57,9 @@ Then(/^when I click "(.*?)"$/) do |arg1|
   click_link "#{arg1}"
 end
 
+When(/^I click "(.*?)"$/) do |arg1|
+  click_link "#{arg1}"
+end
 
 Given(/^I am on the courses results page$/) do
   visit "/generalhistoryclasses"
@@ -66,6 +69,9 @@ When(/^I click link to sort courses by "(.*?)"$/) do |arg1|
   visit "/generalhistoryclasses/?sort=#{arg1}"
 end
 
+When(/^I view question results$/) do
+	visit "/question"
+end
 Given(/^the following users have registered into the Teacher Quality Rating System:$/) do |table|
    table.hashes.each do |user|
     User.create!(user)

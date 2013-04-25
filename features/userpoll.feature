@@ -39,10 +39,9 @@ Scenario: I can vote for any question present on the home page
 When I click on Home link
 Then I should see "Your answer was submitted. View the results page to see how other people answered the question."
 
-
-
-
-
+Scenario: I can view all the results
+When I view question results
+Then I should see "What is your favorite place of study?"
 
 
 
