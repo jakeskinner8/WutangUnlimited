@@ -88,13 +88,13 @@ end
 
 
 questions=[
-{:question => 'What is your favorite place of study?', :total => 0},
+{:question => 'Where is your favorite place to study?', :total => 0},
 {:question => 'Do you like this website?', :total => 0},
 {:question => 'How many hours do you study daily?', :total => 0},
 {:question => 'Which flower do you like the most?', :total => 0},
 {:question => 'What is your major?', :total => 0},
 {:question => 'Which sport do you like the most?', :total => 0},
-{:question => 'How many hours do you spend time in the library per month?', :total => 0},
+{:question => 'How many hours do you spend in the library each month?', :total => 0},
 {:question => 'Do you like programming?', :total => 0}
 ]
 
@@ -111,25 +111,28 @@ answers=[
 {:Question_id => 1, :answers => 'Other'},
 {:Question_id => 2, :answers => 'Yes'},
 {:Question_id => 2, :answers => 'No'},
-{:Question_id => 3, :answers => '5'},
-{:Question_id => 3, :answers => '6'},
-{:Question_id => 3, :answers => '7'},
-{:Question_id => 3, :answers => '8'},
-{:Question_id => 3, :answers => 'Other'},
+{:Question_id => 3, :answers => '0'},
+{:Question_id => 3, :answers => '1'},
+{:Question_id => 3, :answers => '2'},
+{:Question_id => 3, :answers => '3'},
+{:Question_id => 3, :answers => '4 or more'},
 {:Question_id => 4, :answers => 'Rose'},
 {:Question_id => 4, :answers => 'Lotus'},
 {:Question_id => 4, :answers => 'Other'},
 {:Question_id => 5, :answers => 'Computer Science'},
-{:Question_id => 5, :answers => 'Engineering'},
+{:Question_id => 5, :answers => 'Software Engineering'},
+{:Question_id => 5, :answers => 'Electrical Engineering'},
 {:Question_id => 5, :answers => 'Other'},
 {:Question_id => 6, :answers => 'Tennis'},
 {:Question_id => 6, :answers => 'Baseball'},
+{:Question_id => 6, :answers => 'Football'},
+{:Question_id => 6, :answers => 'Basketball'},
 {:Question_id => 6, :answers => 'Other'},
-{:Question_id => 7, :answers => '5'},
-{:Question_id => 7, :answers => '6'},
-{:Question_id => 7, :answers => '7'},
-{:Question_id => 7, :answers => '8'},
-{:Question_id => 7, :answers => 'Other'},
+{:Question_id => 7, :answers => '0-5'},
+{:Question_id => 7, :answers => '6-10'},
+{:Question_id => 7, :answers => '11-15'},
+{:Question_id => 7, :answers => '16-20'},
+{:Question_id => 7, :answers => '20 or more'},
 {:Question_id => 8, :answers => 'Yes'},
 {:Question_id => 8, :answers => 'No'}
 ]
@@ -139,35 +142,62 @@ answers.each do |a|
 end
 
 userpollresults=[
-{:Question_id => 1, :Answer_id => 'Library', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'Home', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'John Deere Plaza', :totalpoll => 0},
-{:Question_id => 1, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 2, :Answer_id => 'Yes', :totalpoll => 0},
-{:Question_id => 2, :Answer_id => 'No', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '5', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '6', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '7', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => '8', :totalpoll => 0},
-{:Question_id => 3, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Rose', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Lotus', :totalpoll => 0},
-{:Question_id => 4, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Computer Science', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Engineering', :totalpoll => 0},
-{:Question_id => 5, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Tennis', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Baseball', :totalpoll => 0},
-{:Question_id => 6, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '5', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '6', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '7', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => '8', :totalpoll => 0},
-{:Question_id => 7, :Answer_id => 'Other', :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 'Yes', :totalpoll => 0},
-{:Question_id => 8, :Answer_id => 'No', :totalpoll => 0}
+{:Question_id => 1, :Answer_id => 1, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 2, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 3, :totalpoll => 0},
+{:Question_id => 1, :Answer_id => 4, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 5, :totalpoll => 0},
+{:Question_id => 2, :Answer_id => 6, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 7, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 8, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 9, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 10, :totalpoll => 0},
+{:Question_id => 3, :Answer_id => 11, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 12, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 13, :totalpoll => 0},
+{:Question_id => 4, :Answer_id => 14, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 15, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 16, :totalpoll => 0},
+{:Question_id => 5, :Answer_id => 17, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 18, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 19, :totalpoll => 0},
+{:Question_id => 6, :Answer_id => 20, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 21, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 22, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 23, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 24, :totalpoll => 0},
+{:Question_id => 7, :Answer_id => 25, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 26, :totalpoll => 0},
+{:Question_id => 8, :Answer_id => 27, :totalpoll => 0}
 ]
 
 userpollresults.each do |u|
   Userpollresult.create!(u)
 end
+
+pquestions=[
+{:question => 'Who is better at communication?'},
+{:question => 'Who provides extra help outside class better?'},
+{:question => 'Who is friendlier?'},
+{:question => 'Who gives extra credit?'},
+{:question => 'Whose lectures are more interesting?'},
+{:question => 'Who would be a better adviser in general?'}
+]
+
+pquestions.each do |q|
+  PQuestion.create!(q)
+end
+
+cquestions=[
+{:question => 'Which course has more homework?'},
+{:question => 'Which course offer online?'},
+{:question => 'Which course requires a personal laptop?'},
+{:question => 'Which course has more workload then its actual credit hour?'},
+{:question => 'Which course offer in all semester?'},
+{:question => 'Which course has more than 2 exams, including final?'}
+]
+
+cquestions.each do |q|
+  CQuestion.create!(q)
+end
+

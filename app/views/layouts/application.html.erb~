@@ -14,7 +14,7 @@
 	  padding-top:3px;
 	}
 	footer{
-	  padding-bottom:200px;
+	  padding-bottom:50px;
 	}
     </style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -72,23 +72,11 @@
 	         <li class="divider-vertical"></li>
 
 	   <li class="dropdown" id="historytab">
-		<a class="dropdown-toggle" id="drop2" role="button" data-toggle="dropdown" href="#">History <b class="caret"></b></a>	
-		  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
-	            <li class="dropdown-submenu" id="subtab1">
-		       <a class="dropdown-toggle" id="drop3" role="button" data-toggle="dropdown" href="#">My Votes</a>	
-		         <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-		            <li role="presentation"><%= link_to "Classes", "/generalhistory"  %></li>
-		            <li role="presentation"><%= link_to "Teachers", "/generalhistory"  %></li>
-		         </ul>
-		    </li>
-	            <li class="dropdown-submenu" id="subtab2">
-		       <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Overall Votes</a>	
-		         <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
-		            <li role="presentation"><%= link_to "Classes", "/generalhistoryclasses"  %></li>
-		            <li role="presentation"><%= link_to "Teachers", "/generalhistoryprofessors"  %></li>
-		        </ul>
-	            </li>
-		  </ul>
+		<a class="dropdown-toggle" id="drop2" role="button" data-toggle="dropdown" href="#">Results <b class="caret"></b></a>	
+		<ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+	      <li role="presentation"><%= link_to "Professors", "/generalhistoryprofessors"  %></li>
+	      <li role="presentation"><%= link_to "Classes", "/generalhistoryclasses"  %></li>
+		</ul>
 	   </li>
 
                  <li class="divider-vertical"></li>

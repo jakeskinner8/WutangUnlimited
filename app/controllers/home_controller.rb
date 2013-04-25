@@ -4,7 +4,6 @@ class HomeController < ApplicationController
     @top5professors = Professor.find(:all,:order=>'winpercentage desc').take(5)
     @top5courses = Course.find(:all,:order=>'winpercentage desc').take(5)
 
-   
     @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
     @answer = Answer.find_all_by_Question_id(@randomquestion)
     if params[:id] != nil
@@ -12,7 +11,8 @@ class HomeController < ApplicationController
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
       Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
-      flash[:notice] = "Uptil now total #{totalpoll} out of #{total} people voted #{params[:realanswer]} for #{params[:realquestion]}."
+      flash[:notice] = "Your answer was submitted. View the results page to see how other people answered the question."
+      params[:id] = nil
     end
 
 
@@ -28,8 +28,9 @@ class HomeController < ApplicationController
   def faveclass
   end
   def question
+	@results = Userpollresult.all
+	@questions = Question.all
   end
-
     def generalhistoryprofessors
 	if(params[:sort].to_s == "name") 
 		@top5 = Professor.find(:all,:order=>'last_name asc')

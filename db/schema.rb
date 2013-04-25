@@ -11,11 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420234419) do
+ActiveRecord::Schema.define(:version => 20130424234003) do
 
   create_table "answers", :force => true do |t|
     t.integer  "Question_id"
     t.string   "answers"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "c_questions", :force => true do |t|
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "c_votes", :force => true do |t|
+    t.integer  "Professor_id"
+    t.integer  "CQuestion_id"
+    t.integer  "wins"
+    t.integer  "appearances"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +50,21 @@ ActiveRecord::Schema.define(:version => 20130420234419) do
     t.integer  "wins"
     t.integer  "appearances"
     t.float    "winpercentage"
+  end
+
+  create_table "p_questions", :force => true do |t|
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "p_votes", :force => true do |t|
+    t.integer  "Professor_id"
+    t.integer  "PQuestion_id"
+    t.integer  "wins"
+    t.integer  "appearances"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "professors", :force => true do |t|
