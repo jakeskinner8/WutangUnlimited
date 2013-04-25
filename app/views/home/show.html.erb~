@@ -35,11 +35,11 @@
 			<p><ul> 
 				<% @answer.each do |a| %>
 				<li style="list-style-type:none">
-<td class="skip1"><%= link_to "#{a.answers}", :id => @randomquestion[0].id, :Answer_id => a.id,:realquestion => @randomquestion[0].question, :realanswer => a.answers %> 
+<td class="skip1"><%= link_to "#{a.answers}", home_path(:id => @randomquestion[0].id, :Answer_id => a.id,:realquestion => @randomquestion[0].question, :realanswer => a.answers) %> 
     					</td>
 				</li>
 				<% end %>
-			</ul></p>
+			</ul></p><a class="btn" href="questionshistory">More Results</a>
 		</div>
 		<div class="span4" style="margin-top:-30px">
 		  <h2>Top Ranked Teachers</h2>
@@ -50,7 +50,7 @@
 				 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
 			       </li>
 			<% end %>
-		       </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
+		       </ol></p><a class="btn" href="question">More Results</a>
 		 
 	       </div>
         <div class="span4" style="margin-top:-30px">
