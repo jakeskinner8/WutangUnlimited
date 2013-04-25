@@ -25,29 +25,35 @@ class VotesController < ApplicationController
 		flash[:notice] = "You skipped the previous question."
 	else
 		if(session[:votingOn].to_s == "Teachers")
-
-		wins = Professor.find(params[:id]).wins + 1
-		appearances = Professor.find(params[:id]).appearances + 1
-		winpercentage = wins.to_f / appearances.to_f * 100
-		Professor.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-
-		wins = Professor.find(params[:loser]).wins
-		appearances = Professor.find(params[:loser]).appearances + 1
-		winpercentage = wins.to_f / appearances.to_f * 100
-Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
-			flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
+		  wins = Professor.find(params[:id]).wins + 1
+		  appearances = Professor.find(params[:id]).appearances + 1
+		  winpercentage = wins.to_f / appearances.to_f * 100
+		  Professor.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
+		  exists = PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question])
+		  if exists != nil
+		    wins = exists[3] + 1
+		    appearances = exists[4] + 1
+		    PVote.find_by_Professor_id_and_PQuestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		  else
+		    PVote.create(:Professor_id=>params[:id], :PQuestion=>params[:question],:wins=>1,:appearances=>1)		
+		  end
+		
+		  wins = Professor.find(params[:loser]).wins
+		  appearances = Professor.find(params[:loser]).appearances + 1
+		  winpercentage = wins.to_f / appearances.to_f * 100
+		  Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
+		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
-
-		wins = Course.find(params[:id]).wins + 1
-		appearances = Course.find(params[:id]).appearances + 1
-		winpercentage = wins.to_f / appearances.to_f * 100
-		Course.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-
-		wins = Course.find(params[:loser]).wins
-		appearances = Course.find(params[:loser]).appearances + 1
-		winpercentage = wins.to_f / appearances.to_f * 100
-Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
-			flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
+		  wins = Course.find(params[:id]).wins + 1
+		  appearances = Course.find(params[:id]).appearances + 1
+		  winpercentage = wins.to_f / appearances.to_f * 100
+		  Course.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
+		
+		  wins = Course.find(params[:loser]).wins
+		  appearances = Course.find(params[:loser]).appearances + 1
+		  winpercentage = wins.to_f / appearances.to_f * 100
+		  Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
+		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
 		end	
 	end
 	flash.keep
