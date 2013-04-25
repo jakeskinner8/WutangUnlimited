@@ -1,6 +1,6 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 
-%h1{:style=>"text-align:center"} Overall Voting Results
+%h3{:style=>"text-align:center"} Top Professor Overall
 %ul{:style=>"text-align:center"}
 
 %table{:class => "table"}
@@ -17,4 +17,12 @@
         %td= prof.wins
         %td= prof.appearances
         %td= number_with_precision(prof.winpercentage, :precision => 2)
+
+- PQuestion.all.each do |x|
+  %h4= "#{x.question}"
+  %table{:class => "table"}
+    - for counter in 1..5 do 
+      %thead
+        %tr
+          %td= "#{counter}."
 
