@@ -174,3 +174,30 @@ userpollresults=[
 userpollresults.each do |u|
   Userpollresult.create!(u)
 end
+
+pquestions=[
+{:question => 'Who is better at communication?'},
+{:question => 'Who provides extra help outside class better?'},
+{:question => 'Who is friendlier?'},
+{:question => 'Who gives extra credit?'},
+{:question => 'Whose lectures are more interesting?'},
+{:question => 'Who would be a better adviser in general?'}
+]
+
+pquestions.each do |q|
+  PQuestion.create!(q)
+end
+
+cquestions=[
+{:question => 'Which course has more homework?'},
+{:question => 'Which course offer online?'},
+{:question => 'Which course requires a personal laptop?'},
+{:question => 'Which course has more workload then its actual credit hour?'},
+{:question => 'Which course offer in all semester?'},
+{:question => 'Which course has more than 2 exams, including final?'}
+]
+
+cquestions.each do |q|
+  CQuestion.create!(q)
+end
+

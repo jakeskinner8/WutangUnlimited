@@ -171,3 +171,16 @@ userpollresults=[
 userpollresults.each do |u|
   Userpollresult.create!(u)
 end
+
+pquestions=[
+{:question => 'Who is better at communication?'},
+{:question => 'Who provides extra help outside class better?'},
+{:question => 'Who is friendlier?'},
+{:question => 'Who gives extra credit?'},
+{:question => 'Whose lectures are more interesting?'},
+{:question => 'Who would be a better adviser in general?'}
+]
+
+pquestions.each do |q|
+  PQuestion.create!(q)
+end
