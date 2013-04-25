@@ -13,10 +13,10 @@ class VotesController < ApplicationController
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
 		session[:votingOn] = "Teachers"
 		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
-		@question = PQuestion.find(:all,:order=>'RANDOM()', :limit => 1)
+		@question = Pquestion.find(:all,:order=>'RANDOM()', :limit => 1)
         else
 		@random = Course.find(:all,:order=>'RANDOM()', :limit => 2)
-		@question = CQuestion.find(:all,:order=>'RANDOM()', :limit => 1)
+		@question = Cquestion.find(:all,:order=>'RANDOM()', :limit => 1)
 	end
   end	
 
@@ -29,14 +29,14 @@ class VotesController < ApplicationController
 		  appearances = Professor.find(params[:id]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-		  exists = PVote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question])
+		  exists = Pvote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question])
 		  if exists.nil?
-		    PVote.create!(:Professor_id=>params[:id], :Pquestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		    Pvote.create!(:Professor_id=>params[:id], :Pquestion_id=>params[:question],:wins=>1,:appearances=>1)		
 		  else
 
 		    wins = exists[:wins] + 1
 		    appearances = exists[:appearances] + 1
-		    PVote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		    Pvote.find_by_Professor_id_and_Pquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
 
 		  end
 		
@@ -44,13 +44,13 @@ class VotesController < ApplicationController
 		  appearances = Professor.find(params[:loser]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Professor.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
-		  exists = PVote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question])
+		  exists = Pvote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question])
 		  if exists.nil?
-		    PVote.create!(:Professor_id=>params[:loser], :Pquestion_id=>params[:question],:wins=>0,:appearances=>1)
+		    Pvote.create!(:Professor_id=>params[:loser], :Pquestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
 
 		    appearances = exists[:appearances] + 1
-		    PVote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
+		    Pvote.find_by_Professor_id_and_Pquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
 
 		  end		
 		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
