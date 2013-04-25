@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/ubuntu/WutangUnlimited/app/models/user.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/user.rb": [
         1,
         null,
         null,
@@ -13,21 +13,21 @@
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/application_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/application_controller.rb": [
         1,
         null,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/application_helper.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/helpers/home_helper.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/account_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/account_controller.rb": [
         1,
         1,
         1,
@@ -44,24 +44,30 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/account.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/account.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/home_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/home_controller.rb": [
         1,
         1,
-        18,
-        18,
-        18,
-        18,
-        13,
-        13,
-        13,
+        34,
+        34,
+        34,
         null,
-        5,
-        5,
+        null,
+        34,
+        34,
+        34,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         null,
         null,
         1,
@@ -101,7 +107,7 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/invite_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/invite_controller.rb": [
         1,
         1,
         1,
@@ -125,11 +131,11 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/invite.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/invite.rb": [
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/professors_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/professors_controller.rb": [
         1,
         1,
         2,
@@ -141,84 +147,84 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/professor.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/professor.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/results_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/results_controller.rb": [
         1,
         1,
         null,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/controllers/votes_controller.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/controllers/votes_controller.rb": [
         1,
         1,
+        1,
+        49,
+        49,
+        3,
+        3,
+        null,
+        null,
+        null,
+        null,
         1,
         23,
-        23,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
         11,
-        7,
-        7,
-        7,
+        11,
+        11,
         null,
-        4,
-        4,
+        12,
+        12,
         null,
-        null,
-        null,
-        1,
-        7,
-        2,
-        null,
-        5,
-        null,
-        4,
-        4,
-        4,
-        4,
-        null,
-        4,
-        4,
-        4,
-        4,
-        4,
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
+        13,
+        6,
         null,
         7,
-        7,
+        null,
+        4,
+        4,
+        4,
+        4,
+        null,
+        4,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null,
+        3,
+        3,
+        3,
+        3,
+        null,
+        3,
+        3,
+        3,
+        3,
+        3,
+        null,
+        null,
+        13,
+        13,
         null,
         null,
         1,
-        2,
-        2,
+        4,
+        4,
         null,
         null,
         1,
-        2,
-        2,
+        6,
+        6,
         null,
         1,
         null,
@@ -230,7 +236,7 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/mailers/my_mailer.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/mailers/my_mailer.rb": [
         1,
         1,
         1,
@@ -240,35 +246,41 @@
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/answer.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/answer.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/categorie.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/categorie.rb": [
         1,
         null,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/course.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/course.rb": [
         1,
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/question.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/question.rb": [
         1,
         1,
         null
       ],
-      "/home/ubuntu/WutangUnlimited/app/models/teach.rb": [
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/teach.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/Documents/FinalFourthRepo/WutangUnlimited/app/models/userpollresult.rb": [
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1366510680
+    "timestamp": 1366849007
   },
   "RSpec": {
     "coverage": {

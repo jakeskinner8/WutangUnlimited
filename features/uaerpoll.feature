@@ -7,12 +7,8 @@ I want to be able to answer general questions
 Background: I am on home page
 
 Given the following questions have been added have into the Teacher Quality Rating System:
-| question                                       |       total       |
-| 'What is your favorite place of study?'        |         0         |
-
-Given the following userpollresults have been added have into the Teacher Quality Rating System:
-| Question_id                   |        Answer_id           |            totalpoll   |
-| 1                             |         1                  |                 0      |                 
+| question                   | 
+| 'What is your favorite place of study?'        | 
 
 Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
