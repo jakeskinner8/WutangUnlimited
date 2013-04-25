@@ -18,21 +18,23 @@
         %td= prof.appearances
         %td= number_with_precision(prof.winpercentage, :precision => 2)
 
-- Pquestion.all.each do |x|
-  - if not x.Professor == []
-    %h4= "#{x.question}"
-    %table{:class => "table"}
-      %thead
-        %tr
-          %th Professor Name
-          %th Wins
-          %th Appearances
-          %th Win Percentage (%)
-      - x.Professor.each do |y|
-        %tbody
-          %tr
-            %td= "#{y.first_name} #{y.last_name}"
-            %td= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins}"
-            %td= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances}"
-            %td= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
-
+%div{:style=>"text-align:center"}
+  - Pquestion.all.each do |x|
+    - if not x.Professor == []
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;"}
+        %h4= "#{x.question}"
+        %table{:class => "table", :style=>"width:500px;"}
+          %thead
+            %tr
+              %th{:style=>"text-align:center"} Professor Name
+              %th{:style=>"text-align:center"} Wins
+              %th{:style=>"text-align:center"} Appearances
+              %th{:style=>"text-align:center"} Win Percentage (%)
+          - x.Professor.each do |y|
+            %tbody
+              %tr
+                %td{:style=>"text-align:center"}= "#{y.first_name} #{y.last_name}"
+                %td{:style=>"text-align:center"}= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins}"
+                %td{:style=>"text-align:center"}= "#{Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances}"
+                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
+     
