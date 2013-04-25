@@ -7,8 +7,16 @@ I want to be able to vote
 Background: I'm logged then I'm able see voting page
 
 Given the following questions have been added have into the Teacher Quality Rating System:
-| question                   | 
-| 'What is your favorite place of study?'        | 
+| question                                       | total                       |
+| 'What is your favorite place of study?'        |   0                         |
+
+Given the following answers have been added have into the Teacher Quality Rating System:
+| Question_id           |       answers     |
+|        1              |       Home        |
+
+Given the following userpollresults have been added have into the Teacher Quality Rating System:
+| Question_id                   |        Answer_id           |            totalpoll   |
+| 1                             |         1                  |                 0      |  
 
 Given the following users have registered into the Teacher Quality Rating System:
 | email                       | password     |
@@ -23,6 +31,18 @@ Given the following courses have been enterened into the Teacher Quality Rating 
 | course_name	| wins	| appearances|winpercentage |
 | SELT     	| 0	| 0	     |0.0	    | 
 | CIE     	| 0	| 0	     |0.0 	    | 
+
+Given the following pquestions have been added have into the Teacher Quality Rating System:
+| question                   |       
+| Who is better at communication?|  
+
+Given the following cquestions have been added have into the Teacher Quality Rating System:
+| question                   |       
+| Which course has more homework?|         
+
+Given the following userpollresults have been added have into the Teacher Quality Rating System:
+| Question_id                   |        Answer_id           |            totalpoll   |
+| 1                             |         1                  |                 0      |  
 
 
 And I am on home page

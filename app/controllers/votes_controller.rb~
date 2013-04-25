@@ -13,10 +13,10 @@ class VotesController < ApplicationController
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
 		session[:votingOn] = "Teachers"
 		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
-		@question = Course.find(:all,:order=>'RANDOM()', :limit => 1)
+		@question = PQuestion.find(:all,:order=>'RANDOM()', :limit => 1)
         else
 		@random = Course.find(:all,:order=>'RANDOM()', :limit => 2)
-		@question = Course.find(:all,:order=>'RANDOM()', :limit => 1)
+		@question = CQuestion.find(:all,:order=>'RANDOM()', :limit => 1)
 	end
   end	
 
@@ -67,29 +67,6 @@ Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winperc
     
   end
 
-  def generalhistoryprofessors
-	if(params[:sort].to_s == "name") 
-		@top5 = Professor.find(:all,:order=>'last_name asc')
-	elsif(params[:sort].to_s == "wins") 
-		@top5 = Professor.find(:all,:order=>'wins desc')
-	elsif(params[:sort].to_s == "appearances") 
-		@top5 = Professor.find(:all,:order=>'appearances desc')
-	else
-		@top5 = Professor.find(:all,:order=>'winpercentage desc')
-	end
-  end
-
-  def generalhistoryclasses
-	if(params[:sort].to_s == "name") 
-		@top5 = Course.find(:all,:order=>'course_name asc')
-	elsif(params[:sort].to_s == "wins") 
-		@top5 = Course.find(:all,:order=>'wins desc')
-	elsif(params[:sort].to_s == "appearances") 
-		@top5 = Course.find(:all,:order=>'appearances desc')
-	else
-		@top5 = Course.find(:all,:order=>'winpercentage desc')
-	end
-  end
 
   def topProfs
     

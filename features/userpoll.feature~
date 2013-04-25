@@ -11,8 +11,8 @@ Given the following questions have been added have into the Teacher Quality Rati
 | 'What is your favorite place of study?'        |         0         |
 
 Given the following answers have been added have into the Teacher Quality Rating System:
-| Question_id           |       answers     |
-|        1              |       Home        |
+|       answers     |
+|        Home      |
 
 Given the following userpollresults have been added have into the Teacher Quality Rating System:
 | Question_id                   |        Answer_id           |            totalpoll   |
