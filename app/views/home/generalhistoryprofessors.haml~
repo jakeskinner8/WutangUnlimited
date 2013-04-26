@@ -21,7 +21,7 @@
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
     - if not x.Professor == []
-      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;"}
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:150px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
           %thead
@@ -36,5 +36,5 @@
                 %td{:style=>"text-align:center"}= "#{y.first_name} #{y.last_name}"
                 %td{:style=>"text-align:center"}= Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(["\"Professor_id\"=>y.id, \"Pquestion_id\"=>x.id"])[0].appearances.to_f*100 : 0),:precision=>2)
+                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
      

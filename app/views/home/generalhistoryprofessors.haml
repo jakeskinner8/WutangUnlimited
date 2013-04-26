@@ -21,7 +21,7 @@
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
     - if not x.Professor == []
-      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;"}
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
           %thead
