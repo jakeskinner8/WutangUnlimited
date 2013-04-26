@@ -5,7 +5,6 @@ class CreatePvotes < ActiveRecord::Migration
       t.references 'Pquestion'
       t.integer :wins 		, :default => 0
       t.integer :appearances	, :default => 0
-
       t.timestamps
     end
   end
