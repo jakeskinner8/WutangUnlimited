@@ -1,9 +1,10 @@
 -#  This file is app/views/movies/index.html.haml
-%table#table{ :class => "table",:style => "width:15%;float:left; " }
+
+%h3{:class => "span2", :style => "width:100%;text-align:center"} Professor Biographies
+%table#table{ :class => "table"}
   %tbody
     - @professors.each do |professor|
       %tr
-        %td= link_to "#{professor.first_name} #{professor.last_name}", professor_path(professor)
+        %td{:style="text-align:center"}= link_to "#{professor.first_name} #{professor.last_name}", professor_path(professor)
 
-%h3{:class => "span2", :style => "width:70%;float:left;margin-left: -10px;text-align:center"} Professor Biographies
 
