@@ -23,9 +23,7 @@
   %table{:class =>"table"}
     %tbody
       %tr
+        %td Overall Rank:  #{@ranked}/#{Professor.all.size}
+      %tr
         %td Win Percentage: #{winp}% (#{@selected.wins}/#{@selected.appearances})
-      %tr
-        %td Phone: #{@selected.phone}
-      %tr
-        %td Education: #{@selected.education}
   
