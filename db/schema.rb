@@ -11,70 +11,70 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425030720) do
+ActiveRecord::Schema.define(:version => 20130427223739) do
 
   create_table "answers", :force => true do |t|
-    t.integer   "Question_id"
-    t.string    "answers"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "Question_id"
+    t.string   "answers"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "categories", :force => true do |t|
-    t.integer   "category_id"
-    t.string    "category_type"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "category_id"
+    t.string   "category_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "courses", :force => true do |t|
-    t.string    "course_name"
-    t.string    "course_number"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "wins"
-    t.integer   "appearances"
-    t.float     "winpercentage"
+    t.string   "course_name"
+    t.string   "course_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "wins"
+    t.integer  "appearances"
+    t.float    "winpercentage"
   end
 
   create_table "cquestions", :force => true do |t|
-    t.text      "question"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "cvotes", :force => true do |t|
-    t.integer   "Course_id"
-    t.integer   "Cquestion_id"
-    t.integer   "wins",         :default => 0
-    t.integer   "appearances",  :default => 0
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "Course_id"
+    t.integer  "Cquestion_id"
+    t.integer  "wins",         :default => 0
+    t.integer  "appearances",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pquestions", :force => true do |t|
-    t.text      "question"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "professors", :force => true do |t|
-    t.string    "first_name"
-    t.string    "last_name"
-    t.string    "email"
-    t.string    "phone"
-    t.string    "education"
-    t.string    "image_path"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "wins"
-    t.integer   "appearances"
-    t.float     "winpercentage"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "education"
+    t.string   "image_path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "wins"
+    t.integer  "appearances"
+    t.float    "winpercentage"
   end
 
   create_table "pvotes", :force => true do |t|
-    t.integer  "Professor_id"
-    t.integer  "Pquestion_id"
+    t.integer  "professor_id"
+    t.integer  "pquestion_id"
     t.integer  "wins",         :default => 0
     t.integer  "appearances",  :default => 0
     t.datetime "created_at"
@@ -82,41 +82,41 @@ ActiveRecord::Schema.define(:version => 20130425030720) do
   end
 
   create_table "questions", :force => true do |t|
-    t.string    "question"
-    t.integer   "total"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "question"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "teaches", :force => true do |t|
-    t.integer   "Course_id"
-    t.integer   "Professor_id"
-    t.string    "semester"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "Course_id"
+    t.integer  "Professor_id"
+    t.string   "semester"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "userpollresults", :force => true do |t|
-    t.integer   "Question_id"
-    t.integer   "Answer_id"
-    t.integer   "totalpoll"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "Question_id"
+    t.integer  "Answer_id"
+    t.integer  "totalpoll"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string    "email",                  :default => "", :null => false
-    t.string    "encrypted_password",     :default => "", :null => false
-    t.string    "reset_password_token"
-    t.timestamp "reset_password_sent_at"
-    t.timestamp "remember_created_at"
-    t.integer   "sign_in_count",          :default => 0
-    t.timestamp "current_sign_in_at"
-    t.timestamp "last_sign_in_at"
-    t.string    "current_sign_in_ip"
-    t.string    "last_sign_in_ip"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

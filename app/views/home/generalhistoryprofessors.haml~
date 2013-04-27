@@ -20,7 +20,8 @@
 
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
-    - if not x.Professor == []
+    - y = Professor.find_by_sql('SELECT * from professors INNER JOIN pvotes ON pvotes.professor_id = professors.id WHERE pvotes.pquestion_id ='+x.id.to_s)
+    - if not y == []
       %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
@@ -30,11 +31,10 @@
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances
               %th{:style=>"text-align:center"} Win Percentage (%)
-          - x.Professor.each do |y|
+          - y.each do |z|	
             %tbody
               %tr
-                %td{:style=>"text-align:center"}= "#{y.first_name} #{y.last_name}"
-                %td{:style=>"text-align:center"}= Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins
-                %td{:style=>"text-align:center"}= Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:Professor_id=>y.id, :Pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
-     
+                %td{:style=>"text-align:center"}= "#{z.first_name} #{z.last_name}"
+                %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].wins
+                %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances
+                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:professor_id=>z.id, :pquestion_id=>z.id)[0].appearances != 0 ? Pvote.where(:professor_id=>y.id, :pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
