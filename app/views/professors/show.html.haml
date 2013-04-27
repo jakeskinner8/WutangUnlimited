@@ -18,4 +18,14 @@
         %td Phone: #{@selected.phone}
       %tr
         %td Education: #{@selected.education}
+
+  - winp = number_with_precision(@selected.winpercentage, :precision => 2)
+  %table{:class =>"table"}
+    %tbody
+      %tr
+        %td Win Percentage: #{winp}% (#{@selected.wins}/#{@selected.appearances})
+      %tr
+        %td Phone: #{@selected.phone}
+      %tr
+        %td Education: #{@selected.education}
   

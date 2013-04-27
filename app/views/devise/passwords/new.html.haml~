@@ -1,0 +1,10 @@
+%div{:style=>"text-align:center"}
+  %h2 Forgot your password?
+  =form_tag ('/reset') do
+    %div{:style=>"display:inline-block; margin-right:10px;"}
+      =label :email, :email, 'Email'
+    %div{:style=>"display:inline-block;", :autofocus => true}
+      =text_field :email, 'email'
+    %div
+      =submit_tag 'Send me instructions'
+

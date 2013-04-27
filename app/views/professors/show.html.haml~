@@ -1,5 +1,5 @@
 -#  This file is app/views/movies/index.html.haml
-%table#table{ :class => "table",:style => "width:15%;float:left;margin-top:40px; " }
+%table#table{ :class => "table",:style => "width:15%;float:left;margin-top:50px; " }
   %tbody
     - @professors.each do |professor|
       %tr
@@ -14,6 +14,16 @@
     %tbody
       %tr
         %td Email: #{@selected.email}
+      %tr
+        %td Phone: #{@selected.phone}
+      %tr
+        %td Education: #{@selected.education}
+
+  - winp = number_with_precision(@selected.winpercentage, :precision => 2)
+  %table{:class =>"table"}
+    %tbody
+      %tr
+        %td Win Percentage: #{winp} (#{@selected.wins}/#{@selected.appearances})
       %tr
         %td Phone: #{@selected.phone}
       %tr
