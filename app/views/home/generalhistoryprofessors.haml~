@@ -20,7 +20,8 @@
 
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
-    - if not x.Professor == []
+    - x.find_by_sql('SELECT * FROM professors INNER JOIN pvotes ON professors.id = pvotes.Professor_id WHERE pvotes.Pquestion_id = x.id 
+    - if not x == []
       %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
