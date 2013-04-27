@@ -27,12 +27,13 @@ class HomeController < ApplicationController
   def reset
   	@email = params[:email]["email"]
 	MyMailer.reset(@email).deliver
+	
   end
   def question
 	@results = Userpollresult.all
 	@questions = Question.all
   end
-    def generalhistoryprofessors
+  def generalhistoryprofessors
 	if(params[:sort].to_s == "name") 
 		@top5 = Professor.find(:all,:order=>'last_name asc')
 	elsif(params[:sort].to_s == "wins") 

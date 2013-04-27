@@ -24,9 +24,10 @@ class HomeController < ApplicationController
   def faveclass
   end
 
-  def resetPassword
+  def reset
   	@email = params[:email]["email"]
 	MyMailer.reset(@email).deliver
+	
   end
   def question
 	@results = Userpollresult.all
