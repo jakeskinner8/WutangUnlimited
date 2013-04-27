@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130427223739) do
+ActiveRecord::Schema.define(:version => 20130425030720) do
 
   create_table "answers", :force => true do |t|
     t.integer   "Question_id"
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(:version => 20130427223739) do
   end
 
   create_table "pvotes", :force => true do |t|
-    t.integer  "professor_id"
-    t.integer  "pquestion_id"
+    t.integer  "Professor_id"
+    t.integer  "Pquestion_id"
     t.integer  "wins",         :default => 0
     t.integer  "appearances",  :default => 0
     t.datetime "created_at"
