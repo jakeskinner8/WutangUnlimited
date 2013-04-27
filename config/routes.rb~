@@ -24,7 +24,6 @@ end
      resources :professors
      resources :votes
      resources :invite
-     resources :account
      match 'vote-classes' => 'votes#classes'
      match 'vote-teachers' => 'votes#teachers'
      match 'invite' => 'invite#invite'
@@ -37,6 +36,7 @@ end
      match 'courses' => 'home#courses'
      match 'question' => 'home#question'
      match 'results' => 'results#evaluation'
+     match 'reset' => 'home#resetPassword'
   # Sample resource route with options:
   #   resources :products do
   #     member do

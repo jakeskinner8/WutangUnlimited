@@ -6,18 +6,13 @@ class HomeController < ApplicationController
 
     @randomquestion = Question.find(:all,:order=>'RANDOM()', :limit => 1)
     @answer = Answer.find_all_by_Question_id(@randomquestion)
-<<<<<<< HEAD
-    if params[:Answer_id] != nil && params[:id] != nil
-=======
-    if params[:Answer_id] != nil
->>>>>>> 60096091a66e221f6b1718287ab873fbcd75d9c9
+    if params[:Answer_id] != nil and params[:id] != nil
       total = Question.find(params[:id]).total + 1
       totalpoll = Userpollresult.find(params[:Answer_id]).totalpoll + 1
       Question.find(params[:id]).update_attributes(:total=>total)
       Userpollresult.find(params[:Answer_id]).update_attributes(:totalpoll=>totalpoll)
       flash.now[:notice] = "Your answer was submitted. View the results page to see how other people answered the question."
     end
-    params[:Answer_id] = nil
   end
   def about
   end
@@ -27,6 +22,11 @@ class HomeController < ApplicationController
     
   end
   def faveclass
+  end
+
+  def resetPassword
+  	@email = params[:email]["email"]
+	MyMailer.reset(@email).deliver
   end
   def question
 	@results = Userpollresult.all
