@@ -20,8 +20,7 @@
 
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
-    - y = Professor.find_by_sql('SELECT * FROM professors INNER JOIN pvotes ON professors.id = pvotes.Professor_id WHERE "pvotes.Pquestion_id"='+ x.id.to_s) 
-    - if not y == []
+    - if not x.Professor == []
       %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
@@ -31,7 +30,7 @@
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances
               %th{:style=>"text-align:center"} Win Percentage (%)
-          
+          - x.Professor.each do |y|
             %tbody
               %tr
                 %td{:style=>"text-align:center"}= "#{y.first_name} #{y.last_name}"
