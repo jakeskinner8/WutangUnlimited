@@ -10,6 +10,10 @@
   %img(src="#{@selected.image_path}"){ :style => "width:30%;margin-bottom:20px;"}
   %div
   %div
+  - winp = number_with_precision(@selected.winpercentage, :precision => 2)
+  Overall Rank:  #{@ranked}/#{Professor.all.size}  
+  %br   
+  Win Percentage: #{winp}% (#{@selected.wins}/#{@selected.appearances})
   %table{:class =>"table"}
     %tbody
       %tr
@@ -18,14 +22,3 @@
         %td Phone: #{@selected.phone}
       %tr
         %td Education: #{@selected.education}
-
-  - winp = number_with_precision(@selected.winpercentage, :precision => 2)
-  %table{:class =>"table"}
-    %tbody
-      %tr
-        %td Win Percentage: #{winp}% (#{@selected.wins}/#{@selected.appearances})
-      %tr
-        %td Phone: #{@selected.phone}
-      %tr
-        %td Education: #{@selected.education}
-  
