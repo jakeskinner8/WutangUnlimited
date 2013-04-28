@@ -39,7 +39,7 @@
     					</td>
 				</li>
 				<% end %>
-			</ul></p><a class="btn" href="questionshistory">More Results</a>
+			</ul></p><a class="btn" href="question">More Results</a>
 		</div>
 		<div class="span4" style="margin-top:-30px">
 		  <h2>Top Ranked Teachers</h2>
@@ -50,7 +50,7 @@
 				 <%= link_to "#{a.first_name} #{a.last_name}", professor_path(a.id) %>
 			       </li>
 			<% end %>
-		       </ol></p><a class="btn" href="question">More Results</a>
+		       </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
 		 
 	       </div>
         <div class="span4" style="margin-top:-30px">
