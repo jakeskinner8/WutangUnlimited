@@ -6,29 +6,29 @@
 %table{:class => "table", :style => "width:60%;margin:0 auto"}
   %thead
     %tr
-      %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}
+      %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite"), :style=>"width:5em"}
         #{link_to 'Professor', generalhistoryprofessors_path(:sort => 'name')} 
         -if session[:sort].to_s == "name"
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
-      %th{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}
+      %th{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite"),:style=>"width:3em"}
         #{link_to 'Wins', generalhistoryprofessors_path(:sort => 'wins')}
         -if session[:sort] == "wins" 
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
-      %th{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}
+      %th{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite"),:style=>"width:3em"}
         #{link_to 'Appearances', generalhistoryprofessors_path(:sort => 'appearances')}
         -if session[:sort] == "appearances" 
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
-      %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}
+      %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"),:style=>"width:5em"}
         #{link_to 'Win Percentage(%)',generalhistoryprofessors_path(:sort => 'winpercentage')}
         -if session[:sort] == "winpercentage" || session[:sort] == nil
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
   %tbody
     - @top5.each do |prof|
       %tr
-        %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}#{link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"}   
-        %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}#{prof.wins} 
-        %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}#{prof.appearances}
-        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}#{number_with_precision(prof.winpercentage, :precision => 2)}
+        %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite"),:style=>"width:5em"}#{link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"}   
+        %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite"),:style=>"width:5em"}#{prof.wins} 
+        %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite"),:style=>"width:5em"}#{prof.appearances}
+        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"),:style=>"width:5em"}#{number_with_precision(prof.winpercentage, :precision => 2)}
    
 
 %div{:style=>"text-align:center"}
