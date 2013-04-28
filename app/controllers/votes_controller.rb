@@ -47,7 +47,7 @@ class VotesController < ApplicationController
 		  if exists.nil?
 		    Pvote.create!(:professor_id=>params[:loser], :pquestion_id=>params[:question],:wins=>0,:appearances=>1,:winpercentage=>0.00)
 		  else
-		    wins = exists[:wins] + 1
+		    wins = exists[:wins]
 		    appearances = exists[:appearances] + 1
                     winpercentage = wins.to_f / appearances.to_f * 100
 		    Pvote.find_by_professor_id_and_pquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
@@ -77,7 +77,7 @@ class VotesController < ApplicationController
 		  if exists.nil?
 		    Cvote.create!(:course_id=>params[:loser], :cquestion_id=>params[:question],:wins=>0,:appearances=>1,:winpercentage=>0)
 		  else
-                    wins = exists[:wins] + 1
+                    wins = exists[:wins] 
 		    appearances = exists[:appearances] + 1
                     winpercentage = wins.to_f / appearances.to_f * 100
 		    Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
