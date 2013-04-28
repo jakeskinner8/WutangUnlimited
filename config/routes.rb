@@ -37,6 +37,7 @@ end
      match 'question' => 'home#question'
      match 'results' => 'results#evaluation'
      match 'reset' => 'home#reset'
+     match 'search' => 'professors#search'
   # Sample resource route with options:
   #   resources :products do
   #     member do
