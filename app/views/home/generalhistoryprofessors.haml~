@@ -3,20 +3,33 @@
 %h3{:style=>"text-align:center"} Top Professor Overall
 %ul{:style=>"text-align:center"}
 
-%table{:class => "table"}
+%table{:class => "table", :style => "width:60%;margin:0 auto"}
   %thead
     %tr
-      %th= link_to 'Professor', generalhistoryprofessors_path(:sort => 'name')
-      %th= link_to 'Wins', generalhistoryprofessors_path(:sort => 'wins')
-      %th= link_to 'Appearances', generalhistoryprofessors_path(:sort => 'appearances')
-      %th= link_to 'Win Percentage(%)',generalhistoryprofessors_path(:sort => 'winpercentage')
+      %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}
+        #{link_to 'Professor', generalhistoryprofessors_path(:sort => 'name')} 
+        -if session[:sort].to_s == "name"
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}
+        #{link_to 'Wins', generalhistoryprofessors_path(:sort => 'wins')}
+        -if session[:sort] == "wins" 
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}
+        #{link_to 'Appearances', generalhistoryprofessors_path(:sort => 'appearances')}
+        -if session[:sort] == "appearances" 
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}
+        #{link_to 'Win Percentage(%)',generalhistoryprofessors_path(:sort => 'winpercentage')}
+        -if session[:sort] == "winpercentage" || session[:sort] == nil
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
   %tbody
     - @top5.each do |prof|
       %tr
-        %td= link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"
-        %td= prof.wins
-        %td= prof.appearances
-        %td= number_with_precision(prof.winpercentage, :precision => 2)
+        %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}#{link_to "#{prof.last_name}, #{prof.first_name} ", "professors/#{prof.id}"}   
+        %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}#{prof.wins} 
+        %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}#{prof.appearances}
+        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}#{number_with_precision(prof.winpercentage, :precision => 2)}
+   
 
 %div{:style=>"text-align:center"}
   - Pquestion.all.each do |x|
@@ -37,4 +50,4 @@
                 %td{:style=>"text-align:center"}= "#{z.first_name} #{z.last_name}"
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= number_with_precision((Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances != 0 ? Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].wins.to_f/Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
+                %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].winpercentage
