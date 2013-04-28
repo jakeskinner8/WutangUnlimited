@@ -12,6 +12,21 @@
   width:20%;
   vertical-align:top
 }
+td.highlight{
+  background-color: #EEEEEE;
+  text-align:center;
+}
+th.highlight{
+  background-color: #CCCCCC;  
+  text-align:center;
+
+}
+td.nonhilite {
+ text-align:center;
+}
+th.nonhilite {
+ text-align:center;
+}
 .skip1{
   display:inline-block; 
   width:30%;

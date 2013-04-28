@@ -14,7 +14,7 @@
 }
 .skip1{
   display:inline-block; 
-  width:50%;
+  width:30%;
   margin-top:10%;
   vertical-align:top;
 }
