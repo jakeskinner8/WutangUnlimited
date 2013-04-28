@@ -50,4 +50,4 @@
                 %td{:style=>"text-align:center"}= "#{z.first_name} #{z.last_name}"
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].winpercentage
+                %td{:style=>"text-align:center"}= number_with_precision(Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].winpercentage,:precision=>2)
