@@ -29,6 +29,7 @@ class ProfessorsController < ApplicationController
     
   def search
     @search = params[:search]
+
   #@professors = Professor.where("first_name like ? or last_name like ? or email like ? or phone like ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
   #redirect_to(request.referer)
     @ids=""
@@ -52,7 +53,7 @@ class ProfessorsController < ApplicationController
           @ids = @ids.chop
           redirect_to professors_path(:list=>@ids)
         else
-          flash[:notice] = "Results not found"
+          flash[:notice] = "No Result found"
           redirect_to(:back) 
         end
       end  

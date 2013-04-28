@@ -195,8 +195,8 @@ When(/^I fill the search text field with "(.*?)"$/) do |searchparameter|
 end
 
 When(/^I press enter key and pass search parameter "(.*?)"$/) do |arg1|
-  visit "/search/?search=#{arg1}"
   Capybara.current_session.driver.header 'Referer', 'http://localhost:3000/'
+  visit "/search/?search=#{arg1}"
 end
 
 Then(/^I should be on the home page$/) do

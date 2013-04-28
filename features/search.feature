@@ -46,9 +46,9 @@ And I press enter key and pass search parameter "on"
 Then I should see "Results found"
 
 Scenario: I can search any professor on the basis of first name, last name, email and phone number by incorrect entry
-When  I fill the search text field with "aaaaaa"
-And I press enter key and pass search parameter "aaaaaa"
-Then I should see "Results not found"
+When  I fill the search text field with "zzzzzz"
+And I press enter key and pass search parameter "zzzzzz"
+Then I should be on the home page
 
 Scenario: I can search any professor on the basis of first name, last name, email and phone number by no entry
 When  I fill the search text field with ""
