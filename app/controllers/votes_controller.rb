@@ -51,6 +51,7 @@ class VotesController < ApplicationController
 		  end		
 		  flash[:notice] = "You voted for #{Professor.find(params[:id]).first_name}  #{Professor.find(params[:id]).last_name}." 
 		else
+                
 		  wins = Course.find(params[:id]).wins + 1
 		  appearances = Course.find(params[:id]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
@@ -63,19 +64,20 @@ class VotesController < ApplicationController
 		    appearances = exists[:appearances] + 1
 		    Cvote.find_by_course_id_and_cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
 		  end
+		
 		  wins = Course.find(params[:loser]).wins
 		  appearances = Course.find(params[:loser]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
-		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
 		  exists = Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question])
 		  if exists.nil?
 		    Cvote.create!(:course_id=>params[:loser], :cquestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
 		    appearances = exists[:appearances] + 1
-		    Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)	
-		  end
-		end	
+		    Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)
+		  end		
+		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}."
+		end
 	end
 	flash.keep
 	redirect_to votes_path
