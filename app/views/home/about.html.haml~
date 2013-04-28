@@ -15,6 +15,6 @@
     ProfMash is a website for students to vote for their favorite teachers and courses in a fun and 
     easy way. It's simpler to use than a survey, and it gives students and teachers a clearer representation 
     of the teachers' good qualities, as well as which teachers have been voted as the students' favorites overall.
-  %hr{:style=>"color:black"}
+  %hr
   %h3{:style => "text-align: center"} Questions or comments?
   %label{:style => "text-align: center; font-size:14pt;"} Send us at profmash@hotmail.com 
