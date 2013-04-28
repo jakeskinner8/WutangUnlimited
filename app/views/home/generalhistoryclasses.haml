@@ -3,7 +3,7 @@
 %h3{:style=>"text-align:center"} Overall Voting Results
 %ul{:style=>"text-align:center"}
 
-%table{:class => "table", :style => "width:60%;margin:0 auto"}
+%table{:class => "table", :style => "width:60%;margin:0 auto;margin-bottom:20px;"}
   %thead
     %tr
       %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite"), :style=>"width:5em"}
@@ -32,10 +32,10 @@
    
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
-    - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s)
+    - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s + " ORDER BY cvotes.winpercentage DESC").take(5)
     - if not y == []
-      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
-        %h4= "#{x.question}"
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;height:300px; margin-top:5px;"}
+        %h5= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
           %thead
             %tr
