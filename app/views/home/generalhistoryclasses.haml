@@ -1,27 +1,40 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 
-%h1{:style=>"text-align:center"} Overall Voting Results
+%h3{:style=>"text-align:center"} Overall Voting Results
 %ul{:style=>"text-align:center"}
 
-%table{:class => "table"}
+%table{:class => "table", :style => "width:60%;margin:0 auto"}
   %thead
     %tr
-      %th= link_to 'Course', generalhistoryclasses_path(:sort => 'name')
-      %th= link_to 'Wins', generalhistoryclasses_path(:sort => 'wins')
-      %th= link_to 'Appearances', generalhistoryclasses_path(:sort => 'appearances')
-      %th= link_to 'Win Percentage(%)',generalhistoryclasses_path(:sort => 'winpercentage')
+      %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}
+        #{link_to 'Course', generalhistoryclasses_path(:sort => 'name')} 
+        -if session[:sort].to_s == "name"
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}
+        #{link_to 'Wins', generalhistoryclasses_path(:sort => 'wins')}
+        -if session[:sort] == "wins" 
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}
+        #{link_to 'Appearances', generalhistoryclasses_path(:sort => 'appearances')}
+        -if session[:sort] == "appearances" 
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
+      %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}
+        #{link_to 'Win Percentage(%)',generalhistoryclasses_path(:sort => 'winpercentage')}
+        -if session[:sort] == "winpercentage" || session[:sort] == nil
+          %b{:class=>'caret', :style =>"vertical-align:middle"} 
   %tbody
     - @top5.each do |course|
       %tr
-        %td= course.course_name
-        %td= course.wins
-        %td= course.appearances
-        %td= number_with_precision(course.winpercentage, :precision => 2)
-
+        %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}#{course.course_name}
+        %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}#{course.wins} 
+        %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}#{course.appearances}
+        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}#{number_with_precision(course.winpercentage, :precision => 2)}
+   
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
-    - if not x.Course == []
-      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;"}
+    - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s)
+    - if not y == []
+      %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:200px;"}
         %h4= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
           %thead
@@ -30,10 +43,10 @@
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances
               %th{:style=>"text-align:center"} Win Percentage (%)
-          - x.Course.each do |y|
+          - y.each do |z|	
             %tbody
               %tr
-                %td{:style=>"text-align:center"}= "#{y.course_name}"
-                %td{:style=>"text-align:center"}= "#{Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].wins}"
-                %td{:style=>"text-align:center"}= "#{Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances}"
-                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:Course_id=>y.id, :Cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
+                %td{:style=>"text-align:center"}= "#{z.course_name}"
+                %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins
+                %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances
+                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)

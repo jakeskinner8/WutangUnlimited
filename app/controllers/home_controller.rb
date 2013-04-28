@@ -43,6 +43,11 @@ class HomeController < ApplicationController
 	else
 		@top5 = Professor.find(:all,:order=>'winpercentage desc')
 	end
+        if(params[:sort] == nil) 
+            session[:sort] = "winpercentage"
+        else   
+            session[:sort] = params[:sort]
+        end
   end
 
   def generalhistoryclasses
@@ -55,5 +60,10 @@ class HomeController < ApplicationController
 	else
 		@top5 = Course.find(:all,:order=>'winpercentage desc')
 	end
+        if(params[:sort] == nil) 
+            session[:sort] = "winpercentage"
+        else   
+            session[:sort] = params[:sort]
+        end
   end
 end
