@@ -1,6 +1,6 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
 
-%h1{:style=>"text-align:center"} Overall Voting Results
+%h3{:style=>"text-align:center"} Overall Voting Results
 %ul{:style=>"text-align:center"}
 
 %table{:class => "table", :style => "width:60%;margin:0 auto"}
@@ -49,4 +49,4 @@
                 %td{:style=>"text-align:center"}= "#{z.course_name}"
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:course_id=>z.id, :Cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
+                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
