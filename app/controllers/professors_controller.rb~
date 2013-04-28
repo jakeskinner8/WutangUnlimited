@@ -57,7 +57,7 @@ class ProfessorsController < ApplicationController
         end
       end  
       else
-        redirect_to(:back) 
+        redirect_to(request.headers["Referer"]) 
     end
     
   end

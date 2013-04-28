@@ -1,0 +1,70 @@
+Feature: UserPoll
+
+As a visitor
+So that I can answer basic questions
+I want to be able to answer general questions
+
+Background: I am on home page
+
+Given the following questions have been added have into the Teacher Quality Rating System:
+| question                                       |       total       |
+| 'What is your favorite place of study?'        |         0         |
+
+Given the following answers have been added have into the Teacher Quality Rating System:
+| Question_id           |       answers     |
+|        1              |       Home        |
+
+Given the following userpollresults have been added have into the Teacher Quality Rating System:
+| Question_id                   |        Answer_id           |            totalpoll   |
+| 1                             |         1                  |                 0      |                 
+
+Given the following users have registered into the Teacher Quality Rating System:
+| email                       | password     |
+| student1@uiowa.edu          | password     |
+
+Given the following professors have been enterened into the Teacher Quality Rating System:
+| first_name	| last_name	|email          	|image_path   | phone           | wins	| appearances|winpercentage |
+| onef     	| onel   	|onef-onel@uiowa.edu	|path1	      | (319) 855 0000	| 0	| 0	     |0.0	    |
+| twof     	| twol   	|twof-twol@uiowa.edu	|path2	      |	(319) 855 0001  | 0     | 0          |0.0	    |
+| on            | on            |on-on@uiowa.edu        |path3        | (319) 855 0002  | 0     | 0          |0.0           |
+
+Given the following courses have been enterened into the Teacher Quality Rating System:
+| course_name	| wins	| appearances|winpercentage |
+| SELT     	| 0	| 0	     |0.0	    | 
+| CIE     	| 0	| 0	     |0.0 	    | 
+
+And I am on home page
+
+Scenario: I can search any professor on the basis of first name, last name, email and phone number by full entry
+When I fill the search text field with "onef"
+And I press enter key and pass search parameter "onef"
+Then I should see "Results found"
+
+Scenario: I can search any professor on the basis of first name, last name, email and phone number by partial entry
+When  I fill the search text field with "on"
+And I press enter key and pass search parameter "on"
+Then I should see "Results found"
+
+Scenario: I can search any professor on the basis of first name, last name, email and phone number by incorrect entry
+When  I fill the search text field with "aaaaaa"
+And I press enter key and pass search parameter "aaaaaa"
+Then I should see "Results not found"
+
+Scenario: I can search any professor on the basis of first name, last name, email and phone number by no entry
+When  I fill the search text field with ""
+And I press enter key and pass search parameter ""
+Then I should be on the home page
+
+Scenario: I can search any professor on the basis of first name, last name, email and phone number by spaces
+When  I fill the search text field with "      "
+And I press enter key and pass search parameter "      "
+Then I should be on the home page
+
+
+
+
+
+
+
+
+
