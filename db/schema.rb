@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130428010213) do
+ActiveRecord::Schema.define(:version => 20130428014421) do
 
   create_table "answers", :force => true do |t|
     t.integer  "Question_id"
@@ -46,10 +46,11 @@ ActiveRecord::Schema.define(:version => 20130428010213) do
   create_table "cvotes", :force => true do |t|
     t.integer  "course_id"
     t.integer  "cquestion_id"
-    t.integer  "wins",         :default => 0
-    t.integer  "appearances",  :default => 0
+    t.integer  "wins",          :default => 0
+    t.integer  "appearances",   :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "winpercentage"
   end
 
   create_table "pquestions", :force => true do |t|
@@ -75,10 +76,11 @@ ActiveRecord::Schema.define(:version => 20130428010213) do
   create_table "pvotes", :force => true do |t|
     t.integer  "professor_id"
     t.integer  "pquestion_id"
-    t.integer  "wins",         :default => 0
-    t.integer  "appearances",  :default => 0
+    t.integer  "wins",          :default => 0
+    t.integer  "appearances",   :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "winpercentage"
   end
 
   create_table "questions", :force => true do |t|
