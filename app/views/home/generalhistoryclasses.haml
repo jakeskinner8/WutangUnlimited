@@ -30,8 +30,6 @@
         %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}#{course.appearances}
         %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}#{number_with_precision(course.winpercentage, :precision => 2)}
    
-
-
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
     - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s)
@@ -51,4 +49,4 @@
                 %td{:style=>"text-align:center"}= "#{z.course_name}"
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances
-                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:course_id=>z.id, :Cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)
+                %td{:style=>"text-align:center"}= number_with_precision((Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances != 0 ? Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins.to_f/Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances.to_f*100 : 0),:precision=>2)

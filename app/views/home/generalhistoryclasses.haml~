@@ -30,8 +30,6 @@
         %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}#{course.appearances}
         %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}#{number_with_precision(course.winpercentage, :precision => 2)}
    
-
-
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
     - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s)
