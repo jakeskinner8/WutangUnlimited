@@ -192,12 +192,12 @@ pquestions.each do |q|
 end
 
 cquestions=[
-{:question => 'Which course has more homework?'},
-{:question => 'Which course is offered online?'},
-{:question => 'Which course requires a personal laptop?'},
-{:question => 'Which course has more workload then its actual credit hour?'},
-{:question => 'Which course offered in all semester?'},
-{:question => 'Which course has more than 2 exams, including final?'}
+{:question => 'Which course requires less time spent per week?'},
+{:question => 'Which course is easier?'},
+{:question => 'Which course is more interesting?'},
+{:question => 'Which course involves less work than its actual credit hours?'},
+{:question => "Which course has a larger TA to student ratio (more TA's to help)?"},
+{:question => 'Which course has less than 2 exams, including final?'}
 ]
 
 cquestions.each do |q|

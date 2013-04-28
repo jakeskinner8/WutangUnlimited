@@ -36,7 +36,7 @@ end
      match 'courses' => 'home#courses'
      match 'question' => 'home#question'
      match 'results' => 'results#evaluation'
-     match 'reset' => 'home#resetPassword'
+     match 'reset' => 'home#reset'
   # Sample resource route with options:
   #   resources :products do
   #     member do
