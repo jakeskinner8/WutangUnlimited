@@ -7,19 +7,19 @@
   %thead
     %tr
       %th{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite")}
-        #{link_to 'Course', generalhistorycourses_path(:sort => 'name')} 
+        #{link_to 'Course', generalhistoryclasses_path(:sort => 'name')} 
         -if session[:sort].to_s == "name"
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
       %th{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite")}
-        #{link_to 'Wins', generalhistorycourses_path(:sort => 'wins')}
+        #{link_to 'Wins', generalhistoryclasses_path(:sort => 'wins')}
         -if session[:sort] == "wins" 
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
       %th{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite")}
-        #{link_to 'Appearances', generalhistorycourses_path(:sort => 'appearances')}
+        #{link_to 'Appearances', generalhistoryclasses_path(:sort => 'appearances')}
         -if session[:sort] == "appearances" 
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
       %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite")}
-        #{link_to 'Win Percentage(%)',generalhistorycourses_path(:sort => 'winpercentage')}
+        #{link_to 'Win Percentage(%)',generalhistoryclasses_path(:sort => 'winpercentage')}
         -if session[:sort] == "winpercentage" || session[:sort] == nil
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
   %tbody

@@ -55,25 +55,25 @@ class VotesController < ApplicationController
 		  appearances = Course.find(params[:id]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Course.find(params[:id]).update_attributes(:wins=>wins ,:appearances=>appearances,:winpercentage=>winpercentage)
-		  exists = Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question])
+		  exists = Cvote.find_by_course_id_and_cquestion_id(params[:id],params[:question])
 		  if exists.nil?
-		    Cvote.create!(:Course_id=>params[:id], :Cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
+		    Cvote.create!(:course_id=>params[:id], :cquestion_id=>params[:question],:wins=>1,:appearances=>1)		
 		  else
 		    wins = exists[:wins] + 1
 		    appearances = exists[:appearances] + 1
-		    Cvote.find_by_Course_id_and_Cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
+		    Cvote.find_by_course_id_and_cquestion_id(params[:id],params[:question]).update_attributes(:wins=>wins, :appearances=>appearances)
 		  end
 		  wins = Course.find(params[:loser]).wins
 		  appearances = Course.find(params[:loser]).appearances + 1
 		  winpercentage = wins.to_f / appearances.to_f * 100
 		  Course.find(params[:loser]).update_attributes(:appearances=>appearances,:winpercentage=>winpercentage)
 		  flash[:notice] = "You voted for #{Course.find(params[:id]).course_name}." 
-		  exists = Cvote.find_by_Course_id_and_Cquestion_id(params[:loser],params[:question])
+		  exists = Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question])
 		  if exists.nil?
-		    Cvote.create!(:Course_id=>params[:loser], :Cquestion_id=>params[:question],:wins=>0,:appearances=>1)
+		    Cvote.create!(:course_id=>params[:loser], :cquestion_id=>params[:question],:wins=>0,:appearances=>1)
 		  else
 		    appearances = exists[:appearances] + 1
-		    Cvote.find_by_Course_id_and_Cquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)	
+		    Cvote.find_by_course_id_and_cquestion_id(params[:loser],params[:question]).update_attributes(:appearances=>appearances)	
 		  end
 		end	
 	end
