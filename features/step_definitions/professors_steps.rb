@@ -189,3 +189,19 @@ When(/^I fill in "(.*?)" into the email$/) do |arg1|
   click_button 'Send Invite(s)'
 end
 
+
+When(/^I fill the search text field with "(.*?)"$/) do |searchparameter|
+  fill_in 'search', :with => searchparameter
+end
+
+When(/^I press enter key and pass search parameter "(.*?)"$/) do |arg1|
+  visit "/search/?search=#{arg1}"
+  Capybara.current_session.driver.header 'Referer', 'http://localhost:3000/'
+end
+
+Then(/^I should be on the home page$/) do
+   visit "/"
+end
+
+
+
