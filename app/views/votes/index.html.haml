@@ -10,7 +10,7 @@
       %p
       =link_to "Vote A", vote_path(:id => @random[0].id, :loser=>@random[1].id,:question=>@question[0].id), :class => "btn btn-success",:id=>"A"
     %div{:class=>"skip1"} 
-      =button_to "Skip", "/votes/S" , :method => :get, :class => "btn btn-large btn-inverse"
+      =button_to "Skip", "/votes/S" , :method => :get, :class => "btn btn-large btn-inverse", :id => "Skip"
     %div{:class=>"profImage"}
       =link_to image_tag("#{@random[1].image_path}",:class=>"image2",:alt =>"#{@random[1].id}"), vote_path(:id=>@random[1].id, :loser=>@random[0].id, :question=>@question[0].id)
       %p #{@random[1].first_name} #{@random[1].last_name}
@@ -23,6 +23,6 @@
     %div{:class=>"classVote"}
       %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", vote_path(@random[0].id, :loser=>@random[1].id,:question=>@question[0].id), :id=>"A"
     %div{:class=>"skip2"} 
-      =button_to 'Skip', "/votes/S" , :method => :get
+      =button_to 'Skip', "/votes/S" , :method => :get, :id=>"Skip"
     %div{:class=>"classVote"}
       %p{:style => "text-align:center; display:inline-block;"}= link_to "#{@random[1].course_name}",vote_path(@random[1].id, :loser=>@random[0].id,:question=>@question[0].id), :id=>"B"
