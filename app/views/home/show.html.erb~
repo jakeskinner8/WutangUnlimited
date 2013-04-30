@@ -29,7 +29,7 @@
 	<hr>
 	<!-- Example row of columns -->
 	<div class="row-fluid">
-		<div class="span4" style="margin-top:-30px">
+		<div class="span4" style="margin-top:0px">
 			<h2>Users Poll</h2>
 		  	<p><%= @randomquestion[0].question %> </p>
 			<p><ul> 
@@ -41,7 +41,7 @@
 				<% end %>
 			</ul></p><a class="btn" href="question">More Results</a>
 		</div>
-		<div class="span4" style="margin-top:-30px">
+		<div class="span4" style="margin-top:0px">
 		  <h2>Top Ranked Teachers</h2>
 		  <p>Here is the list of the top 5 teachers </p>
 		  <ol> 
@@ -53,7 +53,7 @@
 		       </ol></p><a class="btn" href="generalhistoryprofessors">More Results</a>
 		 
 	       </div>
-        <div class="span4" style="margin-top:-30px">
+        <div class="span4" style="margin-top:0px">
           <h2>Top Ranked Courses</h2>
           <p>Here is the list of the top 5 courses</p>
           <p><ol> 
