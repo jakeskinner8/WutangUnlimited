@@ -1,5 +1,5 @@
 function leftArrowPressed() {
-  document.getElementById('B').click();
+  document.getElementById('A').click();
 }
 
 function rightArrowPressed() {

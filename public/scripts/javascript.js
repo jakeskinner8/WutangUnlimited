@@ -16,7 +16,6 @@ document.onkeydown = function(evt) {
             rightArrowPressed();
             break;
     }
-
 };
 
 

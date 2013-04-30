@@ -1,5 +1,5 @@
 %link(rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css")
-%script{:src => "/scripts/javascript.js"|
+%script{:src => "/scripts/javascript.js"}
 -if(session[:votingOn] == "Teachers" || session[:votingOn] == nil)
   
   %h2{:style => "text-align:center;"} #{@question[0].question}
@@ -21,7 +21,7 @@
   %h3{:style => "text-align:center"} #{@question[0].question}
   %div{:style => "text-align:center"}
     %div{:class=>"classVote"}
-      %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", vote_path(@random[0].id, :loser=>@random[1].id,:question=>@question[0].id)
+      %p{:style => "text-align:center; display:inline-block; "}= link_to "#{@random[0].course_name}", vote_path(@random[0].id, :loser=>@random[1].id,:question=>@question[0].id), :id=>"A"
     %div{:class=>"skip2"} 
       =button_to 'Skip', "/votes/S" , :method => :get
     %div{:class=>"classVote"}
