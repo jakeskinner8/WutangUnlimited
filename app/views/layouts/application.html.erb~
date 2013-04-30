@@ -7,9 +7,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "ProfMash" %></title>
     <%= csrf_meta_tags %>
     <style type="text/css">
-      body{
-        min-width:800px;
-      }
 	i{
 	  padding-top:3px;
 	}
