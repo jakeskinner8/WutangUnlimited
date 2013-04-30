@@ -224,6 +224,7 @@ DEPENDENCIES
   cucumber-rails-training-wheels
   database_cleaner
   devise
+  execjs
   haml
   haml-rails
   heroku
