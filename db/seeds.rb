@@ -179,12 +179,18 @@ userpollresults.each do |u|
 end
 
 pquestions=[
-{:question => 'Who is better at communication?'},
-{:question => 'Who provides extra help outside class better?'},
+{:question => 'Who answers your questions clearer?'},
+{:question => 'Who provides better help outside class?'},
 {:question => 'Who is friendlier?'},
-{:question => 'Who gives extra credit?'},
+{:question => 'Who provides a more reasonable amount of homework?'},
 {:question => 'Whose lectures are more interesting?'},
-{:question => 'Who would be a better adviser in general?'}
+{:question => 'Who would be a better advisor in general?'},
+{:question => 'Who covers a more reasonable amount of material each class?'},
+{:question => 'Who is more approachable outside of class?'},
+{:question => 'Which professor provides a better curve?'},
+{:question => 'Whose exams are more similar to homework assignments?'},
+{:question => 'Who presents material in a clearer way?'},
+{:question => 'Who presents material more relevant to the course?'}
 ]
 
 pquestions.each do |q|
