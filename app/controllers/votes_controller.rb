@@ -13,6 +13,9 @@ class VotesController < ApplicationController
 	if(session[:votingOn] != "Classes" || session[:votingOn] == nil)
 		session[:votingOn] = "Teachers"
 		@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
+		while @random[0].id == @random[1].id do
+			@random = Professor.find(:all,:order=>'RANDOM()', :limit => 2)
+		end
 		@question = Pquestion.find(:all,:order=>'RANDOM()', :limit => 1)
         else
 		@random = Course.find(:all,:order=>'RANDOM()', :limit => 2)
