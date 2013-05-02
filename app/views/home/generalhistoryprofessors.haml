@@ -36,7 +36,7 @@
     - y = Professor.find_by_sql('SELECT professors.id,first_name, last_name,email from professors INNER JOIN pvotes ON pvotes.professor_id = professors.id WHERE pvotes.pquestion_id ='+x.id.to_s+" ORDER BY pvotes.winpercentage DESC, pvotes.appearances DESC").take(5)
     - if not y == []
       %div{:style=>"text-align:center; border: 1px solid black;width:500px;display:inline-block;margin-top:5px;height:300px;"}
-        %h4= "#{x.question}"
+        %h3= "#{x.question}"
         %table{:class => "table", :style=>"width:500px;"}
           %thead
             %tr
