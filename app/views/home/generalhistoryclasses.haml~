@@ -36,7 +36,7 @@
     - if not y == []
       %div{:style=>"text-align:center; border: 1px solid black;width:600px;display:inline-block;height:300px; margin-top:5px;"}
         %h5= "#{x.question}"
-        %table{:class => "table", :style=>"width:550px;margin:0 auto;"}
+        %table{:class => "table", :style=>"width:600px;margin:0 auto;"}
           %thead
             %tr
               %th{:style=>"text-align:center"} Ranking
