@@ -34,7 +34,7 @@
   - Cquestion.all.each do |x|
     - y = Course.find_by_sql('SELECT courses.id,course_name from courses INNER JOIN cvotes ON cvotes.course_id = courses.id WHERE cvotes.cquestion_id ='+x.id.to_s + " ORDER BY cvotes.winpercentage DESC, cvotes.appearances DESC").take(5)
     - if not y == []
-      %div{:style=>"text-align:center; border: 1px solid black;width:600px;display:inline-block; margin-top:5px; padding:10px;"}
+      %div{:style=>"text-align:center;width:600px;display:inline-block; margin-top:5px; padding:10px; border-top:1px solid black;"}
         %h5{:style=>"margin-top:0"}= "#{x.question}"
         %table{:class => "table", :style=>"width:600px;margin:0 auto;"}
           %thead
@@ -54,3 +54,4 @@
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances
                 %td{:style=>"text-align:center"}= "#{number_with_precision(Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].winpercentage,:precision=>2)}%" 
+
