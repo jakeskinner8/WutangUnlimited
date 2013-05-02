@@ -28,7 +28,7 @@
         %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite"), :style=>"width:5em"}#{course.course_name}
         %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite"), :style=>"width:3em"}#{course.wins} 
         %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite"), :style=>"width:3em"}#{course.appearances}
-        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"), :style=>"width:5em"}= "#{number_with_precision(course.winpercentage, :precision => 2)}"
+        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"), :style=>"width:5em"}= "#{number_with_precision(course.winpercentage, :precision => 2)}%"
    
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
@@ -39,7 +39,7 @@
         %table{:class => "table", :style=>"width:600px;margin:0 auto;"}
           %thead
             %tr
-              %th{:style=>"text-align:center;width:20px"} Ranking
+              %th{:style=>"text-align:center;width:20px", :class=>'highlight'} Ranking
               %th{:style=>"text-align:center;width:150px;"} Course
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances

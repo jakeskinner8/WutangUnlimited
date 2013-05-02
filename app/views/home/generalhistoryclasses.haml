@@ -39,7 +39,7 @@
         %table{:class => "table", :style=>"width:600px;margin:0 auto;"}
           %thead
             %tr
-              %th{:style=>"text-align:center;width:20px"} Ranking
+              %th{:style=>"text-align:center;width:20px", :class=>'highlight'} Ranking
               %th{:style=>"text-align:center;width:150px;"} Course
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances
@@ -49,7 +49,7 @@
             %tbody
               - count = count + 1
               %tr
-                %td{:style=>"text-align:center;width:20px;"}= "#{count}"
+                %td{:style=>"text-align:center;width:20px;", :class=>'highlight'}= "#{count}"
                 %td{:style=>"text-align:center;width:150px;"}= "#{z.course_name}"
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Cvote.where(:course_id=>z.id, :cquestion_id=>x.id)[0].appearances
