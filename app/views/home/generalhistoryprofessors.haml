@@ -37,16 +37,20 @@
     - if not y == []
       %div{:style=>"text-align:center; border: 1px solid black;width:600px;display:inline-block;margin-top:5px ;height:300px;"}
         %h4= "#{x.question}"
-        %table{:class => "table", :style=>"width:500px; margin: 0 auto;"}
+        %table{:class => "table", :style=>"width:550px; margin: 0 auto;"}
           %thead
             %tr
+              %th{:style=>"text-align:center"} Ranking
               %th{:style=>"text-align:center"} Professor Name
               %th{:style=>"text-align:center"} Wins
               %th{:style=>"text-align:center"} Appearances
               %th{:style=>"text-align:center"} Win Percentage (%)
-          - y.each do |z|	
+          - count = 0
+          - y.each do |z|
+            -count = count + 1
             %tbody
               %tr
+                %td{:style=>"text-align:center"}= "#{count}"
                 %td{:style=>"text-align:center"}= "#{z.first_name} #{z.last_name}"
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].wins
                 %td{:style=>"text-align:center"}= Pvote.where(:professor_id=>z.id, :pquestion_id=>x.id)[0].appearances
