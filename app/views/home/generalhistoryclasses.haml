@@ -19,7 +19,7 @@
         -if session[:sort] == "appearances" 
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
       %th{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"), :style=>"width:5em"}
-        #{link_to 'Win Percentage(%)',generalhistoryclasses_path(:sort => 'winpercentage')}
+        #{link_to 'Win Percentage',generalhistoryclasses_path(:sort => 'winpercentage')}
         -if session[:sort] == "winpercentage" || session[:sort] == nil
           %b{:class=>'caret', :style =>"vertical-align:middle"} 
   %tbody
@@ -28,7 +28,7 @@
         %td{:class=>(session[:sort]=="name" ? 'highlight' : "nonhilite"), :style=>"width:5em"}#{course.course_name}
         %td{:class=>(session[:sort]=="wins" ? 'highlight' : "nonhilite"), :style=>"width:3em"}#{course.wins} 
         %td{:class=>(session[:sort]=="appearances" ? 'highlight' : "nonhilite"), :style=>"width:3em"}#{course.appearances}
-        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"), :style=>"width:5em"}#{number_with_precision(course.winpercentage, :precision => 2)}
+        %td{:class=>(session[:sort]=="winpercentage" ? 'highlight' : "nonhilite"), :style=>"width:5em"}= "#{number_with_precision(course.winpercentage, :precision => 2)}%"
    
 %div{:style=>"text-align:center"}
   - Cquestion.all.each do |x|
