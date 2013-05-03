@@ -84,6 +84,13 @@ When(/^I fill email with "(.*?)" and password with "(.*?)"$/) do |email, passwor
   click_button 'Sign in'
 end
 
+When(/^I fill in "(.*?)" into the email field$/) do |arg1|
+  fill_in 'Email', :with => arg1
+end
+Then(/^I click button "send me reset password instructions"$/) do 
+	click_button 'send me reset password instructions'
+end
+
 Then(/^I should see "(.*?)"$/) do |arg1|
   assert page.has_content?("#{arg1}")
 end
@@ -195,6 +202,7 @@ When(/^I fill the search text field with "(.*?)"$/) do |searchparameter|
 end
 
 When(/^I press enter key and pass search parameter "(.*?)"$/) do |arg1|
+  Capybara.current_session.driver.header 'Referer', 'http://localhost:3000/'
   visit "/search/?search=#{arg1}"
 end
 
