@@ -25,9 +25,6 @@ class HomeController < ApplicationController
   end
 
   def reset
-  	@email = params[:email]["email"]
-	MyMailer.reset(@email).deliver
-	
   end
   def question
 	@results = Userpollresult.all
