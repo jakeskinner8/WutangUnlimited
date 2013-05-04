@@ -86,10 +86,9 @@ end
 
 When(/^I fill in "(.*?)" into the email field$/) do |arg1|
   fill_in 'Email', :with => arg1
+  click_button 'Send me reset password instructions'
 end
-Then(/^I click button "send me reset password instructions"$/) do 
-	click_button 'send me reset password instructions'
-end
+
 
 Then(/^I should see "(.*?)"$/) do |arg1|
   assert page.has_content?("#{arg1}")
