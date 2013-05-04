@@ -84,18 +84,3 @@ Scenario: Class voting (voting for some choice twice)
 	When I click class SELT
 	Then I should see "You voted for SELT"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

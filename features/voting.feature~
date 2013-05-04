@@ -81,22 +81,12 @@ Scenario: Class voting (voting for some choice twice)
 	Then I should be able to choose from two classes
 	When I click class SELT
 	Then I should see "You voted for SELT"
-        Given I am on the class voting page
 	When I click class SELT
 	Then I should see "You voted for SELT"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Scenario: Teacher does not have wins
+	When I am on the login page
+	And I fill email with "student1@uiowa.edu" and password with "password"
+	And I am on the class voting page
+	Then I should be able to choose from two images
+	
