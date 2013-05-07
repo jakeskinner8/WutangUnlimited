@@ -6,7 +6,7 @@ function rightArrowPressed() {
   document.getElementById('B').click();
 }
 
-function downArrowPressed(){
+function sPressed(){
   document.getElementById('Skip').click();
 }
 document.onkeydown = function(evt) {
@@ -19,10 +19,42 @@ document.onkeydown = function(evt) {
             rightArrowPressed();
             break;
         case 83:
-	    downArrowPressed();
+	    sPressed();
 	    break;
 
     }
 };
 
+function validateEmail() {
+ alert('hii');
+   var emailEntered = document.getElementById('email_email').value;
+   var emailAddresses = emailEntered.split(',');
+   var invalidEmailAddresses =0;
+   var emailEntered = document.getElementById('email_email').value;
+   var test = emailEntered.replace(/\s+/g,"");
+   if( test == null || test.length==0)
+   {
+      alert('Emails cannot be left blank');
+      return false;
+   }
+
+  for (var i=0;i<emailAddresses.length;i++)
+  {
+    var toBeTested = emailAddresses[i].trim();
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(toBeTested))  
+    {  
+    
+    }  
+    else
+    {
+       invalidEmailAddresses = 1;
+    }
+  }
+  
+  if(invalidEmailAddresses == 1)
+  {
+    alert ("invalidEmailAddresses");
+    return false;
+  }
+}
 

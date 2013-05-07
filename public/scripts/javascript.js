@@ -25,4 +25,35 @@ document.onkeydown = function(evt) {
     }
 };
 
+function validateEmail() {
+   var emailEntered = document.getElementById('email_email').value;
+   var emailAddresses = emailEntered.split(',');
+   var invalidEmailAddresses =0;
+   var emailEntered = document.getElementById('email_email').value;
+   var test = emailEntered.replace(/\s+/g,"");
+   if( test == null || test.length==0)
+   {
+      alert('Emails cannot be left blank');
+      return false;
+   }
+
+  for (var i=0;i<emailAddresses.length;i++)
+  {
+    var toBeTested = emailAddresses[i].trim();
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(toBeTested))  
+    {  
+    
+    }  
+    else
+    {
+       invalidEmailAddresses = 1;
+    }
+  }
+  
+  if(invalidEmailAddresses == 1)
+  {
+    alert ("invalidEmailAddresses");
+    return false;
+  }
+}
 

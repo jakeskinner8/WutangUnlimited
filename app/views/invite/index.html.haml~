@@ -1,9 +1,8 @@
-<%= stylesheet_link_tag "invite.css" %>
-
+%script{:src => "/scripts/javascript.js"}
 %div{:style=>"text-align:center"}
   %h1{:style=>"text-align:center"} Invite your friends!
   %h5{:style=>"text-align:center"} Separate by commas if sending more than one.
-  = form_tag ('/sendinvite') do
+  = form_tag sendinvite_path, :name => 'invitation', :onsubmit => 'return validateEmail()' do
     %div{:style=>"display:inline-block"}
       =label :email, :email, 'Emails'
     %div{:style=>"display:inline-block"}
