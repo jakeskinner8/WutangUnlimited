@@ -43,7 +43,7 @@ group :assets do
 end
 
 gem 'less-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.1.3'
 gem 'bootstrap-sass'
 gem 'sass-rails', "  ~> 3.1.0"
 # Use unicorn as the web server
