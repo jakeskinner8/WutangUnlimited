@@ -19,8 +19,8 @@ group :development, :test do
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
+  gem 'cucumber-rails', '>= 1.3.1'
+  gem 'cucumber-rails-training-wheels', '>= 1.0.0'
 end
 
 group :production do
