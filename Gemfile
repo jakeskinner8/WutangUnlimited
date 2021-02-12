@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '6.0.3.5'
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem "haml-rails"
@@ -19,8 +19,8 @@ group :development, :test do
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
+  gem 'cucumber-rails', '>= 1.4.0'
+  gem 'cucumber-rails-training-wheels', '>= 1.0.0'
 end
 
 group :production do
