@@ -13,7 +13,7 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
   gem 'capybara'
-  gem 'launchy'
+  gem 'launchy', '>= 2.2.0'
   gem 'rspec-rails'
   gem 'execjs'
   gem 'therubyracer'
@@ -56,5 +56,5 @@ gem 'sass-rails', "  ~> 3.1.0"
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem "haml"
-gem "heroku"
+gem "heroku", ">= 3.99.4"
 
