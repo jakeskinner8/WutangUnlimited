@@ -12,15 +12,15 @@ group :development, :test do
   gem 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
-  gem 'capybara'
+  gem 'capybara', '>= 2.0.3'
   gem 'launchy'
   gem 'rspec-rails'
   gem 'execjs'
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
-  gem 'cucumber-rails-training-wheels'
+  gem 'cucumber-rails', '>= 1.3.1'
+  gem 'cucumber-rails-training-wheels', '>= 1.0.0'
 end
 
 group :production do
