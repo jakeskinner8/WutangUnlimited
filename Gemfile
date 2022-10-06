@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
-gem 'devise'
-gem 'twitter-bootstrap-rails'
-gem "haml-rails"
+gem 'rails', '5.2.8.1'
+gem 'devise', '>= 4.7.1'
+gem 'twitter-bootstrap-rails', '>= 3.2.0'
+gem "haml-rails", ">= 1.0.0"
 gem 'simplecov'
 
 # Bundle edge Rails instead:
@@ -19,7 +19,7 @@ group :development, :test do
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '>= 1.4.0'
   gem 'cucumber-rails-training-wheels'
 end
 
@@ -33,19 +33,19 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
-  gem 'twitter-bootstrap-rails'
-  gem 'bootstrap-sass'
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.2.2'
+  gem 'uglifier', '>= 2.7.2'
+  gem 'twitter-bootstrap-rails', '>= 3.2.0'
+  gem 'bootstrap-sass', '>= 3.4.0', '>= 3.4.0'
   gem 'less-rails'
   gem 'therubyracer'
 end
 
 gem 'less-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.4.0'
 gem 'bootstrap-sass'
-gem 'sass-rails', "  ~> 3.1.0"
+gem 'sass-rails', '~> 5.0.5'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -55,6 +55,6 @@ gem 'sass-rails', "  ~> 3.1.0"
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-gem "haml"
-gem "heroku"
+gem "haml", ">= 5.0.0"
+gem "heroku", ">= 3.99.4"
 
