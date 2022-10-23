@@ -33,8 +33,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', '~> 3.1.7'
+  gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
@@ -45,7 +45,7 @@ end
 gem 'less-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem 'sass-rails', "  ~> 3.1.0"
+gem 'sass-rails', '~> 3.1.7'
 # Use unicorn as the web server
 # gem 'unicorn'
 
