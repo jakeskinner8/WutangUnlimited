@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
-gem 'devise'
+gem 'rails', '4.0.0'
+gem 'devise', '>= 3.0.0'
 gem 'twitter-bootstrap-rails'
 gem "haml-rails"
 gem 'simplecov'
@@ -19,7 +19,7 @@ group :development, :test do
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '>= 1.4.0'
   gem 'cucumber-rails-training-wheels'
 end
 
@@ -33,8 +33,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'coffee-rails', '~> 4.0.0'
   gem 'uglifier'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
@@ -45,7 +45,7 @@ end
 gem 'less-rails'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem 'sass-rails', "  ~> 3.1.0"
+gem 'sass-rails', '~> 4.0.0'
 # Use unicorn as the web server
 # gem 'unicorn'
 
