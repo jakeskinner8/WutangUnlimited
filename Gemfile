@@ -1,9 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
-gem 'devise'
+gem 'rails', '6.1.7.1'
+gem 'devise', '>= 4.7.0'
 gem 'twitter-bootstrap-rails'
-gem "haml-rails"
+gem "haml-rails", ">= 0.5.3"
 gem 'simplecov'
 
 # Bundle edge Rails instead:
@@ -19,7 +19,7 @@ group :development, :test do
   gem 'therubyracer'
 end
 group :test do
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', '>= 1.4.0'
   gem 'cucumber-rails-training-wheels'
 end
 
@@ -33,8 +33,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', '~> 5.0.8'
+  gem 'coffee-rails', '~> 4.2.2'
   gem 'uglifier'
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass'
@@ -43,9 +43,9 @@ group :assets do
 end
 
 gem 'less-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 gem 'bootstrap-sass'
-gem 'sass-rails', "  ~> 3.1.0"
+gem 'sass-rails', '~> 5.0.8'
 # Use unicorn as the web server
 # gem 'unicorn'
 
